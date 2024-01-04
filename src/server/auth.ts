@@ -38,6 +38,19 @@ declare module "next-auth" {
  */
 export const authOptions: NextAuthOptions = {
   callbacks: {
+    // configure teh signIn() callback to see if the user has a valid, allowed email address
+    signIn: async ({ user, email }) => {
+      // grab the allowed usernames from the env variable
+      const whiteList = env.EMAIL_WHITELIST.split(" ");
+
+      if (email?.verificationRequest && user?.email && whiteList.includes(user.email)) {
+        return true;
+      } else {
+        // log that a none whitelisted user tried to sign in
+        console.log(`A user tried to sign in with an invalid email address: ${user?.email}`)
+        return false;
+      }
+    },
     session: ({ session, user }) => ({
       ...session,
       user: {
