@@ -57,20 +57,17 @@ model VerificationToken {
 }
 
 model Supplier {
-  id                      String                  @id @default(cuid())
-  name                    String
-  type                    SupplierType
-  country                 String?
-  region                  String?
-  city                    String?
-  state                   String?
-  createdAt               DateTime                @default(now())
-  updatedAt               DateTime                @updatedAt
-  enhancedCommissions     EnhancedCommission[]
-  seasonalOffers          SeasonalOffer[]
-  contacts                OnSiteContact[]
-  generalManagers         GeneralManager[]
-  representativeCompanies RepresentativeCompany[]
+  id                    String                  @id @default(cuid())
+  name                  String
+  type                  SupplierType
+  country               String?
+  region                String?
+  city                  String?
+  state                 String?
+  enhancedCommission    EnhancedCommission[]
+  contact               OnSiteContact[]
+  generalManager        GeneralManager[]
+  representativeCompany RepresentativeCompany[]
 }
 
 enum SupplierType {
@@ -78,13 +75,13 @@ enum SupplierType {
   DMC
   CRUISE
   RAIL
-  TRAINS
   REPRESENTATION_COMPANY
   AIR
   TOUR_OPERATOR
   CAR_RENTAL
   TRAVEL_INSURANCE
   CHAUFFEUR_SERVICES
+  TRAINS
   CHAUFFERED
   OTHER
 }
@@ -95,8 +92,6 @@ model OnSiteContact {
   title      String?
   email      String
   phone      String?
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
   supplierId String
   supplier   Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
 }
@@ -107,8 +102,6 @@ model GeneralManager {
   title      String?
   email      String
   phone      String?
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
   supplierId String
   supplier   Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
 }
@@ -120,8 +113,6 @@ model RepresentativeCompany {
   email       String
   phone       String?
   companyName String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
   supplierId  String
   supplier    Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
 }
@@ -134,48 +125,16 @@ model EnhancedCommission {
   bookingInstructions String?
   startDate           DateTime?
   endDate             DateTime?
-  updatedAt           DateTime  @updatedAt
-  createdAt           DateTime  @default(now())
-  supplierId          String
-  supplier            Supplier  @relation(fields: [supplierId], references: [id], onDelete: Cascade)
-}
-
-model SeasonalOffer {
-  id                  String    @id @default(cuid())
-  name                String
-  details             String?
-  specialAmenities    String?
-  bookingInstructions String?
-  startDate           DateTime?
-  endDate             DateTime?
-  updatedAt           DateTime  @updatedAt
-  createAt            DateTime  @default(now())
   supplierId          String
   supplier            Supplier  @relation(fields: [supplierId], references: [id], onDelete: Cascade)
 }
 
 model HomepageTickerItem {
-  id        String    @id @default(cuid())
+  id        String  @id @default(cuid())
   title     String
-  content   String?
+  subtitle  String?
   link      String?
   linkLabel String?
   image     String?
   order     Int?
-  updatedAt DateTime  @updatedAt
-  createdAt DateTime  @default(now())
-  expiresAt DateTime?
-}
-
-model CalendarTickerItem {
-  id        String    @id @default(cuid())
-  title     String
-  content   String?
-  link      String?
-  linkLabel String?
-  image     String?
-  order     Int?
-  updatedAt DateTime  @updatedAt
-  createdAt DateTime  @default(now())
-  expiresAt DateTime?
 }

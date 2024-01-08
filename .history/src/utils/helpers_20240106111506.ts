@@ -55,9 +55,9 @@ export const filterSupplierDatabseByLocation = (data: PublicSupplierDatabaseProp
 }
 
 // function that will filter an array of objects and return suppliers with a specific name
-export const filterSupplierDatabseByName = (data: PublicSupplierDatabaseProps[], name: string) => {
-  const filteredData = data.filter((supplier) => {
-    return supplier.name.includes(name)
+export const filterSupplierDatabseByName = (data: PublicSupplierDatabaseProps[], supplier: string) => {
+  const filteredData = data.filter((entry) => {
+    return entry.name.includes(supplier)
   });
 
   return filteredData;
