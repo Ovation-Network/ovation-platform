@@ -59,7 +59,7 @@ model VerificationToken {
 model Supplier {
   id                      String                  @id @default(cuid())
   name                    String
-  type                    SupplierType
+  type                    SupplierType            @default(OTHER)
   country                 String?
   region                  String?
   city                    String?
@@ -154,28 +154,28 @@ model SeasonalOffer {
   supplier            Supplier  @relation(fields: [supplierId], references: [id], onDelete: Cascade)
 }
 
-model HomepageTickerItem {
+model HomepageTicker {
   id        String    @id @default(cuid())
   title     String
-  content   String?
+  content   String
   link      String?
   linkLabel String?
   image     String?
   order     Int?
   updatedAt DateTime  @updatedAt
   createdAt DateTime  @default(now())
-  expiresAt DateTime?
+  expiresAt DateTime
 }
 
-model CalendarTickerItem {
+model CalendarTicker {
   id        String    @id @default(cuid())
   title     String
-  content   String?
+  content   String
   link      String?
   linkLabel String?
   image     String?
   order     Int?
   updatedAt DateTime  @updatedAt
   createdAt DateTime  @default(now())
-  expiresAt DateTime?
+  expiresAt DateTime
 }
