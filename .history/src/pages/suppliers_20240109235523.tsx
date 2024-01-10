@@ -4,33 +4,6 @@ import { supplierDatabaseData, duplicateIDs } from "~/utils/data-migration";
 
 export default function Suppliers() {
 
-  /* Here we will write the functions to migrate current existing into the new Supabase database
-    * 1. Create a function to use api to create a new supplier
-    * 2. Create a function to use api to connect an onsite contact to a supplier
-    * 3. Create a function to use api to create a new onsite contact
-    * 4. Create a function to use api to create a new rep company contact
-  */
-
-  const createSupplierAPI = api.supplier.addSupplier.useMutation({
-    onSuccess: (supplier) => {
-      console.log("Supplier created", supplier)
-    }
-  })
-
-  const createOnsiteContactAPI = api.onsiteContact.addOnsiteContact.useMutation({
-    onSuccess: (contact) => {
-      console.log("Onsite contact created", contact)
-    }
-  })
-
-  const createSupplier = async (supplierData: typeof supplierDatabaseData[0]) => {
-
-  }
-
-  const migrateSupplier = async (supplierData: typeof supplierDatabaseData) => {
-
-  }
-
   return (
     <>
       <Head>

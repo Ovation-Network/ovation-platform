@@ -5,20 +5,18 @@ import {
   protectedProcedure,
 } from "~/server/api/trpc";
 
-import type { SeasonalOffer } from "@prisma/client";
-
-export const seasonalOfferRouter = createTRPCRouter({
-  addSeasonalOffer: protectedProcedure
+export const enhancedCommissionsRouter = createTRPCRouter({
+  addEnhancedCommission: protectedProcedure
     .input(z.object({
       supplierId: z.string(),
       name: z.string(),
-      details: z.string().nullable(),
+      commission: z.string().nullable(),
       specialAmenities: z.string().nullable(),
       bookingInstructions: z.string().nullable(),
       startDate: z.date().nullable(),
       endDate: z.string().nullable(),
     }))
-    .mutation(async ({ ctx, input }) => {
+    .mutation(({ ctx, input }) => {
       // extract session and databse from ctx
       const { session, db } = ctx;
 
@@ -27,11 +25,11 @@ export const seasonalOfferRouter = createTRPCRouter({
         throw new Error("You must be logged in to add a homepage ticker item");
       }
 
-      // create seasonal offer item related to a supplier based on id
-      const seasonalOffer = await db.seasonalOffer.create({
+      // create enhanced commission item related to a supplier based on id
+      const enhancedCommission = db.enhancedCommission.create({
         data: {
           name: input.name,
-          details: input.details,
+          commission: input.commission,
           specialAmenities: input.specialAmenities,
           bookingInstructions: input.bookingInstructions,
           startDate: input.startDate,
@@ -44,13 +42,13 @@ export const seasonalOfferRouter = createTRPCRouter({
         },
       });
 
-      return seasonalOffer;
+      return enhancedCommission;
     }),
-  updateSeasonalOffer: protectedProcedure
+  updateEnhancedCommission: protectedProcedure
     .input(z.object({
       id: z.string(),
       name: z.string(),
-      details: z.string().nullable(),
+      commission: z.string().nullable(),
       specialAmenities: z.string().nullable(),
       bookingInstructions: z.string().nullable(),
       startDate: z.date().nullable(),
@@ -65,14 +63,14 @@ export const seasonalOfferRouter = createTRPCRouter({
         throw new Error("You must be logged in to add a homepage ticker item");
       }
 
-      // update seasonal offer item related to a supplier based on id
-      const seasonalOffer = db.seasonalOffer.update({
+      // update enhanced commission item related to a supplier based on id
+      const enhancedCommission = db.enhancedCommission.update({
         where: {
           id: input.id,
         },
         data: {
           name: input.name,
-          details: input.details,
+          commission: input.commission,
           specialAmenities: input.specialAmenities,
           bookingInstructions: input.bookingInstructions,
           startDate: input.startDate,
@@ -80,9 +78,9 @@ export const seasonalOfferRouter = createTRPCRouter({
         },
       });
 
-      return seasonalOffer;
+      return enhancedCommission;
     }),
-  deleteSeasonalOffer: protectedProcedure
+  deleteEnhancedCommission: protectedProcedure
     .input(z.object({
       id: z.string(),
     }))
@@ -95,13 +93,13 @@ export const seasonalOfferRouter = createTRPCRouter({
         throw new Error("You must be logged in to add a homepage ticker item");
       }
 
-      // delete seasonal offer item related to a supplier based on id
-      const seasonalOffer = db.seasonalOffer.delete({
+      // delete enhanced commission item related to a supplier based on id
+      const enhancedCommission = db.enhancedCommission.delete({
         where: {
           id: input.id,
         },
       });
 
-      return seasonalOffer;
+      return enhancedCommission;
     }),
 });

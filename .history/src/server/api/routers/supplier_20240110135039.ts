@@ -155,62 +155,6 @@ export const supplierRouter = createTRPCRouter({
 
       return onsiteContact;
     }),
-  /* Update onsite contact - PROTECTED */
-  updateOnSiteContact: protectedProcedure
-    .input(
-      z.object({
-        id: z.number(),
-        name: z.string(),
-        title: z.string().nullable(),
-        phone: z.string().nullable(),
-        email: z.string(),
-      }
-      ))
-    .mutation(async ({ ctx, input }) => {
-      // Get database and sessions from ctx
-      const { db, session } = ctx;
-      // check if user is logged in
-      if (!session.user) {
-        throw new Error("You must be logged in to update a onsite contact");
-      }
-
-      // update onsite contact
-      const onsiteContact = await db.onSiteContact.update({
-        where: {
-          id: input.id
-        },
-        data: {
-          name: input.name,
-          title: input.title,
-          email: input.email,
-          phone: input.phone,
-        }
-      });
-
-      return onsiteContact;
-    }),
-  /* Delete onsite contact - PROTECTED */
-  deleteOnSiteContact: protectedProcedure
-    .input(z.object({
-      id: z.number(),
-    }))
-    .mutation(async ({ ctx, input }) => {
-      // Get database and sessions from ctx
-      const { db, session } = ctx;
-      // check if user is logged in
-      if (!session.user) {
-        throw new Error("You must be logged in to delete a onsite contact");
-      }
-
-      // delete onsite contact
-      const onsiteContact = await db.onSiteContact.delete({
-        where: {
-          id: input.id
-        }
-      });
-
-      return onsiteContact;
-    }),
   /* Add a representative company */
   addRepresentativeCompany: protectedProcedure
     .input(
@@ -245,66 +189,6 @@ export const supplierRouter = createTRPCRouter({
               id: input.supplierId
             }
           }
-        }
-      });
-
-      return representativeCompany;
-    }),
-  /* Update a representative company */
-  updateRepresentativeCompany: protectedProcedure
-    .input(
-      z.object({
-        id: z.number(),
-        name: z.string(),
-        title: z.string().nullable(),
-        companyName: z.string().nullable(),
-        phone: z.string().nullable(),
-        email: z.string(),
-      })
-    )
-    .mutation(async ({ ctx, input }) => {
-      // Get database and sessions from ctx
-      const { db, session } = ctx;
-
-      // check if user is logged in
-      if (!session.user) {
-        throw new Error("You must be logged in to add a representative company");
-      }
-
-      // add representative company
-      const representativeCompany = await db.representativeCompany.update({
-        where: {
-          id: input.id
-        },
-        data: {
-          name: input.name,
-          title: input.title,
-          companyName: input.companyName,
-          email: input.email,
-          phone: input.phone,
-        }
-      });
-
-      return representativeCompany;
-    }),
-  /* Delete a representative company */
-  deleteRepresentativeCompany: protectedProcedure
-    .input(z.object({
-      id: z.number(),
-    }))
-    .mutation(async ({ ctx, input }) => {
-      // Get database and sessions from ctx
-      const { db, session } = ctx;
-
-      // check if user is logged in
-      if (!session.user) {
-        throw new Error("You must be logged in to delete a representative company");
-      }
-
-      // delete representative company
-      const representativeCompany = await db.representativeCompany.delete({
-        where: {
-          id: input.id
         }
       });
 
@@ -381,28 +265,5 @@ export const supplierRouter = createTRPCRouter({
       });
 
       return generalManager;
-    }),
-  /* Delete a General Manager */
-  deleteGeneralManager: protectedProcedure
-    .input(z.object({
-      id: z.number(),
-    }))
-    .mutation(async ({ ctx, input }) => {
-      // Get database and sessions from ctx
-      const { db, session } = ctx;
-
-      // check if user is logged in
-      if (!session.user) {
-        throw new Error("You must be logged in to delete a general manager");
-      }
-
-      // delete general manager
-      const generalManager = await db.generalManager.delete({
-        where: {
-          id: input.id
-        }
-      });
-
-      return generalManager;
-    }),
+    })
 });

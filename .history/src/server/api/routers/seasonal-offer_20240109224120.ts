@@ -18,7 +18,7 @@ export const seasonalOfferRouter = createTRPCRouter({
       startDate: z.date().nullable(),
       endDate: z.string().nullable(),
     }))
-    .mutation(async ({ ctx, input }) => {
+    .mutation(({ ctx, input }) => {
       // extract session and databse from ctx
       const { session, db } = ctx;
 
@@ -28,7 +28,7 @@ export const seasonalOfferRouter = createTRPCRouter({
       }
 
       // create seasonal offer item related to a supplier based on id
-      const seasonalOffer = await db.seasonalOffer.create({
+      const seasonalOffer = db.seasonalOffer.create({
         data: {
           name: input.name,
           details: input.details,
@@ -44,7 +44,7 @@ export const seasonalOfferRouter = createTRPCRouter({
         },
       });
 
-      return seasonalOffer;
+      return seasonalOffer
     }),
   updateSeasonalOffer: protectedProcedure
     .input(z.object({

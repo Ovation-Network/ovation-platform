@@ -27,24 +27,24 @@ export const seasonalOfferRouter = createTRPCRouter({
         throw new Error("You must be logged in to add a homepage ticker item");
       }
 
-      // create seasonal offer item related to a supplier based on id
-      const seasonalOffer = await db.seasonalOffer.create({
-        data: {
-          name: input.name,
-          details: input.details,
-          specialAmenities: input.specialAmenities,
-          bookingInstructions: input.bookingInstructions,
-          startDate: input.startDate,
-          endDate: input.endDate,
-          supplier: {
-            connect: {
-              id: input.supplierId,
-            },
+      try {
+        // create seasonal offer item related to a supplier
+        const seasonalOffer: SeasonalOffer = await db.seasonalOffer.create({
+          data: {
+            supplierId: input.supplierId,
+            name: input.name,
+            details: input.details,
+            specialAmenities: input.specialAmenities,
+            bookingInstructions: input.bookingInstructions,
+            startDate: input.startDate,
+            endDate: input.endDate,
           },
-        },
-      });
+        });
 
-      return seasonalOffer;
+        return seasonalOffer ;
+      } catch (err) {
+        console.log(err);
+      }
     }),
   updateSeasonalOffer: protectedProcedure
     .input(z.object({

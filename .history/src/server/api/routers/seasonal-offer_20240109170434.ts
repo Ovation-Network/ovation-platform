@@ -5,8 +5,6 @@ import {
   protectedProcedure,
 } from "~/server/api/trpc";
 
-import type { SeasonalOffer } from "@prisma/client";
-
 export const seasonalOfferRouter = createTRPCRouter({
   addSeasonalOffer: protectedProcedure
     .input(z.object({
@@ -18,7 +16,7 @@ export const seasonalOfferRouter = createTRPCRouter({
       startDate: z.date().nullable(),
       endDate: z.string().nullable(),
     }))
-    .mutation(async ({ ctx, input }) => {
+    .mutation(({ ctx, input }) => {
       // extract session and databse from ctx
       const { session, db } = ctx;
 
@@ -28,7 +26,7 @@ export const seasonalOfferRouter = createTRPCRouter({
       }
 
       // create seasonal offer item related to a supplier based on id
-      const seasonalOffer = await db.seasonalOffer.create({
+      const seasonalOffer = db.seasonalOffer.create({
         data: {
           name: input.name,
           details: input.details,

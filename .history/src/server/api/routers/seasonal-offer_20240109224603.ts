@@ -42,7 +42,7 @@ export const seasonalOfferRouter = createTRPCRouter({
             },
           },
         },
-      });
+      }) as SeasonalOffer;
 
       return seasonalOffer;
     }),

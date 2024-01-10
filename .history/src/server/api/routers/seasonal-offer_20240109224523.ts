@@ -42,9 +42,9 @@ export const seasonalOfferRouter = createTRPCRouter({
             },
           },
         },
-      });
+      }) as SeasonalOffer;
 
-      return seasonalOffer;
+      return seasonalOffer ;
     }),
   updateSeasonalOffer: protectedProcedure
     .input(z.object({

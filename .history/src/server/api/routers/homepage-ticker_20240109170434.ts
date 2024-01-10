@@ -9,29 +9,23 @@ import {
 export const homepageTickerRouter = createTRPCRouter({
   /* Get homepage ticker items - PUBLIC */
   getHomepageTickers: publicProcedure
-    .query(async ({ ctx }) => {
+    .query(({ ctx }) => {
       // Get a reference to today's date
       const today = new Date();
 
       // extract database from ctx
       const { db } = ctx;
 
-      try {
-        // get all homepage ticker items that are not yet expired
-        const homepageTicker = await db.homepageTicker.findMany({
-          where: {
-            expiresAt: {
-              gte: today
-            },
-          }
-        })
-  
-        return homepageTicker
+      // get all homepage ticker items that are not yet expired
+      const homepageTicker = db.homepageTicker.findMany({
+        where: {
+          expiresAt: {
+            gte: today
+          },
+        }
+      })
 
-      } catch (error) {
-        console.log(error);
-      }
-
+      return homepageTicker
     }),
   /* Add a homepage ticker item - PROTECTED */
   addHomepageTicker: protectedProcedure

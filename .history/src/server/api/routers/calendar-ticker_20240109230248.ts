@@ -6,9 +6,9 @@ import {
   publicProcedure,
 } from "~/server/api/trpc";
 
-export const homepageTickerRouter = createTRPCRouter({
-  /* Get homepage ticker items - PUBLIC */
-  getHomepageTickers: publicProcedure
+
+export const calendarTickerRouter = createTRPCRouter({
+  getCalendarTickers: publicProcedure
     .query(async ({ ctx }) => {
       // Get a reference to today's date
       const today = new Date();
@@ -16,25 +16,18 @@ export const homepageTickerRouter = createTRPCRouter({
       // extract database from ctx
       const { db } = ctx;
 
-      try {
-        // get all homepage ticker items that are not yet expired
-        const homepageTicker = await db.homepageTicker.findMany({
-          where: {
-            expiresAt: {
-              gte: today
-            },
-          }
-        })
-  
-        return homepageTicker
+      // get all homepage ticker items that are not yet expired
+      const calendarTickers = await db.calendarTicker.findMany({
+        where: {
+          expiresAt: {
+            gte: today
+          },
+        }
+      })
 
-      } catch (error) {
-        console.log(error);
-      }
-
+      return calendarTickers
     }),
-  /* Add a homepage ticker item - PROTECTED */
-  addHomepageTicker: protectedProcedure
+  addCalendarTicker: protectedProcedure
     .input(z.object({
       title: z.string(),
       content: z.string(),
@@ -44,7 +37,7 @@ export const homepageTickerRouter = createTRPCRouter({
       order: z.number().nullable(),
       expiresAt: z.date()
     }))
-    .mutation(({ ctx, input }) => {
+    .mutation(async ({ ctx, input }) => {
       // extract session and databse from ctx
       const { session, db } = ctx;
 
@@ -54,7 +47,7 @@ export const homepageTickerRouter = createTRPCRouter({
       }
 
       // create a new homepage ticker item
-      const homepageTicker = db.homepageTicker.create({
+      const calendarTicker = await db.calendarTicker.create({
         data: {
           title: input.title,
           content: input.content,
@@ -66,10 +59,9 @@ export const homepageTickerRouter = createTRPCRouter({
         }
       });
 
-      return homepageTicker;
+      return calendarTicker;
     }),
-  /* Update a homepage ticker item - PROTECTED */
-  updateHomepageTicker: protectedProcedure
+  updateCalendarTicker: protectedProcedure
     .input(z.object({
       id: z.string(),
       title: z.string(),
@@ -90,7 +82,7 @@ export const homepageTickerRouter = createTRPCRouter({
       }
 
       // update homepage ticker item
-      const homepageTicker = db.homepageTicker.update({
+      const calendarTicker = db.calendarTicker.update({
         where: {
           id: input.id
         },
@@ -105,10 +97,9 @@ export const homepageTickerRouter = createTRPCRouter({
         }
       });
 
-      return homepageTicker;
+      return calendarTicker;
     }),
-  /* Delete a homepage ticker item - PROTECTED */
-  deleteHomepageTicker: protectedProcedure
+  deleteCalendarTicker: protectedProcedure
     .input(z.object({
       id: z.string()
     }))
@@ -122,12 +113,12 @@ export const homepageTickerRouter = createTRPCRouter({
       }
 
       // delete homepage ticker item
-      const homepageTicker = db.homepageTicker.delete({
+      const calendarTicker = db.calendarTicker.delete({
         where: {
           id: input.id
         }
       });
 
-      return homepageTicker;
+      return calendarTicker;
     })
 });

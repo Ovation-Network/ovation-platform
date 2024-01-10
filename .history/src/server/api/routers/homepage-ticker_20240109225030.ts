@@ -18,7 +18,7 @@ export const homepageTickerRouter = createTRPCRouter({
 
       try {
         // get all homepage ticker items that are not yet expired
-        const homepageTicker = await db.homepageTicker.findMany({
+        const homepageTicker = db.homepageTicker.findMany({
           where: {
             expiresAt: {
               gte: today

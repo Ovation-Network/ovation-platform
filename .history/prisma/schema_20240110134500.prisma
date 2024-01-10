@@ -57,7 +57,7 @@ model VerificationToken {
 }
 
 model Supplier {
-  id                      Int                     @id @default(autoincrement())
+  id                      Int                  @id @default(autoincrement())
   name                    String
   type                    SupplierType            @default(OTHER)
   country                 String?
@@ -91,7 +91,7 @@ enum SupplierType {
 }
 
 model OnSiteContact {
-  id         Int      @id @default(autoincrement())
+  id         Int                  @id @default(autoincrement())
   name       String
   title      String?
   email      String
@@ -103,9 +103,9 @@ model OnSiteContact {
 }
 
 model GeneralManager {
-  id         Int      @id @default(autoincrement())
+  id         Int                  @id @default(autoincrement())
   name       String
-  title      String   @default("General Manager")
+  title      String              @default("General Manager") 
   email      String
   phone      String?
   createdAt  DateTime @default(now())
@@ -115,7 +115,7 @@ model GeneralManager {
 }
 
 model RepresentativeCompany {
-  id          Int      @id @default(autoincrement())
+  id          Int                  @id @default(autoincrement())
   name        String
   title       String?
   email       String
@@ -128,7 +128,7 @@ model RepresentativeCompany {
 }
 
 model EnhancedCommission {
-  id                  Int       @id @default(autoincrement())
+  id                  Int                  @id @default(autoincrement())
   name                String
   commission          String?
   specialAmenities    String?
@@ -142,7 +142,7 @@ model EnhancedCommission {
 }
 
 model SeasonalOffer {
-  id                  Int       @id @default(autoincrement())
+  id                  Int                  @id @default(autoincrement())
   name                String
   details             String?
   specialAmenities    String?
@@ -156,27 +156,27 @@ model SeasonalOffer {
 }
 
 model HomepageTicker {
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   title     String
   content   String
   link      String?
   linkLabel String?
   image     String?
   order     Int?
-  updatedAt DateTime @updatedAt
-  createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+  createdAt DateTime  @default(now())
   expiresAt DateTime
 }
 
 model CalendarTicker {
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   title     String
   content   String
   link      String?
   linkLabel String?
   image     String?
   order     Int?
-  updatedAt DateTime @updatedAt
-  createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+  createdAt DateTime  @default(now())
   expiresAt DateTime
 }
