@@ -117,7 +117,7 @@ model RepresentativeCompany {
   id          Int      @id @default(autoincrement())
   name        String
   title       String?
-  email       String?
+  email       String
   phone       String?
   companyName String?
   createdAt   DateTime @default(now())

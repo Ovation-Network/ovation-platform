@@ -93,7 +93,7 @@ model OnSiteContact {
   id         Int      @id @default(autoincrement())
   name       String
   title      String?
-  email      String?
+  email      String
   phone      String?
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
@@ -105,7 +105,7 @@ model GeneralManager {
   id         Int      @id @default(autoincrement())
   name       String
   title      String   @default("General Manager")
-  email      String?
+  email      String
   phone      String?
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
@@ -117,7 +117,7 @@ model RepresentativeCompany {
   id          Int      @id @default(autoincrement())
   name        String
   title       String?
-  email       String?
+  email       String
   phone       String?
   companyName String?
   createdAt   DateTime @default(now())

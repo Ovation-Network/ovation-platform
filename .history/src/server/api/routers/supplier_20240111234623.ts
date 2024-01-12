@@ -33,7 +33,6 @@ export const supplierRouter = createTRPCRouter({
       region: z.string().nullable(),
       city: z.string().nullable(),
       state: z.string().nullable(),
-      ovationID: z.string().nullable(),
     }))
     .mutation(async ({ ctx, input }) => {
       // extract session and databse from ctx
@@ -53,7 +52,6 @@ export const supplierRouter = createTRPCRouter({
           region: input.region,
           city: input.city,
           state: input.state,
-          ovationID: input.ovationID,
         }
       });
     }),

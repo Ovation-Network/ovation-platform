@@ -2,6 +2,7 @@ import { z } from "zod";
 
 import {
   createTRPCRouter,
+  protectedProcedure,
   publicProcedure,
 } from "~/server/api/trpc";
 
@@ -33,7 +34,6 @@ export const supplierRouter = createTRPCRouter({
       region: z.string().nullable(),
       city: z.string().nullable(),
       state: z.string().nullable(),
-      ovationID: z.string().nullable(),
     }))
     .mutation(async ({ ctx, input }) => {
       // extract session and databse from ctx
@@ -53,12 +53,11 @@ export const supplierRouter = createTRPCRouter({
           region: input.region,
           city: input.city,
           state: input.state,
-          ovationID: input.ovationID,
         }
       });
     }),
   /* Update a supplier - PROTECTED */
-  updateSupplier: publicProcedure
+  updateSupplier: protectedProcedure
     .input(z.object({
       id: z.number(),
       name: z.string(),
@@ -73,9 +72,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to update a supplier");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to update a supplier");
+      }
 
       // update supplier
       const supplier = await db.supplier.update({
@@ -95,7 +94,7 @@ export const supplierRouter = createTRPCRouter({
       return supplier;
     }),
   /* Delete a supplier - PROTECTED */
-  deleteSupplier: publicProcedure
+  deleteSupplier: protectedProcedure
     .input(z.object({
       id: z.number(),
     }))
@@ -104,9 +103,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to delete a supplier");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to delete a supplier");
+      }
 
       // delete supplier
       const supplier = await db.supplier.delete({
@@ -118,7 +117,7 @@ export const supplierRouter = createTRPCRouter({
       return supplier;
     }),
   /* Add onsite contact - PROTECTED */
-  addOnSiteContact: publicProcedure
+  addOnSiteContact: protectedProcedure
     .input(
       z.object({
         supplierId: z.number(),
@@ -133,9 +132,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a onsite contact");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a onsite contact");
+      }
 
       // add onsite contact
       const onsiteContact = await db.onSiteContact.create({
@@ -155,7 +154,7 @@ export const supplierRouter = createTRPCRouter({
       return onsiteContact;
     }),
   /* Update onsite contact - PROTECTED */
-  updateOnSiteContact: publicProcedure
+  updateOnSiteContact: protectedProcedure
     .input(
       z.object({
         id: z.number(),
@@ -169,9 +168,9 @@ export const supplierRouter = createTRPCRouter({
       // Get database and sessions from ctx
       const { db, session } = ctx;
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to update a onsite contact");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to update a onsite contact");
+      }
 
       // update onsite contact
       const onsiteContact = await db.onSiteContact.update({
@@ -189,7 +188,7 @@ export const supplierRouter = createTRPCRouter({
       return onsiteContact;
     }),
   /* Delete onsite contact - PROTECTED */
-  deleteOnSiteContact: publicProcedure
+  deleteOnSiteContact: protectedProcedure
     .input(z.object({
       id: z.number(),
     }))
@@ -197,9 +196,9 @@ export const supplierRouter = createTRPCRouter({
       // Get database and sessions from ctx
       const { db, session } = ctx;
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to delete a onsite contact");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to delete a onsite contact");
+      }
 
       // delete onsite contact
       const onsiteContact = await db.onSiteContact.delete({
@@ -211,7 +210,7 @@ export const supplierRouter = createTRPCRouter({
       return onsiteContact;
     }),
   /* Add a representative company */
-  addRepresentativeCompany: publicProcedure
+  addRepresentativeCompany: protectedProcedure
     .input(
       z.object({
         supplierId: z.number(),
@@ -227,9 +226,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a representative company");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a representative company");
+      }
 
       // add representative company
       const representativeCompany = await db.representativeCompany.create({
@@ -250,7 +249,7 @@ export const supplierRouter = createTRPCRouter({
       return representativeCompany;
     }),
   /* Update a representative company */
-  updateRepresentativeCompany: publicProcedure
+  updateRepresentativeCompany: protectedProcedure
     .input(
       z.object({
         id: z.number(),
@@ -266,9 +265,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a representative company");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a representative company");
+      }
 
       // add representative company
       const representativeCompany = await db.representativeCompany.update({
@@ -287,7 +286,7 @@ export const supplierRouter = createTRPCRouter({
       return representativeCompany;
     }),
   /* Delete a representative company */
-  deleteRepresentativeCompany: publicProcedure
+  deleteRepresentativeCompany: protectedProcedure
     .input(z.object({
       id: z.number(),
     }))
@@ -296,9 +295,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to delete a representative company");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to delete a representative company");
+      }
 
       // delete representative company
       const representativeCompany = await db.representativeCompany.delete({
@@ -310,7 +309,7 @@ export const supplierRouter = createTRPCRouter({
       return representativeCompany;
     }),
   /* Add a general manager */
-  addGeneralManager: publicProcedure
+  addGeneralManager: protectedProcedure
     .input(
       z.object({
         supplierId: z.number(),
@@ -325,9 +324,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a general manager");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a general manager");
+      }
 
       // add general manager
       const generalManager = await db.generalManager.create({
@@ -347,7 +346,7 @@ export const supplierRouter = createTRPCRouter({
       return generalManager;
     }),
   /* Update a general manager */
-  updateGeneralManager: publicProcedure
+  updateGeneralManager: protectedProcedure
     .input(
       z.object({
         id: z.number(),
@@ -362,9 +361,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a general manager");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a general manager");
+      }
 
       // add general manager
       const generalManager = await db.generalManager.update({
@@ -382,7 +381,7 @@ export const supplierRouter = createTRPCRouter({
       return generalManager;
     }),
   /* Delete a General Manager */
-  deleteGeneralManager: publicProcedure
+  deleteGeneralManager: protectedProcedure
     .input(z.object({
       id: z.number(),
     }))
@@ -391,9 +390,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to delete a general manager");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to delete a general manager");
+      }
 
       // delete general manager
       const generalManager = await db.generalManager.delete({

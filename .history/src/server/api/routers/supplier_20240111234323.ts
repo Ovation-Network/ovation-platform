@@ -3,6 +3,7 @@ import { z } from "zod";
 import {
   createTRPCRouter,
   publicProcedure,
+  publicProcedure,
 } from "~/server/api/trpc";
 
 import type { SupplierType } from "@prisma/client";
@@ -33,7 +34,6 @@ export const supplierRouter = createTRPCRouter({
       region: z.string().nullable(),
       city: z.string().nullable(),
       state: z.string().nullable(),
-      ovationID: z.string().nullable(),
     }))
     .mutation(async ({ ctx, input }) => {
       // extract session and databse from ctx
@@ -53,7 +53,6 @@ export const supplierRouter = createTRPCRouter({
           region: input.region,
           city: input.city,
           state: input.state,
-          ovationID: input.ovationID,
         }
       });
     }),
@@ -73,9 +72,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to update a supplier");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to update a supplier");
+      }
 
       // update supplier
       const supplier = await db.supplier.update({
@@ -104,9 +103,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to delete a supplier");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to delete a supplier");
+      }
 
       // delete supplier
       const supplier = await db.supplier.delete({
@@ -133,9 +132,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a onsite contact");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a onsite contact");
+      }
 
       // add onsite contact
       const onsiteContact = await db.onSiteContact.create({
@@ -169,9 +168,9 @@ export const supplierRouter = createTRPCRouter({
       // Get database and sessions from ctx
       const { db, session } = ctx;
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to update a onsite contact");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to update a onsite contact");
+      }
 
       // update onsite contact
       const onsiteContact = await db.onSiteContact.update({
@@ -197,9 +196,9 @@ export const supplierRouter = createTRPCRouter({
       // Get database and sessions from ctx
       const { db, session } = ctx;
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to delete a onsite contact");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to delete a onsite contact");
+      }
 
       // delete onsite contact
       const onsiteContact = await db.onSiteContact.delete({
@@ -227,9 +226,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a representative company");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a representative company");
+      }
 
       // add representative company
       const representativeCompany = await db.representativeCompany.create({
@@ -266,9 +265,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a representative company");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a representative company");
+      }
 
       // add representative company
       const representativeCompany = await db.representativeCompany.update({
@@ -296,9 +295,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to delete a representative company");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to delete a representative company");
+      }
 
       // delete representative company
       const representativeCompany = await db.representativeCompany.delete({
@@ -325,9 +324,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a general manager");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a general manager");
+      }
 
       // add general manager
       const generalManager = await db.generalManager.create({
@@ -362,9 +361,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to add a general manager");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to add a general manager");
+      }
 
       // add general manager
       const generalManager = await db.generalManager.update({
@@ -391,9 +390,9 @@ export const supplierRouter = createTRPCRouter({
       const { db, session } = ctx;
 
       // check if user is logged in
-      // if (!session.user) {
-        // throw new Error("You must be logged in to delete a general manager");
-      // }
+      if (!session.user) {
+        throw new Error("You must be logged in to delete a general manager");
+      }
 
       // delete general manager
       const generalManager = await db.generalManager.delete({

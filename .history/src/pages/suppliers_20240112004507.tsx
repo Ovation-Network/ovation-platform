@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import Head from "next/head";
 import { api } from "~/utils/api"
-import { supplierDatabaseData, duplicateIDs, suppliersWithNullNameIDs } from "~/utils/data-migration";
+import { supplierDatabaseData, duplicateIDs } from "~/utils/data-migration";
 import type { SupplierType } from "@prisma/client";
 import { useState } from "react";
 
@@ -106,11 +106,9 @@ export default function Suppliers() {
 
     const suppliers = supplierDatabaseData
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 500; i++) {
 
       const supplier = suppliers[i];
-
-      if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { break; }
 
       const supplierData = {
         name: supplier!.supplier_name!,

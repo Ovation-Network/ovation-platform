@@ -43197,13 +43197,125 @@ export const supplierDatabaseData = [
 export const duplicateIDs = ["3nYDGq87TzMRACGUXrSs", "57En2pTXFteEEuUwwqlS", "5TeCgno9a2RPDg9DD1M3", "5gMI22uGt0nbZwbwCE2k", "7358JFU3nWRjuYBN8b5R", "7ewdB8G2K6IYH9NuyCti", "7scfase5HplF1E0I2w7y", "8WprrZSPfAvTjKzxLimo", "8XpSbVnlpQBsritfeH4Q", "8iwgZjhbkBK1tLDPb6qT", "95I4ut2zcTwoeSn2b4nI", "9r20NJ6DBhr1699oSFtG", "APmW1rrWFqdvxLkrj1mS", "Avmd7RIMnM6GpK2TLmIO", "BgRfhUusTPu5t4i2xJMj", "Bnp5CAkl5QHx1xT6ohqB", "BoAWIZ5CsWoXDerD5DR6", "BzdGzimfjCx9a53iBlsf", "CFB3Nce1wJ9dlSiAIDI2", "Cb5h3uCLjoZ32Fu2qPlI", "CdvcP3a0o8m6Lmv1gy3o", "Cl95xNqxycqeXSOYydrm", "DPS6JngQIrdk8g2o01ki", "DnieFRiXv64ZoUWkTGwc", "DoA5tRivI6m0XrvC5LBV", "F10iYycto5ChsSPXY7Ir", "FAOVvYJJz4zzUflqrTe5", "FJaJvXThfBR54QT8HsuC", "FYnQtQRLN6eRPGECz6fz", "FfhFiHTaaPvcOaAD9GZr", "GSA728ZOMnwV8tYAdDWS", "GdWtsEqdF9LhDQVJlQ2h", "H4xcYq5jmICcAT7qvVHa", "I7he7ziYUoO6JA0CQqob", "ICCqsXD53SlKDIA6W3Cx", "IswtY6i2WoZXn3B6qHxp", "JQz0BVEvTnMB2a46yAA7", "JvLOSlu6dsWmkKAfNvXh", "K5cIXJckMe81DtJb2mP8", "KNM9pypTJEsu7pTL71sF", "KOXYsCSPdWwQu5rodVS3", "Kru0dPZ9g7ic2oFJKoEP", "KuvzFhlzdPKwhLIz09RL", "KyzBvZc0szlKV3qGvdRV", "L5k0iVDlWVGvzzEN3m7w", "LAz131veZZb0g85sG4aO", "LOur120rbhuAvlaWd594", "LQeKbbkk8Gpl7LVF75PH", "Lbo4g2QEVYZbpIIC94Kw", "LfzkuolSfPaMwkeesfVU", "Ly0Op9gl7VCTZHbnSVph", "MFmMXuuaQ9UOc0cCPZoz", "MGS7SlprTZOj0n9skxOO", "MH2HtrGCH9Ownq2z6MBR", "MmUWIpRXNSieUK0HnRxb", "MnkhKBYC38xrhJqUTcD4", "MqIJJTt8WYxM8X6WUwsX", "MqNXRWIb8kqAjkPKynPI", "Mtd8hbPpQF7xRHO7aDYB", "N5IjIaec5AYixhfpn4n5", "N5UH4dwfpIb5bO1xWYgN", "NDKcgHkUnFyhuMvqkz7t", "NINmsi0kaAM6vDEg7Te9", "NKs6Su1VP9xaOnu8HjMj", "NMv8ud6fEnQ4UDrWhc7I", "NQFDJL613oEzyyqdoHVZ", "NezY37lhwTos2OKgF8x8", "NkyDEybVYRSHd2qDR7Ts", "NmAf5B2JEAm21MB4SvE2", "Nvzv0BNyMRGernEy8S7k", "NzlIlMUqUc5q38ILczZx", "O4eUcd7RTtaMzMG25HRG", "OPLv4KW7H1XoSJF28FAB", "On8u6ZEVBtx8tfsCYe0z", "OwllvMiiTMNLexRYlYZ0", "P8X0ERk5ECUk9nLIbJYC", "P9z5q15ZddI8JJVxULNi", "PMgZGPVP8aG4Ir32Dcoy", "PRyoMVoZpacdlGN2YHNR", "PYVOEym5nCmXyh6ImsuK", "Pc88E9LKIYdY2w8UfKCi", "PdK7PmCWGHd2z6G6g16k", "PfV2PBc5QXbIz56pdz7U", "Pkl4LltZqzzFeHMEbVt4", "QMN1GlC9Pu6R1QMjwwM9", "QS0zsazeNrq0mzCbP4jI", "Qyzcst5Ei8KQHGifVeaR", "R1UwhXQy7vCP4lRDqgJI", "RCfzeLpWdM6vGuQ4pNVC", "RkxEITMJY9xSGKUanxOp", "RmX1uQzPM2SaOXBzU765", "S1WygCSzcodh81zzDe76", "SCQsDoE9xt4BwMzDV3br", "SZxychp1rmr9D6q1VEwW", "SmGKyQsmWbuBb8fcUd0G", "SnWcLuz7wgpmFSHiljAW", "T4uYpLb0T01CsFyzVbhE", "T7URluv52GYxIQCIQ97N", "T9LTQe7Y40mAIxkHZjhQ", "TUeDkkF0xvUcEi1Yldz4", "TbIyEcR92crUbabSxXXN", "Tk6V8pZEiBFiUmgQp4lR", "Ty1zgEBndUZzq3ZXLHAw", "U1DjPiWjjx2X8mee8JgY", "U1NNFCNaVxfVaVoRAOyb", "U5mnoCa9KFnHKRaiS7sz", "UoJrsncIQaen82nrDSMC", "VAcMlTyS8CJnozWsZqd2", "VVdGBRaVhAShJ64vTLBv", "VpBI0eo28GrYbQurhmBk", "Vt86jfKVjBdD16Tc7sx5", "W0FjtYgBeEiZ7fdUDiZy", "WO9VRN1eZ8GqiMGhVLnR", "WXHKlu5qPBuFH3er8wzf", "Wa3qq6I731xpWHnWyObd", "WfSBibFECG0h8e9aKWaK", "WiWQkQQC6RhsXf6y8qnT", "WvqPdVUaUOEV2IjnyXO7", "X0jrw374nZA5qjpUObjW", "X4O4BIVcgsKoRXFZDGGk", "XGxjj9NezYevFn9WG9hr", "XMflZzUUHF0pqbBJnJsJ", "XQFa5d6Gv2Ba149F8Lla", "XXKDHdlZ3BRmCz7sn7o0", "XXhXrGcCf4AfoTQ8LuY1", "XfBlbof2pWUl60DqEqFv", "Xz538KYBlzbi32TL9wzS", "YUDR7dUmmJUoBtwyBb4z", "YdmQD89G9CmOORtxv7Np", "Yds22nvm80pdgjkODxWS", "YepWahDaCx0ywiD8lD0q", "YozzXzeA4VJrSQM1nRLd", "YpzrLM1r3Td6l11Zbb1C", "YySwitdlpOwcvgV39axA", "Z8PGRTvB2B9zLwqcVsQ1", "ZFQ9KZycub3jLmfj814p", "ZOYV0nk2uygr8Dra6bYG", "ZOvp8q145ovnouJkbaQZ", "ZeUbif8tyCmH5XPw0ZIy", "Zfs60IGtB6bI4KjJ8bfq", "Zlud4Gr2mKoDr9k8wTAQ", "ZuRoTEBSqpGAzC8Wp0pr", "ZwdK8vC7k71ahzuNdGuJ", "ZxyNkfufOVDyIZBJQG7Q", "a5bYnSEmprBb1lheYz3T", "aFCkLqy4MYlMNWJZSPJS", "aIvzBMSlmp4EGBXywxLv", "aSF62J3CCobKEDPdvWGo", "aUowkhHisI3qxBrceGSq", "aZn9A91X1kiRFrQ5dNhp", "akPMvfK1sTWEBjOX2bwx", "auZwwo5k9dQmK1R92eR0", "avDqXMCWpWLq74DK2ZmM", "ayQoeJaiKdpNwtwWBr8N", "b5N8bjGcIKFcH9KjsOhL", "bL85xqY9Sq7SBSlLPgku", "bPIwfRkEI2tTC2guLl0B", "bRFPZU8otoe69nS1Z8rg", "bUep15OsA5IQUlcsDrVf", "bfQ5MbeWJ6IrSFUmwa4j", "biFX0QVEcLZsa2Y1ajqE", "bjhhKsAEloRpKzvYip8z", "bly29E4DpLSPCy9Owt4Z", "cDuPsEgIvT77edHVZJRr", "cEsFa9zuxB62pxNpbl99", "cK2suqZtwtNZRdHud4YP", "cKCIcQEz952qY0zwiFd1", "cKxp8Mu8lVRGeYspmf54", "cY8LLyOTCW6bMEucrxmb", "cjWN5myLRgaPyqvDCxvU", "cxmshqRrwrcqWcqx2kHi", "cz7C5luMZ0qCzXvqaqYJ", "d93ERrGACnfGaRAXxMOD", "dCiLLwowDWYcopUk8ahp", "dPDkieIITEQnXfu9Iuu5", "dRqsBRAjRjKbcWbubUO4", "dW2ixV6FYRpd37inkSmp", "dd71ByDK07iaswRFMy77", "dh7A6LdksPGt0blBOF2z", "dnJsMA29YLXJEICuy8WZ", "dsq4IqDWf9ExHT647mgN", "dsuo16usPEd6pXMTdzeZ", "dzhyoWUjZtQAq2FLkMx5", "e7MuaOLzKk0TL3DMz306", "e8LlBbZFgDgVuSutfag3", "eCnoIEl7M8V9i7fI6Y8E", "eLXoIQVgTSo5KNr8H5eM", "eNoGZp76RFwl1yc3wAhn", "eTZWGSexOtOEb27VvKqX", "ebGmg7LtHLBRpj2ppsFp", "ecCsLeqO2th5bKz7I5mf", "epJv6kcWvcE0TEtKcxeC", "erbar81QIBzLVOdPcfYb", "ezQt0CjBIR36oUxcVYrc", "fWeVFPRrA4BIiFKvMEPR", "fjOl4atEKVoLngjT2bYK", "fkUAT666EBqKcufNWcs2", "flFr9jKUqCYIk5VVapF4", "fvJAGBxeEweb1kKqq1YK", "gPO6YEypaCydsxRp9tky", "gjSdXrUcQnopM8fZsao0", "gmLKB2snsPwZznoqD47P", "grnlcNvGSiyhi3JsWAWI", "gxNCWTy5IXyPsY5S70v5", "gzFGrasUJF6BVwJXl3fN", "h2D96sAE5YBsvnjxeSDr", "hHDfmOdl7rQdwFfPi1ow", "hcHnlkswpYBXTMBZzehc", "hfTG4IVpjZ0jti9SMEWe", "hjjY5ZbH857sGFHkWYfq", "hmeN7EsnBmFTcxJcqq1I", "iXx6m4YWaH39iPhL6Yvi", "iZQRjacd6WlpC02GlXQk", "ilOHutUqthK5YbblG6Jg", "iwTzeWo8XINTeVUXMR36", "jFuFbWPIOe4r5ozPR77M", "jWyCaTGNNBTXs1QvUlE8", "jXe0av4f8eWLrlmZUVnE", "jlI8mx0ALejwyKG46T4i", "jlx9bWteKH4WuZxx7cez", "jnq7bQNst2PO1HoECqSX", "k8Rn8Lx85fLxHe0T25jG", "kAmpwHBaPZymHGA6Obur", "kGxf6P46rhmFNU1iovqa", "kJD4IBULFSCwuywF3jUm", "kNPQ1kmjy9w8mF0VinyE", "kbllhTI06V3olrJXl4Oc", "khAx03354h4DckTJFBBd", "kmjq289br7bCDKwcvIrU", "kq1uHKaI7sVoV9zI5yQj", "kyVDFRW62FiO2SsHdHaX", "lEfg0fdA5RiXkzGpOYz5", "lLesPwCwiXXbgHckXyzl", "lNJbc1yrhtHoVJKkDFGA", "lPpeagpOdPLviel4nTey", "lQlWuFoYfm9xx4b8RYO9", "lRSXrqCvg6Hwn68FMss0", "lSTWWkFVfQ0DaFWmsFWF", "lSdso6F5arbok5cjrTi2", "lZmcWcw8q6ZUAfrKjQzC", "larxXjJvvfrtuZ8JuRqH", "lgOfvG3FPMtsfsRxLPMP", "lhtvoEklzyndsnnbret4", "ltDsfBopSCnGMPrdswJN", "m0FqlhN0UDPHyxINKN1b", "m54kKtvGk3y0PdRw0Rmx", "m78FiJxJtZWDdQ38BDuv", "mE4OWPJkWhnTGuatB0dE", "mGgiFRavjVAijW0afOO5", "mJdU39R76ZafESyDH2j5", "mgKrM0IZGligXCYTOjqG", "mjhKDXOCiRa2xbRr21RD", "mldaPilXSuN1WnACDaox", "mv6TzV6bIeD7Km7J0MV6", "n3kjYXpY10MmKRuXu4ps", "n7BFoPukBNLymNU26Ioa", "nEtwYeBHTaiTqWXQIxEI", "nLfm6zH3sG3ggGupqsJ8", "nTEqYPhfDNKiYMQymmDb", "nUTR3YBhhf72rqrin4pP", "nbrokFIHcw41FBGtSpa3", "ntCBHgbYuWmyYsg9E7Ox", "nvKG9QleSyGdxrodBuaQ", "nxeF7duZASU7Th764LSA", "nzHViuPCbgA8BiwUfz7L", "o74NSRSUy4F2dG7anWdI", "o97EQSnAXc4WltrJZpvc", "oDlz9IkXJCVDGgoYouN7", "oHJTZr0dRceds5K0FGO1", "oKO2mcpdwsTNSCLvAGYL", "oZmVFUzbLawgMD0uDaT6", "obzCiBwRgt0idFWW1x5E", "ofnTuXLClZWgghTmMKIr", "oyyZAirmiux9BWXDns9C", "ozYSv3ua6acbk2MQc5ic", "p6tZfgAL8X8vw0ERLJrF", "pC3Z5kY09Ub4WUIFxAc7", "pGLzwWJYyLndFJZtucBW", "pOEC1IqOBqFqukTNHAtE", "pZG4MhpK2JaKips7Rjck", "peDfmiv4mvjZzBJHDX3G", "pq2F7GEApXh30QSRpM1G", "prHMVnckgl0pIFwrp1on", "q004ngDMWu0026HAnvgP", "q50Sdrl1BZJjUsWRLmfJ", "q9sLURzeNfE7BAdnCieh", "qBXTQ7rj1cIe7L5YD9hj", "qBo9fJ9wC6HwNnWrzOZm", "qIvHCwqLUs9h16dJScpK", "qP9XAtjErdkckXtRFsdr", "qcovSMBpQcsDWJmDUTTG", "qhQoFfgTOl7qDNV7ax4y", "qj2Xkr6VfqZlkVOQeCeX", "ql7Q0qIDSiHlLVyARysb", "qvrvsdBpDOJh2m8wxAV5", "qx4kQPbuXBqt20ZntjFE", "qxE6O3nn653xJRDLmqyk", "r2JI5v2i8lFvzoKsVpXe", "r47ZcWgauTLRWtW2xCLX", "rAeEZNl2nTbhjQzO13MA", "rBRQoL0vfUmSRKGNUiJE", "rCOElEju0otcEvfTIOYO", "rEHCKpxJ0A61LwwqXcJw", "rESh5cCGjQSdOn2tRzNL", "rFLpSs2d2FQQJZSZLv86", "rMTyrG3LQuCuaMqwn3Tl", "rNoeUNNw2kNgzmRFObzv", "rSSeAABpN7N5WTtI7gQc", "rZ8hzwpqPtvo46bZHXQJ", "rjhT6soSZZnqmVpEtHZr", "rkZzCRcBKHeUoMSC8pR6", "rlbWEPWFP7w3lFmtJKGf", "rmV2NpefUuYNNmogki2a", "roDfDgMhB1uf2t3fflKp", "rqY3RrxfqoRQKSHJ1tPv", "rwf33vLRsJHp6ISunvcn", "sC5cD9tuPAhpsSOiJHaT", "sCGlMt4XQLaTfa2dJrox", "sCO97d3znO57yxDoFQGc", "sDgDFkTuKx8v0pE3y3mM", "sHOUAlL7PjgvlKEiqDIu", "sIJUXr5GSvfCpuOYCsJ7", "sLcxptnMy3iOXvdjxUsp", "sVSDKppOj8Ur1hZ6z3V7", "sVhAw4ikXaTxx2623XfS", "sXCOvLGNKvsGMJUpM2N3", "sgVHIv1YUo1VsyWAT3BI", "shX4dwgmuhi32Fo2CLCz", "sqioBVE4fvtNTq4RLkQX", "sszz3Mmn2aHx5hNBFqzC", "t7VMrZNeJeu3B6saF5qb", "tEr6XaUxenhWoIzURyKY", "tIpwHqXvRALDKmRdw6Jv", "tPS8LBPQ8A5DazKFLfM4", "tVByxmcroFNuRrlMyvtd", "tXvfYac4IFnYVQfXZgLF", "tgzjsi6sBHl2DA0ztz9P", "tpP30NYRq1p8tDQMpOZV", "tryTGsvngvOqHgXi3tBj", "ts9GnF7SPVCYRPQODnJs", "twjuBdDQ0trp73zjMuiQ", "twmVMG0Ee4VtQIFxdJGl", "u5euQknG4NrXQmr6KEZc", "u8SsazgOBt5ApApnsoWQ", "uJYeJvz3DK3j4YA4vdrU", "ubBlXHIEqZm7EIhz24vD", "uozKWEqjK9LW259srWlK", "utFfRTQIuwQkZcyd67ZV", "uvepvgmAYi1xRnLS4cO8", "uwcooVgo9BuCHHfrhq5e", "v0HTMqE4iDV8SQjP1kOI", "v1SsrQ8RboEKKpRgRwug", "v7dNQSsFdKGeONF0GMTm", "vEMPVmOmeJCgq3HK5ZPU", "vHiVNUxpnTTifbAJYtQz", "vO16ZbJjl8s0OdtoDFnL", "vQ8ue0pSicgSODHCVsae", "vVN9NcATqwQ03LGbK0Nj", "vXN1zZ6YQk1SK56vzHGb", "va0xjcl1syeBseBl24bU", "vb4sNh0vWm5uOzYbbeHN", "vjkXkyYjnZ2vAfEKsmGu", "vmEqkT6VsN3q0rh32eAq", "voxmAU6zmKI86w1JjUSa", "w04EEebhe7QNUfyIhIPU", "w4l2M3eyxH9SPpguZPmf", "w7wgF2eUpCr0HpNDh5Y9", "w99R2h56wProZgVSV7iJ", "wBCkPfOaGf62hhuNpDxM", "wBKohNknVepMvuN1YZat", "wBcGS8IzN4PYOOh1WyBX", "wEuZGamJkgFYXOvOxK6s", "wFkkKfGoaPd5iKZYzhiQ", "wOR3tdOgQX2BqGeIS1Rf", "wQwIDnCfW2o8R0rxELy3", "wX7Os6mghH1zPGW5p8Cr", "wd1Jbb9Q16yYX3x9hp7s", "wrQDgP4GEWeCmI1l40Nw", "wtuEdIYIsQmakXtSyiPG", "wtupoQux9bR6M2d0AEpj", "wySiEZNO1SJ0WVnGt7K6", "x2hOgcOeBPmtmSXinaXy", "x7fb9dhirMEmMDhmBqpL", "xQiMrvMSTGbRYKUbI9k2", "xVmIW2gGX0UskIAccxLZ", "xWQJTA1GFhl39MQw7xPE", "xXHcbo7XIe1LJGtXLOFl", "xc8CDLvzSMo6Khb3RqUS", "xd7F4v7TtMFI16081h8A", "xe52Ue7nosB1uEBPJlU7", "xgDhMU59I6f3UQqxHKLk", "xmuexDTOwVx4aLkx2UzC", "y7Z5466SIiJSwQ2eHFq5", "yApuMvS4Ca3CJPVT79Z7", "yE8YzNlm2Lq3dJj5c9oh", "yO5EBRTuGbEMAwwzAnYd", "yY27QtHdquuNC9ky24Xu", "yenKhr8ouhWcAgG7mqDO", "yj9ydGY9jLRhXXuQe3QP", "ymz0FkZYfGmComJZgAuP", "yr5WWao7MH2mB7m1aI8k", "yufB2hMBPCPAZm4ME7Xt", "ywDq4Xt1uvBILSKk2VAd", "ywuJOx8LVyncpyt03esi", "z5Morhx7SAGvXcVsqS2U", "zA5TPdw562d761XALYYN", "zIrWiZbx5w7hYO7kuzaA", "zeinB12GV6j79m2Ktmhp", "zekjU906uzObFwU93i0W", "zhbAHZ51lEPRfIPUzYDB", "zsbVBQQH6ucS1JDyLeDK"]
 
 export const suppliersWithNullNameIDs = [
-
-    "4yRmUyLJfgJwoX7T06DT",
-"9XGXltSQvUShAEz1YLBI",
-"BwEtveQdbtet5B90WF6d",
-"aZn9A91X1kiRFrQ5dNhp",
-"c17X5OIN4ng7qUoOnRNB",
-"jdZ6LsqMM7Q3HDfNdE6b",
-"nzHViuPCbgA8BiwUfz7L",
-"wtuEdIYIsQmakXtSyiPG",
+    {
+        "id": "4yRmUyLJfgJwoX7T06DT",
+        "country": "United States of America (USA)",
+        "state": "NY",
+        "representative_company": null,
+        "supplier_name": null,
+        "hotel_representative": {
+            "name": "DeAngelis, Suzi",
+            "email": "suzi@walkerhotels.com",
+            "phone": "+1-973-477-1738",
+            "title": null
+        },
+        "supplier_type": "Hotel",
+        "city": "New York"
+    },
+    {
+        "id": "9XGXltSQvUShAEz1YLBI",
+        "supplier_name": null,
+        "city": null,
+        "supplier_type": "DMC",
+        "state": null,
+        "hotel_representative": {
+            "title": null,
+            "phone": "347 558 0793",
+            "name": "Costa , Marisa ",
+            "email": "marisa@amikotravel.com"
+        },
+        "representative_company": null,
+        "country": "United States of America (USA)"
+    },
+    {
+        "id": "BwEtveQdbtet5B90WF6d",
+        "hotel_representative": {
+            "email": "c.malimpensa@chevalblanc.com",
+            "title": null,
+            "name": "Malimpensa, Camille",
+            "phone": "+590-590-27-61-81"
+        },
+        "state": null,
+        "city": null,
+        "country": "Saint-BarthÃ©lemy",
+        "supplier_type": "Hotel",
+        "representative_company": null,
+        "supplier_name": null
+    },
+    {
+        "id": "aZn9A91X1kiRFrQ5dNhp",
+        "hotel_representative": {
+            "phone": "+590-590-27-61-81",
+            "name": "Malimpensa, Camille",
+            "title": null,
+            "email": "c.malimpensa@chevalblanc.com"
+        },
+        "state": null,
+        "country": "Saint-BarthÃ©lemy",
+        "supplier_name": null,
+        "city": null,
+        "supplier_type": "Hotel",
+        "representative_company": null
+    },
+    {
+        "id": "c17X5OIN4ng7qUoOnRNB",
+        "country": "Italy",
+        "hotel_representative": null,
+        "city": "Capri",
+        "supplier_name": null,
+        "state": null,
+        "representative_company": {
+            "email": "marketing@villamarinacapri.com",
+            "title": null,
+            "name": "Desiderio, Antonio",
+            "phone": "+39 3398628362",
+            "company": "Legend - Preferred Hotels & Resorts"
+        },
+        "supplier_type": "Hotel"
+    },
+    {
+        "id": "jdZ6LsqMM7Q3HDfNdE6b",
+        "supplier_type": "Hotel",
+        "state": null,
+        "supplier_name": null,
+        "representative_company": null,
+        "city": null,
+        "country": "Turkey",
+        "hotel_representative": {
+            "phone": "+90 212 259 2969 ",
+            "email": "Ralph.radtke@kempinski.com",
+            "title": null,
+            "name": "Radtke, Ralph "
+        }
+    },
+    {
+        "id": "nzHViuPCbgA8BiwUfz7L",
+        "city": null,
+        "state": null,
+        "supplier_type": "Hotel",
+        "representative_company": null,
+        "hotel_representative": {
+            "name": "Martin, Arnaud",
+            "phone": "+33-6-87-84-09-63",
+            "title": null,
+            "email": "A.martin@LVMH.FR"
+        },
+        "country": "Saint-BarthÃ©lemy",
+        "supplier_name": null
+    },
+    {
+        "id": "wtuEdIYIsQmakXtSyiPG",
+        "state": null,
+        "representative_company": null,
+        "city": null,
+        "country": "Saint-BarthÃ©lemy",
+        "hotel_representative": {
+            "title": null,
+            "email": "A.martin@LVMH.FR",
+            "name": "Martin, Arnaud",
+            "phone": "+33-6-87-84-09-63"
+        },
+        "supplier_type": "Hotel",
+        "supplier_name": null
+    }
 ]

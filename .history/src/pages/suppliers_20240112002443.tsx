@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import Head from "next/head";
 import { api } from "~/utils/api"
-import { supplierDatabaseData, duplicateIDs, suppliersWithNullNameIDs } from "~/utils/data-migration";
+import { supplierDatabaseData, duplicateIDs } from "~/utils/data-migration";
 import type { SupplierType } from "@prisma/client";
 import { useState } from "react";
 
@@ -93,7 +93,7 @@ export default function Suppliers() {
     }
   }
 
-  const addSupplier = async (contact: { type: "DMC" | "HOTEL" | "CRUISE" | "RAIL" | "TRAINS" | "REPRESENTATION_COMPANY" | "AIR" | "TOUR_OPERATOR" | "CAR_RENTAL" | "TRAVEL_INSURANCE" | "CHAUFFEUR_SERVICES" | "OTHER"; name: string; country: string | null; region: string | null; city: string | null; state: string | null; ovationID: string | null}) => {
+  const addSupplier = async (contact: { type: "DMC" | "HOTEL" | "CRUISE" | "RAIL" | "TRAINS" | "REPRESENTATION_COMPANY" | "AIR" | "TOUR_OPERATOR" | "CAR_RENTAL" | "TRAVEL_INSURANCE" | "CHAUFFEUR_SERVICES" | "OTHER"; name: string; country: string | null; region: string | null; city: string | null; state: string | null; }) => {
     try {
       createSupplierAPI.mutate(contact)
     } catch (error) {
@@ -106,14 +106,12 @@ export default function Suppliers() {
 
     const suppliers = supplierDatabaseData
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < suppliers.length; i++) {
 
       const supplier = suppliers[i];
 
-      if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { break; }
-
       const supplierData = {
-        name: supplier!.supplier_name!,
+        name: supplier.supplier_name,
         type: generateSupplierTypeENUM(supplier!.supplier_type) as SupplierType,
         region: null,
         country: supplier!.country,
@@ -122,9 +120,7 @@ export default function Suppliers() {
         ovationID: supplier!.id,
       }
       await addSupplier(supplierData)
-
-      console.log(`Successfully created supplier with id ${supplierID} in database`)
-
+  
       /* 
       // Create the onsite contact                            if it exists on the data
       if (supplier.hotel_representative !== null) {
@@ -181,8 +177,12 @@ export default function Suppliers() {
         }
       } */
       
-      
+      console.log(`Successfully created supplier with id ${supplierID} in database`)
     }
+
+    suppliers.forEach((supplier) => {
+      // create the supplierData object
+    })
   }
 
 

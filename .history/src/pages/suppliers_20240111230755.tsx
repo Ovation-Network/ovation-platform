@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/prefer-for-of */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import Head from "next/head";
 import { api } from "~/utils/api"
-import { supplierDatabaseData, duplicateIDs, suppliersWithNullNameIDs } from "~/utils/data-migration";
+import { supplierDatabaseData, duplicateIDs } from "~/utils/data-migration";
 import type { SupplierType } from "@prisma/client";
 import { useState } from "react";
 
@@ -93,43 +91,36 @@ export default function Suppliers() {
     }
   }
 
-  const addSupplier = async (contact: { type: "DMC" | "HOTEL" | "CRUISE" | "RAIL" | "TRAINS" | "REPRESENTATION_COMPANY" | "AIR" | "TOUR_OPERATOR" | "CAR_RENTAL" | "TRAVEL_INSURANCE" | "CHAUFFEUR_SERVICES" | "OTHER"; name: string; country: string | null; region: string | null; city: string | null; state: string | null; ovationID: string | null}) => {
-    try {
-      createSupplierAPI.mutate(contact)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  async function migrateSuppliers(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    e.preventDefault()
-
+  async function migrateSuppliers() {
     const suppliers = supplierDatabaseData
 
-    for (let i = 0; i < 100; i++) {
-
-      const supplier = suppliers[i];
-
-      if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { break; }
-
+    suppliers.forEach((supplier) => {
+      // create the supplierData object
       const supplierData = {
-        name: supplier!.supplier_name!,
-        type: generateSupplierTypeENUM(supplier!.supplier_type) as SupplierType,
+        name: supplier.supplier_name!,
+        type: generateSupplierTypeENUM(supplier.supplier_type) as SupplierType,
         region: null,
-        country: supplier!.country,
-        city: supplier!.city,
-        state: supplier!.state,
-        ovationID: supplier!.id,
+        country: supplier.country,
+        city: supplier.city,
+        state: supplier.state,
+        ovationID: supplier.id,
       }
-      await addSupplier(supplierData)
+      // Try to create the supplier
+      try {
+        const supplierCreated = createSupplierAPI.mutate(supplierData)
+      } catch (error) {
+        console.log(error)
+      }
 
-      console.log(`Successfully created supplier with id ${supplierID} in database`)
-
-      /* 
-      // Create the onsite contact                            if it exists on the data
+      /*   "hotel_representative": {
+            "title": null,
+            "email": "s.baratelli@edenroccapcana.com ",
+            "name": " Baratelli, Stefano ",
+            "phone": "+1 809 469-7469"
+        },  */
+      // Create the onsite contact if it exists on the data
       if (supplier.hotel_representative !== null) {
-        try {                           
-          
+        try {
           const onSiteContactData = {
             name: supplier.hotel_representative.name,
             email: supplier.hotel_representative.email,
@@ -137,52 +128,15 @@ export default function Suppliers() {
             title: supplier.hotel_representative.title,
             supplierId: supplierID,
           }
-  
-          createOnsiteContactAPI.mutate(onSiteContactData)
+
+          const onSiteContactCreated = createOnsiteContactAPI.mutate(onSiteContactData)
         } catch (error) {
           console.log(error)
         }
       }
-  
-      // Create the general manager contact if it exists on the data
-      if (supplier.general_manager !== null && supplier.general_manager !== undefined) {
-        try {
-          
-          const generalManagerData = {
-            name: supplier.general_manager.name,
-            email: supplier.general_manager.email,
-            phone: supplier.general_manager.phone,
-            title: supplier.general_manager.title,
-            supplierId: supplierID,
-          }
-  
-          createGMContactAPI.mutate(generalManagerData)
-        } catch (error) {
-          console.log(error)
-        }
-      }
-  
-      // Create the rep company contact if it exists on the data
-      if (supplier.representative_company !== null) {
-        try {
-          
-          const repCompanyData = {
-            name: supplier.representative_company.name,
-            email: supplier.representative_company.email,
-            phone: supplier.representative_company.phone,
-            title: supplier.representative_company.title,
-            companyName: supplier.representative_company.company,
-            supplierId: supplierID,
-          }
-  
-          createRepContactAPI.mutate(repCompanyData)
-        } catch (error) {
-          console.log(error)
-        }
-      } */
       
-      
-    }
+
+    })
   }
 
 
@@ -200,14 +154,6 @@ export default function Suppliers() {
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             {/* CONTENT FOR LINKS TO THE PUBLIC LINK FOR OVATION PAGES */}
-            <div className="flex flex-col items-center justify-center gap-4 p-8 bg-[#ffffff] rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold tracking-tight text-[hsl(195,100%,71%)] sm:text-[2.5rem]">
-                Migrate Suppliers
-              </h2>
-              <button onClick={async (e) => await migrateSuppliers(e)} className="px-4 py-2 text-lg font-bold tracking-tight text-white bg-[hsl(195,100%,71%)] rounded-lg shadow-lg">
-                Migrate Suppliers
-              </button>
-            </div>
           </div>
         </div>
       </main>
