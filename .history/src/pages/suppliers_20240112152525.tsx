@@ -83,7 +83,7 @@ export default function Suppliers() {
     return
   }
 
-  const addContact = async (contact: { name: string; email: string | null; phone: string | null; title: string | null; supplierId: number; ovationID: string }) => {
+  const addContact = async (contact: { name: string; email: string | null; phone: string | null; title: string | null; supplierId: number }) => {
     try {
       createOnsiteContactAPI.mutate(contact)
     } catch (error) {
@@ -93,7 +93,7 @@ export default function Suppliers() {
     return
   }
 
-  const addGeneralManager = async (contact: { name: string; email: string | null; phone: string | null; title: string; supplierId: number; ovationID: string }) => {
+  const addGeneralManager = async (contact: { name: string; email: string | null; phone: string | null; title: string; supplierId: number }) => {
     try {
       createGMContactAPI.mutate(contact)
     } catch (error) {
@@ -103,7 +103,7 @@ export default function Suppliers() {
     return
   }
 
-  const addRepComapany = async (contact: { name: string; email: string | null; phone: string | null; title: string | null; companyName: string | null; supplierId: number; ovationID: string }) => {
+  const addRepComapany = async (contact: { name: string; email: string | null; phone: string | null; title: string | null; companyName: string | null; supplierId: number }) => {
     try {
       createRepContactAPI.mutate(contact)
     } catch (error) {
@@ -116,20 +116,17 @@ export default function Suppliers() {
   async function migrateSuppliers(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault()
 
-    console.log('CLICKED')
-
     const suppliers = supplierDatabaseData
 
-    const id = 2200
+    for (let i = 1469; i <= 1600 ; i++) {
 
-    const supplier = suppliers[id];
+      console.log(`Entering loop ${i}`)
 
-    if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { 
-      console.log("we dont want this");
-      return 
-    } // this is to skip the suppliers that have null names
+      const supplier = suppliers[i];
 
-      /* const supplierData = {
+      if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { break; } // this is to skip the suppliers that have null names
+
+      const supplierData = {
         name: supplier!.supplier_name!,
         type: generateSupplierTypeENUM(supplier!.supplier_type) as SupplierType,
         region: null,
@@ -138,8 +135,8 @@ export default function Suppliers() {
         state: supplier!.state,
         ovationID: supplier!.id,
       }
-      await addSupplier(supplierData) */
-      
+      await addSupplier(supplierData)
+      /* 
       // Create the onsite contact                            if it exists on the data
       if (supplier?.hotel_representative !== null) {
         try {                           
@@ -149,10 +146,9 @@ export default function Suppliers() {
             email: supplier!.hotel_representative.email,
             phone: supplier!.hotel_representative.phone,
             title: supplier!.hotel_representative.title,
-            supplierId: id,
-            ovationID: supplier!.id,
+            supplierId: i+1,
           }
-
+          console.log(`Trying to create onsite contact in loop ${i} with supplierId as ${i+1}`)
   
           await addContact(onSiteContactData)
         } catch (error) {
@@ -169,10 +165,9 @@ export default function Suppliers() {
             email: supplier.general_manager.email ?? null,
             phone: supplier.general_manager.phone ?? null,
             title: supplier.general_manager.title ?? 'General Manager',
-            supplierId: id,
-            ovationID: supplier.id,
+            supplierId: i+1,
           }
-
+          console.log(`Trying to create GM contact in loop ${i} with supplierID as ${i+1}`)
           await addGeneralManager(generalManagerData)
         } catch (error) {
           console.log(error)
@@ -189,15 +184,17 @@ export default function Suppliers() {
             phone: supplier.representative_company.phone ?? null,
             title: supplier.representative_company.title,
             companyName: supplier?.representative_company.company,
-            supplierId: id,
-            ovationID: supplier.id,
+            supplierId: i+1,
           }
-
+          console.log(`Trying to create REP contact in loop ${i} with supplierID as ${i+1}`)
           await addRepComapany(repCompanyData)
         } catch (error) {
           console.log(error)
         }
       }
+       */
+      
+    }
   }
 
 

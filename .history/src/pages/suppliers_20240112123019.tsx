@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function Suppliers() {
 
-  const [supplierID, setSupplierID] = useState<number>(1)
+  const [supplierID, setSupplierID] = useState<number>(0)
 
   /* Here we will write the functions to migrate current existing into the new Supabase database
     * 1. Create a function to use api to create a new supplier
@@ -21,7 +21,9 @@ export default function Suppliers() {
 
   const createSupplierAPI = api.supplier.addSupplier.useMutation({
     onSuccess: (supplier) => {
-      console.log("Supplier created", supplier)
+      console.log("Supplier created", supplier)  
+      
+      setSupplierID((oldID) => supplier.id)
     }
   })
 
@@ -43,6 +45,24 @@ export default function Suppliers() {
     }
   })
 
+  const supplierTypes =  [
+    "Hotel",
+    "Hotel ",
+    "DMC",
+    "Tour Operator",
+    "Air",
+    "Cruise",
+    "Representation Company",
+    "Car Rental",
+    "Insurance",
+    "Chauffeur Services",
+    "Chauffered",
+    "Chauffered ",
+    "Trains",
+    "Rails",
+    null,
+  ];
+
   // function that will generate the Supplier ENUM for type
   function generateSupplierTypeENUM(type: string | null) {
     switch (type) {
@@ -61,7 +81,7 @@ export default function Suppliers() {
       case "Car Rental":
         return "CAR_RENTAL"
       case "Insurance":
-        return "TRAVEL_INSURANCE"
+        return "INSURANCE"
       case "Chauffeur Services" || "Chauffered" || "Chauffered ":
         return "CHAUFFEUR_SERVICES"
       case "Trains" || "Rails":
@@ -73,63 +93,26 @@ export default function Suppliers() {
     }
   }
 
-  const addSupplier = async (supplier: { type: "DMC" | "HOTEL" | "CRUISE" | "RAIL" | "TRAINS" | "REPRESENTATION_COMPANY" | "AIR" | "TOUR_OPERATOR" | "CAR_RENTAL" | "TRAVEL_INSURANCE" | "CHAUFFEUR_SERVICES" | "OTHER"; name: string; country: string | null; region: string | null; city: string | null; state: string | null; ovationID: string | null}) => {
+  const addSupplier = async (contact: { type: "DMC" | "HOTEL" | "CRUISE" | "RAIL" | "TRAINS" | "REPRESENTATION_COMPANY" | "AIR" | "TOUR_OPERATOR" | "CAR_RENTAL" | "TRAVEL_INSURANCE" | "CHAUFFEUR_SERVICES" | "OTHER"; name: string; country: string | null; region: string | null; city: string | null; state: string | null; ovationID: string | null}) => {
     try {
-      createSupplierAPI.mutate(supplier)
+      createSupplierAPI.mutate(contact)
     } catch (error) {
       console.log(error)
     }
-
-    return
-  }
-
-  const addContact = async (contact: { name: string; email: string | null; phone: string | null; title: string | null; supplierId: number; ovationID: string }) => {
-    try {
-      createOnsiteContactAPI.mutate(contact)
-    } catch (error) {
-      console.log(error)
-    }
-
-    return
-  }
-
-  const addGeneralManager = async (contact: { name: string; email: string | null; phone: string | null; title: string; supplierId: number; ovationID: string }) => {
-    try {
-      createGMContactAPI.mutate(contact)
-    } catch (error) {
-      console.log(error)
-    }
-
-    return
-  }
-
-  const addRepComapany = async (contact: { name: string; email: string | null; phone: string | null; title: string | null; companyName: string | null; supplierId: number; ovationID: string }) => {
-    try {
-      createRepContactAPI.mutate(contact)
-    } catch (error) {
-      console.log(error)
-    }
-
-    return
   }
 
   async function migrateSuppliers(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault()
 
-    console.log('CLICKED')
-
     const suppliers = supplierDatabaseData
 
-    const id = 2200
+    for (let i = 0; i <= 50; i++) {
 
-    const supplier = suppliers[id];
+      const supplier = suppliers[i];
 
-    if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { 
-      console.log("we dont want this");
-      return 
-    } // this is to skip the suppliers that have null names
+      if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { break; } // this is to skip the suppliers that have null names
 
-      /* const supplierData = {
+      const supplierData = {
         name: supplier!.supplier_name!,
         type: generateSupplierTypeENUM(supplier!.supplier_type) as SupplierType,
         region: null,
@@ -138,7 +121,10 @@ export default function Suppliers() {
         state: supplier!.state,
         ovationID: supplier!.id,
       }
-      await addSupplier(supplierData) */
+      await addSupplier(supplierData)
+
+      console.log(`Successfully created supplier with id ${supplierID} in database`)
+
       
       // Create the onsite contact                            if it exists on the data
       if (supplier?.hotel_representative !== null) {
@@ -149,12 +135,10 @@ export default function Suppliers() {
             email: supplier!.hotel_representative.email,
             phone: supplier!.hotel_representative.phone,
             title: supplier!.hotel_representative.title,
-            supplierId: id,
-            ovationID: supplier!.id,
+            supplierId: supplierID,
           }
-
   
-          await addContact(onSiteContactData)
+          createOnsiteContactAPI.mutate(onSiteContactData)
         } catch (error) {
           console.log(error)
         }
@@ -169,11 +153,10 @@ export default function Suppliers() {
             email: supplier.general_manager.email ?? null,
             phone: supplier.general_manager.phone ?? null,
             title: supplier.general_manager.title ?? 'General Manager',
-            supplierId: id,
-            ovationID: supplier.id,
+            supplierId: supplierID,
           }
-
-          await addGeneralManager(generalManagerData)
+  
+          createGMContactAPI.mutate(generalManagerData)
         } catch (error) {
           console.log(error)
         }
@@ -189,15 +172,17 @@ export default function Suppliers() {
             phone: supplier.representative_company.phone ?? null,
             title: supplier.representative_company.title,
             companyName: supplier?.representative_company.company,
-            supplierId: id,
-            ovationID: supplier.id,
+            supplierId: supplierID,
           }
-
-          await addRepComapany(repCompanyData)
+  
+          createRepContactAPI.mutate(repCompanyData)
         } catch (error) {
           console.log(error)
         }
       }
+      
+      
+    }
   }
 
 

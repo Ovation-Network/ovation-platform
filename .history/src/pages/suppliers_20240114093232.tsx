@@ -116,18 +116,13 @@ export default function Suppliers() {
   async function migrateSuppliers(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault()
 
-    console.log('CLICKED')
-
     const suppliers = supplierDatabaseData
 
-    const id = 2200
+    const id = 200
 
     const supplier = suppliers[id];
 
-    if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { 
-      console.log("we dont want this");
-      return 
-    } // this is to skip the suppliers that have null names
+    if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { return; } // this is to skip the suppliers that have null names
 
       /* const supplierData = {
         name: supplier!.supplier_name!,

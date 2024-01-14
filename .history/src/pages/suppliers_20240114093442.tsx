@@ -120,7 +120,7 @@ export default function Suppliers() {
 
     const suppliers = supplierDatabaseData
 
-    const id = 2200
+    const id = 600
 
     const supplier = suppliers[id];
 

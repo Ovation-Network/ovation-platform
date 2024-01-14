@@ -61,7 +61,7 @@ export default function Suppliers() {
       case "Car Rental":
         return "CAR_RENTAL"
       case "Insurance":
-        return "TRAVEL_INSURANCE"
+        return "INSURANCE"
       case "Chauffeur Services" || "Chauffered" || "Chauffered ":
         return "CHAUFFEUR_SERVICES"
       case "Trains" || "Rails":
@@ -73,39 +73,13 @@ export default function Suppliers() {
     }
   }
 
-  const addSupplier = async (supplier: { type: "DMC" | "HOTEL" | "CRUISE" | "RAIL" | "TRAINS" | "REPRESENTATION_COMPANY" | "AIR" | "TOUR_OPERATOR" | "CAR_RENTAL" | "TRAVEL_INSURANCE" | "CHAUFFEUR_SERVICES" | "OTHER"; name: string; country: string | null; region: string | null; city: string | null; state: string | null; ovationID: string | null}) => {
+  const addSupplier = async (contact: { type: "DMC" | "HOTEL" | "CRUISE" | "RAIL" | "TRAINS" | "REPRESENTATION_COMPANY" | "AIR" | "TOUR_OPERATOR" | "CAR_RENTAL" | "TRAVEL_INSURANCE" | "CHAUFFEUR_SERVICES" | "OTHER"; name: string; country: string | null; region: string | null; city: string | null; state: string | null; ovationID: string | null}) => {
     try {
-      createSupplierAPI.mutate(supplier)
-    } catch (error) {
-      console.log(error)
-    }
+      const supplier = createSupplierAPI.mutate(contact)
 
-    return
-  }
+      setSupplierID(supplier?.id as number)
 
-  const addContact = async (contact: { name: string; email: string | null; phone: string | null; title: string | null; supplierId: number; ovationID: string }) => {
-    try {
-      createOnsiteContactAPI.mutate(contact)
-    } catch (error) {
-      console.log(error)
-    }
-
-    return
-  }
-
-  const addGeneralManager = async (contact: { name: string; email: string | null; phone: string | null; title: string; supplierId: number; ovationID: string }) => {
-    try {
-      createGMContactAPI.mutate(contact)
-    } catch (error) {
-      console.log(error)
-    }
-
-    return
-  }
-
-  const addRepComapany = async (contact: { name: string; email: string | null; phone: string | null; title: string | null; companyName: string | null; supplierId: number; ovationID: string }) => {
-    try {
-      createRepContactAPI.mutate(contact)
+      console.log(`updated supplierID via setStateAction to ${supplier?.id}`)
     } catch (error) {
       console.log(error)
     }
@@ -116,20 +90,17 @@ export default function Suppliers() {
   async function migrateSuppliers(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault()
 
-    console.log('CLICKED')
-
     const suppliers = supplierDatabaseData
 
-    const id = 2200
+    for (let i = 0; i <= 50; i++) {
 
-    const supplier = suppliers[id];
+      console.log(`Entering loop ${i} with supplierID as ${supplierID}`)
 
-    if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { 
-      console.log("we dont want this");
-      return 
-    } // this is to skip the suppliers that have null names
+      const supplier = suppliers[i];
 
-      /* const supplierData = {
+      if (supplier && suppliersWithNullNameIDs.includes(supplier.id)) { break; } // this is to skip the suppliers that have null names
+
+      const supplierData = {
         name: supplier!.supplier_name!,
         type: generateSupplierTypeENUM(supplier!.supplier_type) as SupplierType,
         region: null,
@@ -138,7 +109,7 @@ export default function Suppliers() {
         state: supplier!.state,
         ovationID: supplier!.id,
       }
-      await addSupplier(supplierData) */
+      await addSupplier(supplierData)
       
       // Create the onsite contact                            if it exists on the data
       if (supplier?.hotel_representative !== null) {
@@ -149,12 +120,11 @@ export default function Suppliers() {
             email: supplier!.hotel_representative.email,
             phone: supplier!.hotel_representative.phone,
             title: supplier!.hotel_representative.title,
-            supplierId: id,
-            ovationID: supplier!.id,
+            supplierId: supplierID,
           }
-
+          console.log(`Trying to create onsite contact in loop ${i} with supplierID as ${supplierID}`)
   
-          await addContact(onSiteContactData)
+          createOnsiteContactAPI.mutate(onSiteContactData)
         } catch (error) {
           console.log(error)
         }
@@ -169,11 +139,10 @@ export default function Suppliers() {
             email: supplier.general_manager.email ?? null,
             phone: supplier.general_manager.phone ?? null,
             title: supplier.general_manager.title ?? 'General Manager',
-            supplierId: id,
-            ovationID: supplier.id,
+            supplierId: supplierID,
           }
-
-          await addGeneralManager(generalManagerData)
+          console.log(`Trying to create GM contact in loop ${i} with supplierID as ${supplierID}`)
+          createGMContactAPI.mutate(generalManagerData)
         } catch (error) {
           console.log(error)
         }
@@ -189,15 +158,17 @@ export default function Suppliers() {
             phone: supplier.representative_company.phone ?? null,
             title: supplier.representative_company.title,
             companyName: supplier?.representative_company.company,
-            supplierId: id,
-            ovationID: supplier.id,
+            supplierId: supplierID,
           }
-
-          await addRepComapany(repCompanyData)
+          console.log(`Trying to create REP contact in loop ${i} with supplierID as ${supplierID}`)
+          createRepContactAPI.mutate(repCompanyData)
         } catch (error) {
           console.log(error)
         }
       }
+      
+      
+    }
   }
 
 
