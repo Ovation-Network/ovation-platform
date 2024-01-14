@@ -320,6 +320,7 @@ export const supplierRouter = createTRPCRouter({
         title: z.string(),
         phone: z.string().nullable(),
         email: z.string().nullable(),
+        ovationID: z.string(),
       })
     )
     .mutation(async ({ ctx, input }) => {
@@ -338,9 +339,10 @@ export const supplierRouter = createTRPCRouter({
           title: input.title,
           email: input.email,
           phone: input.phone,
+          // supplierId: input.supplierId,
           supplier: {
             connect: {
-              id: input.supplierId
+              ovationID: input.ovationID
             }
           }
         }
