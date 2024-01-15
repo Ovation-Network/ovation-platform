@@ -43,10 +43,7 @@ export const authOptions: NextAuthOptions = {
       // grab the allowed usernames from the env variable
       const whiteList = env.EMAIL_WHITELIST.split(" ");
 
-      if (user?.email && whiteList.includes(user.email)) {
-        return true;
-      }
-      else if (email?.verificationRequest && user?.email && whiteList.includes(user.email)) {
+      if (email?.verificationRequest && user?.email && whiteList.includes(user.email)) {
         return true;
       } else {
         // log that a none whitelisted user tried to sign in
