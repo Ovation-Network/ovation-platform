@@ -2,14 +2,10 @@
 import { useState, useEffect } from 'react';
 import { formatInput } from '~/utils/helpers';
 import type { Supplier } from '@prisma/client';
-import { api } from '~/utils/api';
 
 
 
-export const PublicSupplierDatabaseTable: React.FC = () => {
-
-  const { data, isLoading } = api.supplier.getSupplierContacts.useQuery(undefined, { staleTime: 360 * (60 * 1000)  }); // 360 mins -> 4 hrs
-
+export const PublicSupplierDatabaseTable: React.FC<Supplier[]> = ({suppliers}) => {
   const [filter, setFilter] = useState<string>('supplier');
   const [search, setSearch] = useState<string>('');
   const [enhancedCommissionData, setEnhancedCommissionData] = useState<PublicSupplierDatabaseProps[]>([]);

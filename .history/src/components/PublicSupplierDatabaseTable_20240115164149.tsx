@@ -6,7 +6,7 @@ import { api } from '~/utils/api';
 
 
 
-export const PublicSupplierDatabaseTable: React.FC = () => {
+export const PublicSupplierDatabaseTable: React.FC<> = ({}) => {
 
   const { data, isLoading } = api.supplier.getSupplierContacts.useQuery(undefined, { staleTime: 360 * (60 * 1000)  }); // 360 mins -> 4 hrs
 

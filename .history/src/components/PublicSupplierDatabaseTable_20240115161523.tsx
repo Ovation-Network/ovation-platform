@@ -6,9 +6,9 @@ import { api } from '~/utils/api';
 
 
 
-export const PublicSupplierDatabaseTable: React.FC = () => {
+export const PublicSupplierDatabaseTable: React.FC<Supplier[]> = ({suppliers}) => {
 
-  const { data, isLoading } = api.supplier.getSupplierContacts.useQuery(undefined, { staleTime: 360 * (60 * 1000)  }); // 360 mins -> 4 hrs
+  // const { data, isLoading } = api.supplier.getSupplierContacts.useQuery(undefined, { staleTime: 360 * (60 * 1000)  }); // 360 mins -> 4 hrs
 
   const [filter, setFilter] = useState<string>('supplier');
   const [search, setSearch] = useState<string>('');

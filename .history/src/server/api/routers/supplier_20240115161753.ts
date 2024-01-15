@@ -17,7 +17,6 @@ export const supplierRouter = createTRPCRouter({
 
       // get all suppliers
       const suppliers = db.supplier.findMany({
-
         select: {
           id: true,
           name: true,
@@ -26,6 +25,9 @@ export const supplierRouter = createTRPCRouter({
           region: true,
           city: true,
           state: true,
+
+        },
+        include: {
           contacts: true,
           generalManagers: true,
           representativeCompanies: true,
