@@ -132,6 +132,35 @@ export const protectedProcedure = t.procedure.use(({ ctx, next }) => {
 });
 
 
+export const createContext = async ({
+  req,
+  res,
+}: trpcNext.CreateNextContextOptions) => {
+  return {
+    req,
+    res,
+    db,
+  };
+};
+
+type Context = inferAsyncReturnType<typeof createContext>;
+
+export function createRouter() {
+  return t.router<Context>(t.procedure);
+}
+// const waitFor = async (ms: number) =>
+//   new Promise((resolve) => setTimeout(resolve, ms));
+
+// export const appRouter = createTRPCRouter().query('public.slow-query-cached', {
+//   async resolve({ ctx }) {
+//     await waitFor(5000); // wait for 5s
+//     return {
+//       lastUpdated: new Date().toJSON(),
+//     };
+//   },
+// });
+
+
 
 
 
@@ -140,15 +169,15 @@ export const protectedProcedure = t.procedure.use(({ ctx, next }) => {
 // export API handler
 export default trpcNext.createNextApiHandler({
   router: appRouter,
-  createContext: createTRPCContext,
-  responseMeta({ paths, type, errors }) {
+  ({opts}) => createInnerTRPCContext({ opts }),
+  responseMeta({ ctx, paths, type, errors }) {
     // assuming you have all your public routes with the keyword `public` in them
     const allPublic = paths?.every((path) => path.includes('public'));
     // checking that no procedures errored
     const allOk = errors.length === 0;
     // checking we're doing a query request
     const isQuery = type === 'query';
-    if ( allPublic && allOk && isQuery) {
+    if (ctx?.res && allPublic && allOk && isQuery) {
       // cache request for 1 day + revalidate once every second
       const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
       return {
@@ -156,8 +185,6 @@ export default trpcNext.createNextApiHandler({
           'cache-control': `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`,
         },
       };
-    } else {
-      console.error('Error while trying to set cache headers to response.... line 160 - trpc.ts')
     }
     return {};
   },

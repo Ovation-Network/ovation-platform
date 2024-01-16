@@ -6,15 +6,12 @@
  * TL;DR - This is where all the tRPC server stuff is created and plugged in. The pieces you will
  * need to use are documented accordingly near the end.
  */
-import * as trpc from '@trpc/server';
+
 import { initTRPC, TRPCError } from "@trpc/server";
-import type { inferAsyncReturnType } from '@trpc/server';
-import * as trpcNext from '@trpc/server/adapters/next';
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 import { type Session } from "next-auth";
 import superjson from "superjson";
 import { ZodError } from "zod";
-import { appRouter } from "~/server/api/root";
 
 import { getServerAuthSession } from "~/server/auth";
 import { db } from "~/server/db";
@@ -45,7 +42,6 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
     session: opts.session,
     db,
-
   };
 };
 
@@ -129,36 +125,4 @@ export const protectedProcedure = t.procedure.use(({ ctx, next }) => {
       session: { ...ctx.session, user: ctx.session.user },
     },
   });
-});
-
-
-
-
-
-
-
-// export API handler
-export default trpcNext.createNextApiHandler({
-  router: appRouter,
-  createContext: createTRPCContext,
-  responseMeta({ paths, type, errors }) {
-    // assuming you have all your public routes with the keyword `public` in them
-    const allPublic = paths?.every((path) => path.includes('public'));
-    // checking that no procedures errored
-    const allOk = errors.length === 0;
-    // checking we're doing a query request
-    const isQuery = type === 'query';
-    if ( allPublic && allOk && isQuery) {
-      // cache request for 1 day + revalidate once every second
-      const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
-      return {
-        headers: {
-          'cache-control': `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`,
-        },
-      };
-    } else {
-      console.error('Error while trying to set cache headers to response.... line 160 - trpc.ts')
-    }
-    return {};
-  },
 });
