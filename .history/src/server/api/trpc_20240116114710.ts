@@ -141,7 +141,7 @@ export const protectedProcedure = t.procedure.use(({ ctx, next }) => {
 export default trpcNext.createNextApiHandler({
   router: appRouter,
   createContext: createTRPCContext,
-  responseMeta({ paths, type, errors }) {
+  responseMeta({ ctx, paths, type, errors }) {
     // assuming you have all your public routes with the keyword `public` in them
     const allPublic = paths?.every((path) => path.includes('public'));
     // checking that no procedures errored
@@ -156,8 +156,6 @@ export default trpcNext.createNextApiHandler({
           'cache-control': `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`,
         },
       };
-    } else {
-      console.error('Error while trying to set cache headers to response.... line 160 - trpc.ts')
     }
     return {};
   },

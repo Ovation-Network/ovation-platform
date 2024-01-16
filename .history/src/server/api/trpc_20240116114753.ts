@@ -141,7 +141,7 @@ export const protectedProcedure = t.procedure.use(({ ctx, next }) => {
 export default trpcNext.createNextApiHandler({
   router: appRouter,
   createContext: createTRPCContext,
-  responseMeta({ paths, type, errors }) {
+  responseMeta({ ctx, paths, type, errors }) {
     // assuming you have all your public routes with the keyword `public` in them
     const allPublic = paths?.every((path) => path.includes('public'));
     // checking that no procedures errored
