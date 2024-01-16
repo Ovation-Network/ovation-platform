@@ -29,7 +29,6 @@ export default trpcNext.createNextApiHandler({
   createContext: createTRPCContext,
   responseMeta({ ctx, paths, type, errors }) {
     // assuming you have all your public routes with the keyword `public` in them
-    console.log('Here are all the paths requested: ', paths)
     const allPublic = paths?.every((path) => path.includes('public'));
     // checking that no procedures errored
     const allOk = errors.length === 0;

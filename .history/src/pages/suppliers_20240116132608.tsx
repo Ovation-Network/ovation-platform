@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/prefer-for-of */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import Head from "next/head";
+import { PublicSupplierDatabaseTable } from "~/components/PublicSupplierDatabaseTable";
 
 
 export default function Suppliers() {
@@ -22,6 +23,7 @@ export default function Suppliers() {
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             {/* CONTENT FOR LINKS TO THE PUBLIC LINK FOR OVATION PAGES */}
+            < PublicSupplierDatabaseTable />
             
           </div>
         </div>

@@ -15,7 +15,6 @@ import { type Session } from "next-auth";
 import superjson from "superjson";
 import { ZodError } from "zod";
 import { appRouter } from "~/server/api/root";
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getServerAuthSession } from "~/server/auth";
 import { db } from "~/server/db";
@@ -30,8 +29,6 @@ import { db } from "~/server/db";
 
 interface CreateContextOptions {
   session: Session | null;
-  req: NextApiRequest;
-  res: NextApiResponse;
 }
 
 /**
@@ -48,8 +45,7 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
     session: opts.session,
     db,
-    req: opts.req,
-    res: opts.res,
+
   };
 };
 
@@ -67,8 +63,6 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
 
   return createInnerTRPCContext({
     session,
-    req,
-    res,
   });
 };
 
@@ -115,23 +109,7 @@ export const createTRPCRouter = t.router;
  * guarantee that a user querying is authorized, but you can still access user session data if they
  * are logged in.
  */
-export const publicProcedure = t.procedure.use(({ ctx, next }) => {
-
-  // check if request came from a route that has the keyword 'public' in it
-  const isPublic = ctx?.req?.url?.includes('public');
-
-  if (isPublic) {
-    // cache full page for 1 day + revalidate once every second
-    const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
-
-    // cache the response in server side for one day before revalidating
-    ctx.res.setHeader('Cache-Control', `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`);
-  }
-
-  return next({
-    ctx
-  });
-});
+export const publicProcedure = t.procedure;
 
 /**
  * Protected (authenticated) procedure
@@ -159,28 +137,28 @@ export const protectedProcedure = t.procedure.use(({ ctx, next }) => {
 
 
 
-// // export API handler
-// export default trpcNext.createNextApiHandler({
-//   router: appRouter,
-//   createContext: createTRPCContext,
-//   responseMeta({ ctx, paths, type, errors }) {
-//     // assuming you have all your public routes with the keyword `public` in them
-//     const allPublic = paths?.every((path) => path.includes('public'));
-//     // checking that no procedures errored
-//     const allOk = errors.length === 0;
-//     // checking we're doing a query request
-//     const isQuery = type === 'query';
-//     if ( ctx && allPublic && allOk && isQuery) {
-//       // cache request for 1 day + revalidate once every second
-//       const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
-//       return {
-//         headers: {
-//           'cache-control': `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`,
-//         },
-//       };
-//     } else {
-//       console.error('Error while trying to set cache headers to response.... line 160 - trpc.ts')
-//     }
-//     return {};
-//   },
-// });
+// export API handler
+export default trpcNext.createNextApiHandler({
+  router: appRouter,
+  createContext: createTRPCContext,
+  responseMeta({ paths, type, errors }) {
+    // assuming you have all your public routes with the keyword `public` in them
+    const allPublic = paths?.every((path) => path.includes('public'));
+    // checking that no procedures errored
+    const allOk = errors.length === 0;
+    // checking we're doing a query request
+    const isQuery = type === 'query';
+    if ( allPublic && allOk && isQuery) {
+      // cache request for 1 day + revalidate once every second
+      const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
+      return {
+        headers: {
+          'cache-control': `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`,
+        },
+      };
+    } else {
+      console.error('Error while trying to set cache headers to response.... line 160 - trpc.ts')
+    }
+    return {};
+  },
+});

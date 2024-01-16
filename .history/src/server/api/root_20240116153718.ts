@@ -29,18 +29,17 @@ export default trpcNext.createNextApiHandler({
   createContext: createTRPCContext,
   responseMeta({ ctx, paths, type, errors }) {
     // assuming you have all your public routes with the keyword `public` in them
-    console.log('Here are all the paths requested: ', paths)
     const allPublic = paths?.every((path) => path.includes('public'));
     // checking that no procedures errored
     const allOk = errors.length === 0;
     // checking we're doing a query request
     const isQuery = type === 'query';
-    if ( ctx?.res && allPublic && allOk && isQuery) {
+    if ( ctx && allPublic && allOk && isQuery) {
       // cache request for 1 day + revalidate once every second
       const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
       return {
         headers: {
-          'Cache-Control': `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`,
+          'cache-control': `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`,
         },
       };
     } else {

@@ -48,8 +48,6 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
     session: opts.session,
     db,
-    req: opts.req,
-    res: opts.res,
   };
 };
 
@@ -67,8 +65,6 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
 
   return createInnerTRPCContext({
     session,
-    req,
-    res,
   });
 };
 
@@ -115,23 +111,7 @@ export const createTRPCRouter = t.router;
  * guarantee that a user querying is authorized, but you can still access user session data if they
  * are logged in.
  */
-export const publicProcedure = t.procedure.use(({ ctx, next }) => {
-
-  // check if request came from a route that has the keyword 'public' in it
-  const isPublic = ctx?.req?.url?.includes('public');
-
-  if (isPublic) {
-    // cache full page for 1 day + revalidate once every second
-    const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
-
-    // cache the response in server side for one day before revalidating
-    ctx.res.setHeader('Cache-Control', `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`);
-  }
-
-  return next({
-    ctx
-  });
-});
+export const publicProcedure = t.procedure;
 
 /**
  * Protected (authenticated) procedure

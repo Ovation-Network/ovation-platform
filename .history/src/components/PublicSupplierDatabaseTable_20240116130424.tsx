@@ -1,32 +1,23 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
+import { formatInput } from '~/utils/helpers';
+import type { Supplier } from '@prisma/client';
 import { api } from '~/utils/api';
 
 
 
 export const PublicSupplierDatabaseTable: React.FC = () => {
 
-  const { data, isLoading } = api.supplier.getSupplierContacts.useQuery();
+  const { data, isLoading } = api.supplier.getSupplierContacts.useQuery(); 
 
   const [filter, setFilter] = useState<string>('supplier');
-  const [search, setSearch] = useState<string>('');
-  const [filteredSuppliers, setFilteredSuppliers] = useState<typeof data>(undefined);
+  const [search, setSearch] = useState<string | null>(null);
+  const [filteredSuppliers, setFilteredSuppliers] = useState<Supplier[] | undefined>(undefined);
 
   useEffect(() => {
-
-    // if search is not empty, filter enhancedCommissionData by search
-    if (search !== '') {
-      setFilteredSuppliers(data?.filter((supplier) => filter === 'supplier' ? supplier.name.toLowerCase().includes(search.toLowerCase()) : supplier.city?.toLowerCase().includes(search.toLowerCase()) ?? supplier.country?.toLowerCase().includes(search.toLowerCase()) ));
-    } else {
-      setFilteredSuppliers(data);
-    }
     
 
-  }, [filter, search, data, isLoading])
-
-  if (isLoading) return <div>Loading...</div>;
-
-
+  }, [filter, search, data])
 
   return (
     <div className="p-5">
@@ -57,14 +48,14 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
             </tr>
           </thead> 
           <tbody>
-            {filteredSuppliers?.map((row, i) => (
+            {enhancedCommissionData.map((row, i) => (
               <tr className="text-black text-md text-center" key={i}>
                 <td className={i % 2 ? "bg-stone-300 p-2" : "bg-stone-100 p-2"}>
                   {row.city}, {row.state}<br/>
                   {row.country}<br/>
                 </td>
-                <td className={i % 2 ? "bg-stone-300 p-2" : "bg-stone-100 p-2"}>{`${row.city!} ${row.country!}`}</td>
                 <td className={i % 2 ? "bg-stone-300 p-2" : "bg-stone-100 p-2"}>{row.name}</td>
+                <td className={i % 2 ? "bg-stone-300 p-2" : "bg-stone-100 p-2"}>CONTACT COMPONENT</td>
                 <td className={i % 2 ? "bg-stone-300" : "bg-stone-100"}>CONTACT COMPONENT</td>
                 <td className={i % 2 ? "bg-stone-300" : "bg-stone-100"}>CONTACT COMPONENT</td>
                 <td className={i % 2 ? "bg-stone-300" : "bg-stone-100"}>FLAG POPUP</td>
@@ -87,3 +78,8 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
   );
 }
 
+/* COMPONENT FOR RENDERING CONTACT INFO */
+
+/* const ContactInfo = () => {
+
+} */

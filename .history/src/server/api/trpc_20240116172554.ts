@@ -121,15 +121,16 @@ export const publicProcedure = t.procedure.use(({ ctx, next }) => {
   const isPublic = ctx?.req?.url?.includes('public');
 
   if (isPublic) {
-    // cache full page for 1 day + revalidate once every second
-    const ONE_DAY_IN_SECONDS = 60 * 60 * 24;
 
     // cache the response in server side for one day before revalidating
-    ctx.res.setHeader('Cache-Control', `s-maxage=1, stale-while-revalidate=${ONE_DAY_IN_SECONDS}`);
+    ctx.res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate');
   }
 
   return next({
-    ctx
+    ctx: {
+      // infers the `session` as nullable
+      session: { ...ctx.session, user: ctx.session?.user ?? null },
+    },
   });
 });
 

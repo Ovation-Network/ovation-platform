@@ -9,13 +9,13 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
   const { data, isLoading } = api.supplier.getSupplierContacts.useQuery();
 
   const [filter, setFilter] = useState<string>('supplier');
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string | null>(null);
   const [filteredSuppliers, setFilteredSuppliers] = useState<typeof data>(undefined);
 
   useEffect(() => {
 
     // if search is not empty, filter enhancedCommissionData by search
-    if (search !== '') {
+    if (search !== null) {
       setFilteredSuppliers(data?.filter((supplier) => filter === 'supplier' ? supplier.name.toLowerCase().includes(search.toLowerCase()) : supplier.city?.toLowerCase().includes(search.toLowerCase()) ?? supplier.country?.toLowerCase().includes(search.toLowerCase()) ));
     } else {
       setFilteredSuppliers(data);
