@@ -1,4 +1,4 @@
-import { createTRPCRouter } from "~/server/api/trpc";
+import { createTRPCRouter, createTRPCContext } from "~/server/api/trpc";
 import { homepageTickerRouter } from "~/server/api/routers/homepage-ticker"
 import { calendarTickerRouter } from "~/server/api/routers/calendar-ticker"
 import { supplierRouter } from "~/server/api/routers/supplier";
@@ -16,7 +16,7 @@ export const appRouter = createTRPCRouter({
   calendarTicker: calendarTickerRouter,
   supplier: supplierRouter,
   enhancedCommission: enhancedCommissionsRouter,
-  seasonalOffer: seasonalOfferRouter,
+  seasonalOffer: seasonalOfferRouter
   notification: notificationRouter
 });
 
