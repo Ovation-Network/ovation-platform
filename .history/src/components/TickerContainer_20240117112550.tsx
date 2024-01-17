@@ -1,6 +1,6 @@
 import type { HomepageTicker, CalendarTicker } from "@prisma/client";
 
-export const TickerContainer = () => {
+export const TickerContainer = ({ tickers }: { tickers: (HomepageTicker | CalendarTicker)[] }) => {
   const news = [
     {
       string: 'TRAVEL NEWS (USA) | THE CDC EXPANDS ITS AIRPORT SURVEILLANCE PROGRAM',
@@ -33,8 +33,6 @@ export const TickerContainer = () => {
       <div className="hmove">
         {/* Loop through ticker items, placing each news / event in a div with className="hitem" */}
         {news.length === 0 && <div className="hitem">Nothing much going for today</div>}
-
-        {news.map((item, index) => (<div key={index} className="hitem text-black">{item.string}</div>))}
       </div>
     </div>
   )

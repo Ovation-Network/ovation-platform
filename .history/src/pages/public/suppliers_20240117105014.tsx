@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-for-of */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import Head from "next/head";
-import Image from "next/image";
 import { PublicSupplierDatabaseTable } from "~/components/PublicSupplierDatabaseTable";
 
 
@@ -20,15 +19,7 @@ export default function Suppliers() {
       <main className=" flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#ffffff] to-[#5f5f5f]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <div className="flex flex-col">
-            <Image
-              src="/ovation-logo.png"
-              alt="logo"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: '50%', height: 'auto' }} // optional
-            />
-
+            {/* CONTENT FOR LINKS TO THE PUBLIC LINK FOR OVATION PAGES */}
             < PublicSupplierDatabaseTable />
             
           </div>

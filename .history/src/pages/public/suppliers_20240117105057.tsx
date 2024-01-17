@@ -26,9 +26,9 @@ export default function Suppliers() {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: '50%', height: 'auto' }} // optional
+              style={{ width: '100%', height: 'auto' }} // optional
             />
-
+            {/* CONTENT FOR LINKS TO THE PUBLIC LINK FOR OVATION PAGES */}
             < PublicSupplierDatabaseTable />
             
           </div>

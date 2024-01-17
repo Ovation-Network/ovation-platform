@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { TickerContainer } from "~/components/TickerContainer";
 
 export default function Ticker() {
 
@@ -15,9 +14,8 @@ export default function Ticker() {
           <h1 className="text-5xl font-extrabold tracking-tight text-[hsl(195,100%,71%)] sm:text-[5rem]">
             OvationNetwork<span className="text-[hsl(195,100%,71%)]">IA</span>Admin Portal
           </h1>
-          <div className="w-full">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             {/* CONTENT FOR LINKS TO THE PUBLIC LINK FOR OVATION PAGES */}
-            <TickerContainer />
           </div>
         </div>
       </main>

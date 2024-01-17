@@ -26,7 +26,7 @@ export default function Suppliers() {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: '50%', height: 'auto' }} // optional
+              style={{ width: '75%', height: 'auto' }} // optional
             />
 
             < PublicSupplierDatabaseTable />

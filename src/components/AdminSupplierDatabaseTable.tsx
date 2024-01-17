@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import { api } from '~/utils/api';
+import Link from 'next/link';
 
-export const PublicSupplierDatabaseTable: React.FC = () => {
+export const AdminSupplierDatabaseTable: React.FC = () => {
 
   const { data, isLoading } = api.supplier.getSupplierContacts.useQuery(undefined, {
     refetchOnWindowFocus: false,
@@ -152,7 +153,7 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
                       </div>
                       ))}
                   </td>
-                  <td className={i % 2 ? "bg-stone-300" : "bg-stone-100"}>FLAG POPUP</td>
+                  <td className={i % 2 ? "bg-stone-300" : "bg-stone-100"}><Link className="btn btn-sm" href={`/admin/suppliers/${row.id}`}>EDIT</Link></td>
                 </tr>
               ))}
             </tbody> 

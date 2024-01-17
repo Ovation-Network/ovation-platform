@@ -29,7 +29,7 @@ export const TickerContainer = () => {
   ];
   
   return (
-    <div className="hwrap">
+    <div className="hwrap w-full">
       <div className="hmove">
         {/* Loop through ticker items, placing each news / event in a div with className="hitem" */}
         {news.length === 0 && <div className="hitem">Nothing much going for today</div>}

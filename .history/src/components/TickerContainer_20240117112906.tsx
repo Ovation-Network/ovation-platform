@@ -34,7 +34,7 @@ export const TickerContainer = () => {
         {/* Loop through ticker items, placing each news / event in a div with className="hitem" */}
         {news.length === 0 && <div className="hitem">Nothing much going for today</div>}
 
-        {news.map((item, index) => (<div key={index} className="hitem text-black">{item.string}</div>))}
+        {news.map((item, index) => (<div key={index} className="hitem text-black w-full">{item.string}</div>))}
       </div>
     </div>
   )
