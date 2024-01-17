@@ -10,6 +10,7 @@ import {
   publicProcedure,
 } from "~/server/api/trpc";
 
+import type { Notification } from "@prisma/client";
 
 
 export const notificationRouter = createTRPCRouter({

@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { z } from "zod";
 
 import {
@@ -9,7 +5,6 @@ import {
   protectedProcedure,
   publicProcedure,
 } from "~/server/api/trpc";
-
 
 
 export const notificationRouter = createTRPCRouter({
@@ -38,7 +33,7 @@ export const notificationRouter = createTRPCRouter({
     .input(z.object({
       id: z.number(),
     }))
-    .mutation(async ({ ctx, input }) => {
+    .mutation(({ ctx, input }) => {
       // extract session and databse from ctx
       const { session, db } = ctx;
 
@@ -48,13 +43,13 @@ export const notificationRouter = createTRPCRouter({
       }
 
       // update seasonal offer item related to a supplier based on id
-      const notification = await db.notification.update({
+      const notification = db.notification.update({
         where: {
           id: input.id,
         },
         data: {
           isResolved: true,
-          resolvedBy: session.user.email!,
+          updatedBy: session.user.email!,
         },
       });
 
@@ -64,7 +59,7 @@ export const notificationRouter = createTRPCRouter({
     .input(z.object({
       id: z.number(),
     }))
-    .mutation(async ({ ctx, input }) => {
+    .mutation(({ ctx, input }) => {
       // extract session and databse from ctx
       const { session, db } = ctx;
 
@@ -74,13 +69,13 @@ export const notificationRouter = createTRPCRouter({
       }
 
       // update seasonal offer item related to a supplier based on id
-      const notification = await db.notification.update({
+      const notification = db.notification.update({
         where: {
           id: input.id,
         },
         data: {
           isResolved: false,
-          resolvedBy: session.user.email!,
+          updatedBy: session.user.email!,
         },
       });
 

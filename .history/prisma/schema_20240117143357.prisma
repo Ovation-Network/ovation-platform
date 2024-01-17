@@ -181,12 +181,11 @@ model CalendarTicker {
 }
 
 model Notification {
-  id         Int      @id @default(autoincrement())
-  supplierId Int?
+  id         Number   @id @default(autoincrement())
   name       String?
-  details    String
+  content    String
   isResolved Boolean  @default(false)
-  resolvedBy String?  @default("IA TEAM")
+  resolvedBy String?
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
