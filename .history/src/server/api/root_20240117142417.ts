@@ -16,8 +16,7 @@ export const appRouter = createTRPCRouter({
   calendarTicker: calendarTickerRouter,
   supplier: supplierRouter,
   enhancedCommission: enhancedCommissionsRouter,
-  seasonalOffer: seasonalOfferRouter
-  notification: notificationRouter
+  seasonalOffer: seasonalOfferRouter,
 });
 
 // export type definition of API
