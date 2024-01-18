@@ -1,5 +1,5 @@
 import { api } from '~/utils/api';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type NotificationProps = {
   supplierId: number | null;
@@ -8,33 +8,39 @@ type NotificationProps = {
 
 export const NotifyIAPopup: React.FC<NotificationProps> = ({ supplierId, supplierName }) => {
 
-  // const [modal, setModal] = useState<HTMLDialogElement | undefined>(undefined);
-
-  const modalElement = document.getElementById('flag-modal') as HTMLDialogElement;
+  const [modal, setModal] = useState<HTMLDialogElement | undefined>(undefined);
 
   const openModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    modalElement?.showModal();
+    modal?.showModal();
   }
 
   const notificationAPI = api.notification.createNotification.useMutation({
     onSuccess: () => {
       alert('successfully notified IA team, thank you! :)')
 
-      modalElement?.close();
+      modal?.close();
     }
   });
 
   const notifyIA = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const formData = new FormData(e.currentTarget);
-    const name = formData.get('name') as string;
-    const details = formData.get('details') as string;
+
+    const { name: string, details: string } = formData.entries();
 
     notificationAPI.mutate({ supplierId, name, details });
+
+
+
+    
   }
 
-
+  useEffect(() => {
+    
+    setModal(document.getElementById('flag-modal') as HTMLDialogElement);
+  }, [])
 
 
   return (

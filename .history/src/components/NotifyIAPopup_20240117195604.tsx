@@ -1,5 +1,5 @@
 import { api } from '~/utils/api';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type NotificationProps = {
   supplierId: number | null;
@@ -27,11 +27,17 @@ export const NotifyIAPopup: React.FC<NotificationProps> = ({ supplierId, supplie
 
   const notifyIA = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const formData = new FormData(e.currentTarget);
+
     const name = formData.get('name') as string;
     const details = formData.get('details') as string;
 
     notificationAPI.mutate({ supplierId, name, details });
+
+
+
+    
   }
 
 

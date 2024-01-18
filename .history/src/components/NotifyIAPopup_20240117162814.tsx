@@ -1,5 +1,5 @@
 import { api } from '~/utils/api';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type NotificationProps = {
   supplierId: number | null;
@@ -8,33 +8,33 @@ type NotificationProps = {
 
 export const NotifyIAPopup: React.FC<NotificationProps> = ({ supplierId, supplierName }) => {
 
-  // const [modal, setModal] = useState<HTMLDialogElement | undefined>(undefined);
-
-  const modalElement = document.getElementById('flag-modal') as HTMLDialogElement;
+  const [modal, setModal] = useState<HTMLDialogElement | undefined>(undefined);
 
   const openModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    modalElement?.showModal();
+    modal?.showModal();
   }
 
   const notificationAPI = api.notification.createNotification.useMutation({
     onSuccess: () => {
       alert('successfully notified IA team, thank you! :)')
 
-      modalElement?.close();
+      modal?.close();
     }
   });
 
-  const notifyIA = (e: React.FormEvent<HTMLFormElement>) => {
+  const notifyIA = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get('name') as string;
-    const details = formData.get('details') as string;
 
-    notificationAPI.mutate({ supplierId, name, details });
+    const 
+
+    
   }
 
-
+  useEffect(() => {
+    
+    setModal(document.getElementById('flag-modal') as HTMLDialogElement);
+  }, [])
 
 
   return (
@@ -54,7 +54,7 @@ export const NotifyIAPopup: React.FC<NotificationProps> = ({ supplierId, supplie
             </div>
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-            <button type="submit" className="btn">NOTIFY</button>
+            <button type="submit" claaName="btn">NOTIFY</button>
           </form>
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Press ESC key or click on ✕ button to close</p>

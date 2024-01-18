@@ -154,7 +154,7 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
                   ))}
               </td>
               <td className={i % 2 ? "bg-stone-300" : "bg-stone-100"}>
-                <NotifyIAPopup supplierId={row.id} supplierName={row.name} />
+                <NotifyIAPopup supplierId={row.id} />
               </td>
             </tr>
           ))}

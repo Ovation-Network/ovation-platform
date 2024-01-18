@@ -1,5 +1,5 @@
 import { api } from '~/utils/api';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type NotificationProps = {
   supplierId: number | null;
@@ -8,33 +8,33 @@ type NotificationProps = {
 
 export const NotifyIAPopup: React.FC<NotificationProps> = ({ supplierId, supplierName }) => {
 
-  // const [modal, setModal] = useState<HTMLDialogElement | undefined>(undefined);
-
-  const modalElement = document.getElementById('flag-modal') as HTMLDialogElement;
+  const [modal, setModal] = useState<HTMLDialogElement | undefined>(undefined);
 
   const openModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    modalElement?.showModal();
+    modal?.showModal();
   }
 
   const notificationAPI = api.notification.createNotification.useMutation({
     onSuccess: () => {
       alert('successfully notified IA team, thank you! :)')
 
-      modalElement?.close();
+      modal?.close();
     }
   });
 
-  const notifyIA = (e: React.FormEvent<HTMLFormElement>) => {
+  const notifyIA = (e: React.MouseEvent<HTMLButtonElement, MouseEvent, TouchEvent>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get('name') as string;
-    const details = formData.get('details') as string;
 
-    notificationAPI.mutate({ supplierId, name, details });
+    const { value: message } = document.getElementById('message') as HTMLInputElement;
+
+    
   }
 
-
+  useEffect(() => {
+    
+    setModal(document.getElementById('flag-modal') as HTMLDialogElement);
+  }, [])
 
 
   return (
@@ -43,7 +43,7 @@ export const NotifyIAPopup: React.FC<NotificationProps> = ({ supplierId, supplie
       <button className="btn" onClick={(e) => openModal(e)}>FLAG</button>
       <dialog id="flag-modal" className="modal">
         <div className="modal-box">
-          <form method="dialog" onSubmit={notifyIA}>
+          <form method="dialog">
             <div>
               <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>
               <input name="name" type="text" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter name here" required />
@@ -54,7 +54,6 @@ export const NotifyIAPopup: React.FC<NotificationProps> = ({ supplierId, supplie
             </div>
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-            <button type="submit" className="btn">NOTIFY</button>
           </form>
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Press ESC key or click on ✕ button to close</p>
