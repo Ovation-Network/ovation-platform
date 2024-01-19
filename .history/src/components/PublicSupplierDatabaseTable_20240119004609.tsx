@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import { api } from '~/utils/api';
 import { NotifyIAPopup } from '~/components/NotifyIAPopup';

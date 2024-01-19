@@ -1,3 +1,3939 @@
+export const enhancedCommissionsData = [
+  {
+    "region": "Asia",
+    "country": "Japan",
+    "city": "Kyoto",
+    "hotel": "Aman Kyoto",
+    "commission": "12.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Courchevel",
+    "hotel": "Aman Le Melezin, Courchevel",
+    "commission": "12.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "North America",
+    "country": "USA - New York",
+    "city": "New York",
+    "hotel": "Aman New York",
+    "commission": "12%",
+    "special_amenity": "Daily Breakfast for 2 Guests per Suite",
+    "booking_instructions": null
+  },
+  {
+    "region": "N. America",
+    "country": "USA - New York",
+    "city": "NYC",
+    "hotel": "Aman New York",
+    "commission": "10.0%",
+    "special_amenity": "Breakfast for 2 per room/suite per stay for individual bookings",
+    "booking_instructions": null
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Dolomites",
+    "hotel": "Aman Rosa Alpina",
+    "commission": "12.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Beijing",
+    "hotel": "Aman Summer Palace",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Europe",
+    "country": null,
+    "city": "Montenegro",
+    "hotel": "Aman Sveti Stefan",
+    "commission": "12.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Japan",
+    "city": "Tokyo",
+    "hotel": "Aman Tokyo",
+    "commission": "12.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Venice",
+    "hotel": "Aman Venice",
+    "commission": "12.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Aman villas at Nusa Dus",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "India",
+    "city": "Rajasthan",
+    "hotel": "Aman-i-khas",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "India",
+    "city": "Rajastham",
+    "hotel": "Amanbagh",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Amandari",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Lijian",
+    "hotel": "Amandayan",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Japan",
+    "city": "Shima",
+    "hotel": "Amanemu",
+    "commission": "12.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Caribbean",
+    "country": "Dominican Republic",
+    "city": "Rio San Juan, DR",
+    "hotel": "Amanera",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Hangzhou",
+    "hotel": "Amanfayun",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Sri Lanka",
+    "city": "Galle",
+    "hotel": "Amangalla",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Wyoming",
+    "city": "Jackson Hole",
+    "hotel": "Amangani",
+    "commission": "15%",
+    "special_amenity": null,
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Utah",
+    "city": "Canyon Point",
+    "hotel": "Amangiri & Camp Sarika",
+    "commission": "15%",
+    "special_amenity": null,
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": " Africa",
+    "country": " Morocco",
+    "city": "Marakech",
+    "hotel": "Amanjena",
+    "commission": "15%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Central Java",
+    "hotel": "Amanjiwo",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Amankila",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Kingdom of Bhutan",
+    "city": "Thimphu",
+    "hotel": "Amankora",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "city": "Ninh Thuan",
+    "hotel": "Amanoi",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Phillipines",
+    "city": "Pamalican Island",
+    "hotel": "Amanpulo",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Phuket",
+    "hotel": "Amanpuri",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Europe",
+    "country": "Turkiye",
+    "city": "Bodrum",
+    "hotel": "Amanruya",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Cambodia",
+    "city": "Siem Reap",
+    "hotel": "Amansara",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Lao",
+    "city": "Luang Prabang",
+    "hotel": "Amantaka",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Moyo Island",
+    "hotel": "Amanwana",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Sri Lanka",
+    "city": "Tangalle",
+    "hotel": "Amanwella",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Shanghai",
+    "hotel": "Amanyangyun",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Caribbean",
+    "country": "Turks & Caicos",
+    "city": "Providenciales",
+    "hotel": "Amanyara",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Porto Heli",
+    "hotel": "Amanzoe",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Amartera Villas Bali Nusa Dua",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Koh Samui",
+    "hotel": "Anantara Lawana Koh Samui Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or via email lawanasamui@anantara.com"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Phuket",
+    "hotel": "Anantara Mai Khao Phuket Villas",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Sri Lanka",
+    "city": "Tangalle",
+    "hotel": "Anantara Peace Haven Tangalle Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "city": "Quy Nhon",
+    "hotel": "Anantara Quy Nhon Villas",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Anantara Ubud Bali Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hotel": "Anantara World Islands Dubai Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Peru",
+    "hotel": "Andean Explorer, a Belmond Train",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Corfu",
+    "hotel": "Angsana Corfu Resort & Spa",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Argentina",
+    "city": "Ushuaia",
+    "hotel": "Arakur Ushuaia Resort & Spa",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Hungary",
+    "city": "Budapest",
+    "hotel": "Aria Hotel Budapest by Library Hotel Collection",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Turkiye",
+    "city": "Cappadocia",
+    "hotel": "Ariana Sustainable Luxury Lodge",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Lima",
+    "hotel": "Atemporal",
+    "commission": "15%",
+    "special_amenity": null,
+    "booking_instructions": "GDS-OTG ; Contact hotel directly"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Turks & Caicos",
+    "city": "Providenciales",
+    "hotel": "Beach Enclave",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "GDS System or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Portugal",
+    "city": "Portimao",
+    "hotel": "Bela Vista Hotel & Spa",
+    "commission": "20% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Middle East",
+    "country": "Israel",
+    "city": "Mizpe Ramon",
+    "hotel": "Beresheet",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel by Calling +972 8 6387726 or 7728 or email: touristres@isrotel.co.il"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Florida",
+    "city": "Miami",
+    "hotel": "Berkeley Park Miami",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Mykonos",
+    "hotel": "Bill ad Coo Hotels Mykonos",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Caribbean",
+    "country": "St. Lucia",
+    "city": "Cap Estate",
+    "hotel": "BodyHoliday",
+    "commission": "16% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "Book directly via email u.s.reservations@sunsweptresorts.com"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Tuscany",
+    "hotel": "Borgo Finocchieto",
+    "commission": "20% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book direct with hotel via email: office@borgofinocchieto.com or phone +39 057780981"
+  },
+  {
+    "region": "Europe",
+    "country": "Germany",
+    "city": "Baden",
+    "hotel": "Brenners Park Hotel & Spa, Oetker Collection",
+    "commission": "10% commission on rooms; 15% commission on all junior suite+ bookings",
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Florence",
+    "hotel": "Brunelleschi Hotel",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone +39 0552737604 or E-Mail: info@hotelbrunelleschi.it and copy General Manager: c.catani@hotelbrunelleschi.it"
+  },
+  {
+    "region": "Middle East",
+    "country": "UAE",
+    "city": "Dubai",
+    "hotel": "Burj Al Arab Jumeirah",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Wyoming",
+    "city": "Teton Village",
+    "hotel": "Caldera House",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "Caribbean",
+    "city": "Anguilla",
+    "hotel": "Cap Juluca, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Antigua & Barbuda",
+    "city": "St. Mary's",
+    "hotel": "Carlisle Bay",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail: reservations@carlisle-bay.com and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Ireland",
+    "city": "Maynooth",
+    "hotel": "Carlton House",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Praiano",
+    "hotel": "Casa Angelina",
+    "commission": "13% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "San Miguel de Allende",
+    "hotel": "Casa de Sierra Nevada, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "S. America",
+    "country": "Brazil",
+    "city": "Armacao de Buzios",
+    "hotel": "Casas Brancas Boutique Hotel & Spa",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book direct with hotel via email: reservas@casasbrancas.com.br or by phone +55 22 2623 1458"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Montalcino",
+    "hotel": "Castello di Velona Resort, Thermal SPA & Winery",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Contact the hotel directly; Gianluca Fabiani (GM) g.fabiani@castellodivelona.it; Enzo Barbagallo (DOSM) enzo.barbagallo@castellodivelona.it; reservation@castellodivelona.it or by phone +39 0577 839002"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Vence",
+    "hotel": "Chateau Saint-Martin, Oetker Collection",
+    "commission": null,
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "Caribbean",
+    "country": "St. Barths",
+    "city": "St. Barths",
+    "hotel": "Cheval Blanc St-Barth",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Texas",
+    "city": "Marfa - El Paso",
+    "hotel": "Cibolo Creek Ranch",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone +1 (432) 729-6654 or E-Mail: reservations@cibolocreekranch.com"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Arequipa",
+    "hotel": "Cirqa - Relais & Chateaux",
+    "commission": "15%",
+    "special_amenity": null,
+    "booking_instructions": "GDS-OTG ; Contact hotel directly"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - California",
+    "city": "Berkley",
+    "hotel": "Claremont Club and Spa, a Fairmont Hotel",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "S. America",
+    "country": "Brazil",
+    "city": "Rio de Janeiro",
+    "hotel": "Copacabana Palace, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Provence - Gargas",
+    "hotel": "Coquillade Provence Resort & Spa",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Antigua & Barbuda",
+    "city": "St. John's",
+    "hotel": "Curtain Bluff Resort",
+    "commission": "15% on all refundable bookings; 10% for the 25% non-refundable prepaid offer & group - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Contact the hotel directly; +1 888 289 9898 or +1 268 462 8400; email: curtainbluff@curtainbluff.com;"
+  },
+  {
+    "region": "Europe",
+    "country": "Turkiye",
+    "city": "Mugla",
+    "hotel": "D Maris Bay",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Kenya",
+    "city": "DATA Kichwa Tembo",
+    "hotel": "DATA andBeyond Bateleur Camp",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Book via email: simplysafari@andBeyond.com"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Kenya",
+    "city": "DATA Loisaba Conservancy",
+    "hotel": "DATA Elewana Loisaba Tented Camp",
+    "commission": "DATA 12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Contact the hotel directly; email: reservations@elewana.com or phone 254 730 127 000"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Tanzania",
+    "city": "DATA Ngorongoro Crater Conservation",
+    "hotel": "DATA Elewana the Manor at Ngorongoro",
+    "commission": "DATA 12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Contact the hotel direction; email: reservations@elewana.com or phone 254 754 250 630"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA South Africa",
+    "city": "DATA Johannesburg",
+    "hotel": "DATA Fairlawns Boutique Hotel & Spa",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Botswana",
+    "city": "DATA Makgadikgadi Pans National Park",
+    "hotel": "DATA Jack's Camp",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Book directly with the hotel via phone +27 21 001 1574 or email: resrvations@naturalselection.travel"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Mauritius",
+    "city": "DATA Grand Baie",
+    "hotel": "DATA LUX Grand Baie",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA CRS System or book directly via phone or email"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Zimbabwe",
+    "city": "DATA Victoria Falls",
+    "hotel": "DATA Matetsi Victoria Falls",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Contact the hotel directly via phone or email"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA South Africa",
+    "city": "DATA Madikwe Game Reserve",
+    "hotel": "DATA Mateya Safari Lodge",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Contact the hotel directly via phone 27 14 778 9200 or email: reservations@mateyasafari.com"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Madagascar",
+    "city": "DATA Nosy Anko",
+    "hotel": "DATA MIAVANA by Time + Tide",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Contact the hotel directly via phone or email"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Kenya",
+    "city": "DATA Nanyuki",
+    "hotel": "DATA Ol Jogi Wildlife Conservancy",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Book directly with hotel via phone +254 722 2020516 or email: reservations@oljogi.org"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA South Africa",
+    "city": "DATA Cape Town",
+    "hotel": "DATA One & Only Cape Town",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Mauritius",
+    "city": "DATA Poste De Flacq",
+    "hotel": "DATA One & Only Le Saint Geran",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Rwanda",
+    "city": "DATA Nyungwe National Park",
+    "hotel": "DATA One & Only Nyungwe House",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Morocco",
+    "city": "DATA Marrakech",
+    "hotel": "DATA Royal Mansour Marrakech",
+    "commission": "DATA 12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA South Africa",
+    "city": "DATA Paterson",
+    "hotel": "DATA Shamwari Private Game Reserve",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Contact the hotel directly via phone or email"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Tanzania",
+    "city": "DATA Serengeti",
+    "hotel": "DATA Singita Grumeti",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Book directly via email attention Hazel Stuart at reservations@singita.com - when booking via Virtuoso Agent in South Africa ensure that you identify as Virtuoso Member Agency"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA South Africa",
+    "city": "DATA Kruger National Park",
+    "hotel": "DATA Singita Kruger National Park",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Book directly via email attention Hazel Stuart at reservations@singita.com - when booking via Virtuoso Agent in South Africa ensure that you identify as Virtuoso Member Agency"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Zimbabwe",
+    "city": "DATA Malilangwe Wildlife Reserve",
+    "hotel": "DATA Singita Pamushana Lodge",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Book directly via email attention Hazel Stuart at reservations@singita.com - when booking via Virtuoso Agent in South Africa ensure that you identify as Virtuoso Member Agency"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA South Africa",
+    "city": "DATA Sabi Sand",
+    "hotel": "DATA Singita Sabi Sand",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Book directly via email attention Hazel Stuart at reservations@singita.com - when booking via Virtuoso Agent in South Africa ensure that you identify as Virtuoso Member Agency"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA Rwanda",
+    "city": "DATA Volcanoes National Park",
+    "hotel": "DATA Singita Volcanoes National Park",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Book directly via email attention Hazel Stuart at reservations@singita.com - when booking via Virtuoso Agent in South Africa ensure that you identify as Virtuoso Member Agency"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA South Africa",
+    "city": "DATA Manyeleti Reserve",
+    "hotel": "DATA Tintswalo Safari Lodge",
+    "commission": "DATA 12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Contact hotel directly via phone + 27 (0) 11 300 8888 or email: res1@tintswalo.com / res2@tintswalo.com"
+  },
+  {
+    "region": "DATA Africa",
+    "country": "DATA South Africa",
+    "city": "DATA Tswalu Kalahari Game Reserve",
+    "hotel": "DATA Tswalu Kalahari",
+    "commission": "DATA 15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "DATA Contact hotel directly via phone +27 53 7819331 or email: res@tswalu.com"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Massignac",
+    "hotel": "Domaine des Etangs, Auberge Resorts Collection",
+    "commission": "12% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Africa",
+    "country": "Botswana",
+    "city": "Botswana",
+    "hotel": "Eagle Island Lodge, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Ouranoupoli",
+    "hotel": "Eagles Villas",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Gardone Riviera",
+    "hotel": "Eden Reserve Hotel & Villas",
+    "commission": "10% rooms / 15% villas - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Dominican Republic",
+    "city": "Punta Cana",
+    "hotel": "Eden Roc Cap Cana",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Caribbean",
+    "country": "St. Barths",
+    "city": "St. Barths",
+    "hotel": "Eden Rock St. Barth",
+    "commission": "15% rooms and 20% suites",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Caribbean",
+    "country": "St. Barths",
+    "city": "St Barths",
+    "hotel": "Eden Rock Villas",
+    "commission": "12.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "N. America",
+    "country": "USA - California",
+    "city": "Santa Barbara",
+    "hotel": "El Encanto, a Belmnod Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Central America",
+    "country": "Costa Rica",
+    "city": "Bajos del Toro",
+    "hotel": "El Silencio Lodge & Spa - Relais & Chateaux",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Contact the hotel directly; email: reserve@elsilenciolodge.com or info@elsilenciolodge.com; Phone +506 4070 1100 or 1 866 446 4053"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Elounda",
+    "hotel": "Elounda Gulf Vilas",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Pacific",
+    "country": "Australia",
+    "city": "Wolgan Valley",
+    "hotel": "Emirates One & Only Wolgan Valley",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - New York",
+    "city": "New York",
+    "hotel": "Equinox Hotel",
+    "commission": "12% Junior Suites and above",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "booking via Sabre or email"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Ajman",
+    "hotel": "Fairmont Ajman",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Texas",
+    "city": "Austin",
+    "hotel": "Fairmont Austin",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Abu Dhabi",
+    "hotel": "Fairmont Bab Al Bahr",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "Azerbajin",
+    "city": "Baku",
+    "hotel": "Fairmont Baku Flame Towers",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Spain",
+    "city": "Barcelona",
+    "hotel": "Fairmont Barcelona Rey Juan Carlos",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Beijing",
+    "hotel": "Fairmont Beijing",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA -California",
+    "city": "Los Angeles",
+    "hotel": "Fairmont Century Plaza LA",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Ottawa",
+    "hotel": "Fairmont Chateau Laurier Ottawa",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Chengdu",
+    "hotel": "Fairmont Chengdu",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Illinois",
+    "city": "Chicago",
+    "hotel": "Fairmont Chicago Millennium Park",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Massachusetts",
+    "city": "Boston",
+    "hotel": "Fairmont Copley Place",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Texas",
+    "city": "Dallas",
+    "hotel": "Fairmont Dallas",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hotel": "Fairmont Dubai",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hotel": "Fairmont Dubai The Palm",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Puerto Rico",
+    "city": "San Juan",
+    "hotel": "Fairmont El San Juan",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Fujairah",
+    "hotel": "Fairmont Fujeirah",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Switzerland",
+    "city": "Geneva",
+    "hotel": "Fairmont Geneva",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - California",
+    "city": "San Diego",
+    "hotel": "Fairmont Grand Del Mar",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Ukraine",
+    "city": "Kyiv",
+    "hotel": "Fairmont Grand Hotel Kyiv",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Bermuda",
+    "city": "Pembroke",
+    "hotel": "Fairmont Hamilton Princess Beach Club",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Mayakoba",
+    "hotel": "Fairmont Heritage Palace Mayakoba",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Vancouver",
+    "hotel": "Fairmont Hotel Vancouver",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Germany",
+    "city": "Hamburg",
+    "hotel": "Fairmont Hotel Vier Jahreszeiten Hamburg",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "India",
+    "city": "Jaipur",
+    "hotel": "Fairmont Jaipur",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Jakarta",
+    "hotel": "Fairmont Jakarta",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Hawaii",
+    "city": "Wailea",
+    "hotel": "Fairmont Kea Lani",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Quebec City",
+    "hotel": "Fairmont Le Chateau Frontenac Quebec City",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Montebello",
+    "hotel": "Fairmont Le Chateu Montebello",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "La Malbaie",
+    "hotel": "Fairmont Le Manoir Richelieu La Malbaie",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Switzerland",
+    "city": "Montreux",
+    "hotel": "Fairmont Le Montreux Palace",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Philippines",
+    "city": "Makati",
+    "hotel": "Fairmont Makati",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Maldives",
+    "hotel": "Fairmont Maldives Sirru Fen Fushi",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Mayakoba",
+    "hotel": "Fairmont Mayakoba",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Monaco",
+    "city": "Monte Carlo",
+    "hotel": "Fairmont Monte Carlo",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Nanjing",
+    "hotel": "FAirmont Nanjing",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Washington",
+    "city": "Seattle",
+    "hotel": "Fairmont Olympic Hotel Seattle",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Calgary",
+    "hotel": "Fairmont Palliser",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Shanghai",
+    "hotel": "Fairmont Peace Hotel Shanghai",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Turkey",
+    "city": "Istanbul",
+    "hotel": "Fairmont Quasar Istanbul",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Montreal",
+    "hotel": "Fairmont Queen Elisabeth Montreal",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Africa",
+    "country": "Morocco",
+    "city": "Marrakech",
+    "hotel": "Fairmont Royal Palm Marrakech",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Barbados",
+    "city": "Barbados",
+    "hotel": "Fairmont Royal Pavilion",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Toronto",
+    "hotel": "Fairmont Royal York Toronto",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - California",
+    "city": "San Francisco",
+    "hotel": "Fairmont San Francisco",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Arizona",
+    "city": "Scotsdale",
+    "hotel": "Fairmont Scottsdale Princess",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "South Korea",
+    "city": "Seoul",
+    "hotel": "Fairmont Seoul",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Singapore",
+    "city": "Singapore",
+    "hotel": "Fairmont Singapore",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - California",
+    "city": "Sonoma",
+    "hotel": "Fairmont Sonoma Mission INN Spa",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Scotland",
+    "city": "St. Andrews",
+    "hotel": "Fairmont St Andrews Scotland",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Africa",
+    "country": "Morocco",
+    "city": "Taghazout Bay",
+    "hotel": "Fairmont Taghazout Bay",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Tremblant",
+    "hotel": "Fairmont Tremblant",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Vancouver",
+    "hotel": "Fairmont Vancouver Waterfront",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - DC",
+    "city": "Washington D.C.",
+    "hotel": "Fairmont Washington Georgetown",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Great Britian",
+    "city": "Windsor",
+    "hotel": "Fairmont Windsor",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Winnipeg",
+    "hotel": "Fairmont Winnipeg",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Wuhan",
+    "hotel": "Fairmont Wuhan",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Hawaii",
+    "city": "Waikoloa",
+    "hotel": "Farmont Orchid",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Santa Margherita di Pula",
+    "hotel": "Forte Village Hotel Castello",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Virtuoso or Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "UK",
+    "city": "Girvan",
+    "hotel": "Glenapp Castle ",
+    "commission": "10% rooms / 15% PH Castle Apartment, The Endeavour and Hebridean Sea Safari - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Jamaica",
+    "city": "St. Mary's",
+    "hotel": "Golden Eye",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Contact the hotel directly by phone 1-800-OUT-POST or email: reservations@islandoutpost.com"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Turks & Caicos",
+    "city": "Providenciales",
+    "hotel": "Grace Bay Resorts",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": "GDS; OTG; Book Directly with Hotel via Phone or Email"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Viareggio",
+    "hotel": "Grand Hotel Principe di Piemonte",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Croatia",
+    "city": "Rovinj",
+    "hotel": "Grand Park Hotel Rovinj",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Antigua & Barbuda",
+    "city": "Saint Phillips",
+    "hotel": "Hammock Cove Antigua",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Peru",
+    "hotel": "Hiram Bingham, a Belmond Train",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Dominican Republic",
+    "city": "Puerto Plata",
+    "hotel": "Hotel Boutique Casa Colonia Beach & Spa",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Venice",
+    "hotel": "Hotel Cipriani, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Bellini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Switzerland",
+    "city": "Geneva",
+    "hotel": "Hotel d'Angleterre Geneva",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Brazil",
+    "city": "Iguassu Falls",
+    "hotel": "Hotel das Catarata, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Rome",
+    "hotel": "Hotel De'Ricci Roma",
+    "commission": "12% - suites",
+    "special_amenity": "Consortia Amenities",
+    "booking_instructions": "booking via Erin Pirozonni (erin@insiemebyerin.com)"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Antibes",
+    "hotel": "Hotel du Cap-Eden-Roc, Oetker Collection",
+    "commission": null,
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Xpu Ha",
+    "hotel": "Hotel Esencia",
+    "commission": "15%",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "GDS; or book directly with hotel"
+  },
+  {
+    "region": "S. America",
+    "country": "Brazil",
+    "city": "Rio",
+    "hotel": "Hotel Fairmont Rio de Janeiro Copacabana",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Croatia",
+    "city": "Rovinj",
+    "hotel": "Hotel Monte Mulini",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Brazil",
+    "city": "Sao Paulo",
+    "hotel": "Hotel Unique",
+    "commission": "13% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - California",
+    "city": "Yountville",
+    "hotel": "Hotel Villagio at the Estate Yountville",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Croatia",
+    "city": "Opatija",
+    "hotel": "Ikador Luxury Boutique Hotel & Spa",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Jamaica",
+    "city": "Ocho Rios",
+    "hotel": "Jamaica Inn",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book directly with the hotel via phone 1 800 837 4608 or 876 974 2514 or via email reservations@jamaicainn.com"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Male",
+    "hotel": "JOALI Being",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book via email: reservations.being@joali.com"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Raa Atol",
+    "hotel": "JOALI Maldives",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Africa",
+    "country": "Africa",
+    "city": "Africa",
+    "hotel": "Journeys in Africa (FIT Tours) - Belmond",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Peru",
+    "hotel": "Journeys in Peru (FIT Tours) - Belmond",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Antigua",
+    "city": "Jumby Bay Island",
+    "hotel": "Jumby Bay Island, Oetker Collection",
+    "commission": null,
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "Middle East",
+    "country": "UAE",
+    "city": "Dubai",
+    "hotel": "Jumeirah Al Naseem",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Middle East",
+    "country": "UAE",
+    "city": "Dubai",
+    "hotel": "Jumeirah Al Qasr",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Middle East",
+    "country": "UAE",
+    "city": "Abu Dhabi",
+    "hotel": "Jumeirah at Saadiyat Island Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Spain",
+    "city": "Majorca",
+    "hotel": "Jumeirah Port Soller Hotel & Spa",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Mykonos",
+    "hotel": "Katikies Mykonos",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Turkiye",
+    "city": "Bodrum",
+    "hotel": "Kempinski Hotel Barbaros Bay Bodrum",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Switzerland",
+    "city": "Engelberg",
+    "hotel": "Kempinski Palace Engelberg Titlis - Swiss Alps ",
+    "commission": "10% rooms / 15% suite - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Africa",
+    "country": "Botswana",
+    "city": "Botswana",
+    "hotel": "Khwai River Lodge, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Mykonos",
+    "hotel": "Kivotos Mykonos",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Pacific",
+    "country": "Fiji",
+    "city": "Yaukuve Levu Islands",
+    "hotel": "Kokomo Private Island Fiji",
+    "commission": "13% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS; API Rate; email: reservations@kokomoislandfiji.com or phone +679 776 4441"
+  },
+  {
+    "region": "Central America",
+    "country": "Costa Rica",
+    "city": "Uvita",
+    "hotel": "Kura Boutique Hotel",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS; API Rate; email: travel@kuracostarica.com or phone +1 844 783 4507"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Courchevel",
+    "hotel": "L'Apogee Courchevel, Oetker Collection",
+    "commission": null,
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Riviera Maya",
+    "hotel": "La Casa de la Playa",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Vituoso Amenities",
+    "booking_instructions": "GDS Sabre: 395935, or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Cortona",
+    "hotel": "La Corte Dei Papi",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Garlenda",
+    "hotel": "La Meridiana Hotel Resort & Golf",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone +39 0182 580271 or E-Mail info@lameridianaresort.com and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "Caribbean",
+    "city": "St. Martin",
+    "hotel": "La Samanna, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Calvi",
+    "hotel": "La Villa Calvi",
+    "commission": "12% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Colca Canyon",
+    "hotel": "Las Casitas, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "hotel": "Le Bristol Paris, Oetker Collection",
+    "commission": "10% commission on rooms; 15% commission on all junior suite+ bookings",
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "Europe",
+    "country": "Switzerland",
+    "city": "Gstaad",
+    "hotel": "Le Grand Bellevue ",
+    "commission": "10% on double rooms / 15% on Jr suites and above - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "hotel": "Le Royal Monceau",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Caribbean",
+    "country": "St. Barths",
+    "city": "St. Barths",
+    "hotel": "Le Sereno",
+    "commission": "15% and 20% for Le Sereno Villa",
+    "special_amenity": "$100 resort credit, bottle of champagne or rose, upgrade upon availability, personalized welcome card, early check in/ late check out subject to availability",
+    "booking_instructions": "Waiting for loading instructions"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Zakynthos",
+    "hotel": "Lesante Blue Exclusive Beach Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Torrita di Siena",
+    "hotel": "Lupaia",
+    "commission": "12% - suites",
+    "special_amenity": "Consortia Amenities",
+    "booking_instructions": "booking via Erin Pirozonni (erin@insiemebyerin.com)"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Male",
+    "hotel": "LUX South Ari Aoll",
+    "commission": "12% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Czech Republic",
+    "city": "Prague",
+    "hotel": "Mandarin Oriental, Prague",
+    "commission": "15% rooms, 20% suites",
+    "special_amenity": "Daily breakfast, $100 restaurant or spa credit, late checkout upon availaiblity, wifi, guaranteed room upgrade upon booking",
+    "booking_instructions": "booking via Sabre MO 069252\r, or email"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Riviera Maya",
+    "hotel": "Maroma, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Hawaii",
+    "city": "Big Island",
+    "hotel": "Mauna Lani, an Auberge Resort",
+    "commission": "15.00%",
+    "special_amenity": "Virtuoso Amenities; Priority Upgrade; Personalized amenity sent on behalf of advisor",
+    "booking_instructions": "GDS; OTG Rate; Book Directly with Hotel via Phone or Email and Identify with Ovation Network"
+  },
+  {
+    "region": "Europe",
+    "country": "Spain",
+    "city": "Ibiza",
+    "hotel": "ME Ibiza",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Philippines",
+    "city": "Manila",
+    "hotel": "MGallery Admiral Hotel Manila",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Bangkok",
+    "hotel": "MGallery Bangkok Vie Hotel",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Mile City",
+    "hotel": "MGallery Dongfengyun Hotel Mi'le",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "city": "Hnoi",
+    "hotel": "MGallery HAnoi Hotel De L'Opera",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Pattaya",
+    "hotel": "MGallery Hotel Baraquda Pattaya",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "city": "Lao Cai",
+    "hotel": "MGallery Hotel De La Coupole Sapa",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "city": "Ho Chi Minh",
+    "hotel": "MGallery Hotel Des Arts Saigon",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Hua Hin",
+    "hotel": "MGallery Hua Hin Prachub Kirikha V Villas",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Japan",
+    "city": "Kyoto",
+    "hotel": "MGallery Kyoto Yura Hotel",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Japan",
+    "city": "Kyoto",
+    "hotel": "MGallery Kyoto Yura Nijo Jo Bettei",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "city": "Uong Bi",
+    "hotel": "MGallery Legacy Yen Tu Resort",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "city": "Kien Giang",
+    "hotel": "MGallery Phu Quoc La Veranda Resort",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Phuket",
+    "hotel": "MGallery Phuket V Villas",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Chiang Mai",
+    "hotel": "MGallery Veranda High Resort Chiang Mai",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Hua Hin",
+    "hotel": "MGallery Veranda Resort & Villa Hua Hin Cha Am",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Pattaya",
+    "hotel": "MGallery Veranda Resort Pattaya Na Jomtien",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Yogyakrta",
+    "hotel": "MGallery Yogyakarta Phoenix",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Lima",
+    "hotel": "Miraflores Park, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Cusco",
+    "hotel": "Monasterio, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Tuscany",
+    "hotel": "Monteverdi Tuscany",
+    "commission": "13% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book Directly with hotel via phone 39 0578 268 146 or email: travel@monteverdituscany.com"
+  },
+  {
+    "region": "Africa",
+    "country": "South Africa",
+    "city": "Capetown",
+    "hotel": "Mount Nelson, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Africa",
+    "country": "Morocco",
+    "city": "Marrakech",
+    "hotel": "Movenpick Mansour Eddahbi Palais Des Congres Marrakech",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Africa",
+    "country": "Tunisia",
+    "city": "Sousse",
+    "hotel": "Movenpick Resort & Marine Spa Sousse",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Central America",
+    "country": "Costa Rica",
+    "city": "Puntarenas",
+    "hotel": "Nantipa - A Tico Beach Experience",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Chile",
+    "city": "Atacama Desert",
+    "hotel": "Nayara Alto Atacama",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Central America",
+    "country": "Panama",
+    "city": "Boas del Toro",
+    "hotel": "Nayara Bocas Bali",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Central America",
+    "country": "Costa Rica",
+    "city": "Arenal National Park",
+    "hotel": "Nayara Gardens and Nayara Springs - Relais & Chateaux",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Chile",
+    "city": "Easter Island",
+    "hotel": "Nayara Hangaroa",
+    "commission": "15.00%",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Central America",
+    "country": "Costa Rica",
+    "city": "Arenal National Park",
+    "hotel": "Nayara Tented Camp",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Cabo San Lucas",
+    "hotel": "Nobu Hotel Los Cabos",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Greece",
+    "hotel": "One & Only Aesthesis",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Malaysia",
+    "city": "Johor",
+    "hotel": "One & Only Desaru Coast",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "Africa",
+    "country": "Rwanda",
+    "city": "Volcanoes National Park",
+    "hotel": "One & Only Gorilla's Nest",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Kea Island",
+    "hotel": "One & Only Kea Island",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "Book directly with the hotel via phone or email"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Male",
+    "hotel": "One & Only Reethi Rah",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "Middle East",
+    "country": "UAE",
+    "city": "Dubai",
+    "hotel": "One & Only Royal Mirage",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "Middle East",
+    "country": "UAE",
+    "city": "Dubai",
+    "hotel": "One & Only The Palm",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Lo De Marcos - PVR",
+    "hotel": "One&Only Mandarina",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "San Jose Del Cabo",
+    "hotel": "One&Only Palmilla",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "Europe",
+    "country": "Montenegro",
+    "city": "Harcegnovi",
+    "hotel": "One&Only Portonovi",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "GDS: API Rate; One&Only Resorts Reservations Center at (866) 552-0001 or emailing: reservations@oneandonlyresorts.com"
+  },
+  {
+    "region": "Central America",
+    "country": "Costa Rica",
+    "city": "Turrialba",
+    "hotel": "Pacuare Lodge",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Contact the hotel directly via phone or email ro contact Dominiqe Debay Hotel & Resorts"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Male",
+    "hotel": "Paina Fari Islands",
+    "commission": "18% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Cusco",
+    "hotel": "Palacio Nazarenas, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "South America",
+    "country": "Brazil",
+    "city": "Sao Paulo",
+    "hotel": "Palacio Tangara, Oetker Collection",
+    "commission": "10% commission on rooms; 15% commission on all junior suite+ bookings",
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "Europe",
+    "country": "Austria",
+    "city": "Vienna",
+    "hotel": "Palais Coburg Residez",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Sardinia",
+    "hotel": "Palazzo Doglio",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Playa del Carmen",
+    "hotel": "Palmaia - The House of AiA",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Ecuador",
+    "city": "Galapagos",
+    "hotel": "Pikaia Lodge",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Barbados",
+    "city": "Retreat",
+    "hotel": "Port Ferdinand Yacht & Beach Club Residences",
+    "commission": "14% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book directly with hotel via phone +1 246 272 2000 or email: reservations@unnaliving.com"
+  },
+  {
+    "region": "Europe",
+    "country": "Greece",
+    "city": "Zakynthos",
+    "hotel": "Porto Zante Villas & Spa",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Potato Head Suites (Katamama Suites)",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Middle East",
+    "country": "Qatar",
+    "city": "Doha",
+    "hotel": "Pullman Doha West Bay",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Lijiang",
+    "hotel": "Pullman Lijiang Resort & Spa",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "India",
+    "city": "New Delhi",
+    "hotel": "Pullman New Delhi Aerocity",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "hotel": "Pullman Paris Montparnasse",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Japan",
+    "city": "Tokyo",
+    "hotel": "Pullman Tokyo Tamachi",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "UAE",
+    "city": "Abu Dhabi",
+    "hotel": "Qasr al Sarab Desert Resort by Anantara",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Raffles Bali",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "dubai",
+    "hotel": "Raffles Dubai",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Poland",
+    "city": "Warsaw",
+    "hotel": "Raffles Europejski Warsaw",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Cambodia",
+    "city": "Angkor",
+    "hotel": "Raffles Grand Hotel D'Angkor",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Hainan",
+    "hotel": "Raffles Hainan",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Cambodia",
+    "city": "Phnom Penh",
+    "hotel": "Raffles Hotel Le Royal Phnom Penh",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Turkey",
+    "city": "Istanbul",
+    "hotel": "Raffles Istanbul",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Jakarta",
+    "hotel": "Raffles Jakarta",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Philippines",
+    "city": "Makati",
+    "hotel": "Raffles Makati",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Maldives",
+    "hotel": "Raffles Maldives Merdahoo Resort",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Africa",
+    "country": "Seychelles",
+    "city": "Seychelles",
+    "hotel": "Raffles Seychelles Praslin",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Shenzhen",
+    "hotel": "Raffles Shenzhen",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Singapore",
+    "city": "Singapore",
+    "hotel": "Raffles Singapore",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "India",
+    "city": "Udaipur",
+    "hotel": "Raffles Udaipur",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Washington, D.C.",
+    "city": "DC",
+    "hotel": "Riggs Washington D.C.",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Sacred Valley",
+    "hotel": "Rio Sagrado, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hotel": "Rixos premium Dubai Rixos",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hotel": "Rixos The Palm Dubai",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Montana",
+    "city": "Pray",
+    "hotel": "Sage Lodge",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Machu Picchu",
+    "hotel": "Sanctuary Lodge, a Belmond Hotel",
+    "commission": "10%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Africa",
+    "country": "Botswana",
+    "city": "Botswana",
+    "hotel": "Savute Elephant Lodge, a Belmond Hotel",
+    "commission": "14%",
+    "special_amenity": "Belmond Belini Amenities",
+    "booking_instructions": "booking via GDS or email"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Dominica",
+    "city": "Portsmouth",
+    "hotel": "Secret Bay Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book directly with hotel via email: info@secretbay.dm"
+  },
+  {
+    "region": "Europe",
+    "country": "Spain",
+    "city": "Alicante",
+    "hotel": "SHA Wellness Clinic",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Contact the hotel directly via phone +34 966 811 199 or email: reservations@shawellnessclinic.com"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Venice",
+    "hotel": "Sina Centurion Palace",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Pacific",
+    "country": "Fiji",
+    "city": "Mamanuca Islands",
+    "hotel": "Six Senses Fiji",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Laamu Atoll",
+    "hotel": "Six Senses Laamu",
+    "commission": "13% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Bahamas",
+    "city": "Baha Mar",
+    "hotel": "SLS Baha Mar",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Florida",
+    "city": "Miami",
+    "hotel": "SLS Brickell Miami",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hotel": "SLS Hotel & Residences Dubai",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Florida",
+    "city": "Miami",
+    "hotel": "SLS Lux Brickell Miami",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Florida",
+    "city": "Miami",
+    "hotel": "SLS Souh Beach",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Bangkok",
+    "hotel": "SO/ Bangkok",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Germany",
+    "city": "Berlin",
+    "hotel": "SO/ Berlin Das Stue",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Hua Hin",
+    "hotel": "SO/ Hua Hin",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Russia",
+    "city": "Saint- Petersburg",
+    "hotel": "SO/ Saint-Petersburg",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Singapore",
+    "city": "Singapore",
+    "hotel": "SO/ Singapore",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Spain",
+    "city": "Sotogrande",
+    "hotel": "SO/ Sotogrande",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Austria",
+    "city": "Vienna",
+    "hotel": "SO/ Vienna",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Abu Dhabi",
+    "hotel": "Sofitel Abu Dhabi",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Cambodia",
+    "city": "Angkor",
+    "hotel": "Sofitel Angkor Phokeethra",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Sofitel Bali Nusa Dua",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Bangkok",
+    "hotel": "Sofitel Bangkok Sukhumvit",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "S. America",
+    "country": "Colombia",
+    "city": "Cartagena",
+    "hotel": "Sofitel Baru Calablanca Beach Resort",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Belguim",
+    "city": "Brussels",
+    "hotel": "Sofitel Brussels",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Illinois",
+    "city": "Chicago",
+    "hotel": "Sofitel Chicago Water Tower",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hotel": "Sofitel Dubai Downtown",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hotel": "Sofitel Dubai The Obelisk",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Foshan",
+    "hotel": "Sofitel Foshan",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Germany",
+    "city": "Frankfurt",
+    "hotel": "Sofitel Frankfurt Opera",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Guangzhou",
+    "hotel": "Sofitel Guangzhou Sunrich",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Guiyang",
+    "hotel": "Sofitel Guiyang Hunter",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Turkey",
+    "city": "Istanbul",
+    "hotel": "Sofitel Istanbul Taksim",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Krabi",
+    "hotel": "Sofitel Krabi Phokeethra Golf & Spa Resort",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Kunming",
+    "hotel": "Sofitel Kunming Kunsteel",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "hotel": "Sofitel Legend Hanoi Legend Metropole",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Xian",
+    "hotel": "Sofitel Legend People's Grand Hotel Xian",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "hotel": "Sofitel Legend The Grand Amsterdam",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Portugal",
+    "city": "Lisbon",
+    "hotel": "Sofitel Lisbon Liberdade",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Great Britian",
+    "city": "London",
+    "hotel": "Sofitel London Heathrow",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Great Britian",
+    "city": "London",
+    "hotel": "Sofitel London Saint James",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - California",
+    "city": "Los Angeles",
+    "hotel": "Sofitel Los Angeles",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Lao",
+    "city": "Lao",
+    "hotel": "Sofitel Luang Prabang",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Luxembourg",
+    "city": "Luxembourg",
+    "hotel": "Sofitel Luxembourg Europe",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Luxembourg",
+    "city": "Luxembourg",
+    "hotel": "Sofitel Luxembourg Le Grand Ducal",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Lyon",
+    "hotel": "Sofitel Lyon Bellecour",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Marseille",
+    "hotel": "Sofitel Marseille Vieux Port",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Mexico City",
+    "hotel": "Sofitel Mexico City Reforma",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "Canada",
+    "city": "Montreal",
+    "hotel": "Sofitel Montreal",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "India",
+    "city": "Mumbai",
+    "hotel": "Sofitel Mumbai Bkc",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Germany",
+    "city": "Munich",
+    "hotel": "Sofitel Munich Bayerpost",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - New York",
+    "city": "New York",
+    "hotel": "Sofitel New York",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "hotel": "Sofitel Paris Arc Triomphe",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "hotel": "Sofitel Paris Baltimore Tour Eiffel",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "hotel": "Sofitel Paris Le Faaubourg",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "hotel": "Sofitel Paris Le Faubourg",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "hotel": "Sofitel Paris Scribe",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Philippines",
+    "city": "Manila",
+    "hotel": "Sofitel Philippine Plaza Manila",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Cambodia",
+    "city": "Phnom Penh",
+    "hotel": "Sofitel Phnom Penh Phokeethra",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Africa",
+    "country": "Morocco",
+    "city": "Marrakech",
+    "hotel": "Sofitel Rabat Jardin Des Roses",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Rome",
+    "hotel": "Sofitel Roma Villa Borghese",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Sanya",
+    "hotel": "Sofitel Sanya Leeman Resort",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Singapore",
+    "city": "Singapore",
+    "hotel": "Sofitel Singapore Sentosa",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Poland",
+    "city": "Sopot",
+    "hotel": "Sofitel Sopot Grand",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Strasbourg",
+    "hotel": "Sofitel Strasbourg Grande Ile",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Poland",
+    "city": "Warsaw",
+    "hotel": "Sofitel Warszawa Victoria",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - DC",
+    "city": "Washington D.C.",
+    "hotel": "Sofitel Washington D.C. Lafayette Square",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Africa",
+    "country": "Egypt",
+    "city": "Luxor",
+    "hotel": "Sofitel Winter Place Luxor",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "city": "Xian",
+    "hotel": "Sofitel Xian on Renmin Square",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Spain",
+    "city": "Mallorca",
+    "hotel": "Son Bunyola Hotel, Virgin Limited Edition",
+    "commission": "15%",
+    "special_amenity": "complimentary half board with an approximate value of EUR 420",
+    "booking_instructions": null
+  },
+  {
+    "region": "Asia",
+    "country": "Cambodia",
+    "city": "Koh Rong Archipelago",
+    "hotel": "Song Saa Private Island",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "city": "Bali",
+    "hotel": "Soori Bali",
+    "commission": "12% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Belgium",
+    "city": "Brussels",
+    "hotel": "Steigenberger Wiltcher's",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Turkey",
+    "city": "Izmir",
+    "hotel": "Swissotel Buyuk Efes Izmir",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Illinois",
+    "city": "Chicago",
+    "hotel": "Swissotel Chicago",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Japan",
+    "city": "Nankai",
+    "hotel": "Swissotel Nankai",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Turkey",
+    "city": "Istanbul",
+    "hotel": "Swissotel The Bosphorus Istanbul",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Central America",
+    "country": "Costa Rica",
+    "city": "La Fortuna",
+    "hotel": "Tabacon Thermal Resort & Spa",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "UK",
+    "city": "London",
+    "hotel": "Taj 51 Buckingham Gate Suites and Residences",
+    "commission": "13% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "France",
+    "city": "Provence - Fayence",
+    "hotel": "Terre Blanche Hotel Spa Golf Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Switzerland",
+    "city": "Saas-fee",
+    "hotel": "The Capra",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "GDS Sabre: 271152, or book directly via phone or email"
+  },
+  {
+    "region": "Asia",
+    "country": "Singapore",
+    "city": "Singapore",
+    "hotel": "The Fullerton Bay Hotel Singapore",
+    "commission": "12% rooms / 15% suites - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Asia",
+    "country": "Singapore",
+    "city": "Singapore",
+    "hotel": "The Fullerton Hotel Singapore",
+    "commission": "12% rooms / 15% suites - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Middle East",
+    "country": "Israel",
+    "city": "Jerusalem",
+    "hotel": "The Inbal Hotel",
+    "commission": "TBD - special rate + amenity",
+    "special_amenity": null,
+    "booking_instructions": null
+  },
+  {
+    "region": "Europe",
+    "country": "Great Britain",
+    "city": "London",
+    "hotel": "The Lanesborough, Oetker Collection",
+    "commission": "10% commission on rooms; 15% commission on all junior suite+ bookings",
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - New York",
+    "city": "New York",
+    "hotel": "The Mercer",
+    "commission": "15% Loft Suite and higher",
+    "special_amenity": "$30 breakfast daily per person (2 per room), $50 hotel credit on courtyard through studio rooms, $100 credit per stay on deluxe Studio or higher, early check in and late check out (based on availability)",
+    "booking_instructions": "booking via Sabre or email (slondono@mercerhotel.com)"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "city": "Al Zorah",
+    "hotel": "The Oberoi Beach Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Florence",
+    "hotel": "The Place Firenze",
+    "commission": "12% - suites",
+    "special_amenity": "Consortia Amenities",
+    "booking_instructions": "booking via Erin Pirozonni (erin@insiemebyerin.com)"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - New York",
+    "city": "New York",
+    "hotel": "The Plaza, A Fairmont Managed Hotel",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Europe",
+    "country": "Great Britian",
+    "city": "London",
+    "hotel": "The Savoy, a Fairmont Managed Hotel",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": "Asia",
+    "country": "Thailand",
+    "city": "Bangkok",
+    "hotel": "The Siam",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Central America",
+    "country": "Costa Rica",
+    "city": "La Fortuna",
+    "hotel": "The Springs Resort and Spa at Arenal",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Pacific",
+    "country": "Fiji",
+    "city": "Wakaya Island",
+    "hotel": "The Wakaya Club & Spa",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Contact Wakaya Club directly via phone 1-800-828-3454 or email: reservations@wakaya.com.fj"
+  },
+  {
+    "region": "Europe",
+    "country": "Switzerland",
+    "city": "Geneva",
+    "hotel": "The Woodward, Oetker Collection",
+    "commission": "10% commission on rooms; 15% commission on all junior suite+ bookings",
+    "special_amenity": "Daily breakfast for two, access to best room in category, upgrade upon availability, 100 € ($100) food & beverage credit \nor 100 € ($100) spa credit. Credit increased to 200 € ($200) for stays of \n2-nights and up*",
+    "booking_instructions": "website use \"pearl\" for promotional field, GDS AA-PEA, for Sabre, email"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Bahamas",
+    "city": "South Andros Island",
+    "hotel": "Tiamo Resort",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Chile",
+    "city": "San Pedro de Atacama",
+    "hotel": "Tierra Atacama Hotel & Spa",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Chile",
+    "city": "Torres del Paine",
+    "hotel": "Tierra Patagonia",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "S. America",
+    "country": "Peru",
+    "city": "Puno",
+    "hotel": "Titilaka - Relaix & Chateaux",
+    "commission": "15%",
+    "special_amenity": null,
+    "booking_instructions": "Contact hotel directly via phone 1 866 628 1777 or email: reservas@titilaka.pe ; GDS OTG"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Dominican Republic",
+    "city": "Punta Cana",
+    "hotel": "Tortuga Bay Puntacana Resort & Club",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Montaione",
+    "hotel": "Toscana Resort Castelfalfi",
+    "commission": "15% - Virtuoso",
+    "special_amenity": "Virtuoso Amenities",
+    "booking_instructions": "CRS System or book directly via phone or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Rome",
+    "hotel": "Villa Agrippina Gran Melia",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Switzerland",
+    "city": "Lugano",
+    "hotel": "Villa Principe Leopoldo",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book directly with hotel or Relais Chateaux Reservations (1-800-735-2478)"
+  },
+  {
+    "region": "International",
+    "country": "Various",
+    "city": "Baie Longue",
+    "hotel": "Villas of Distinction",
+    "commission": "11.00%",
+    "special_amenity": "$200 villa credit",
+    "booking_instructions": "Book directly via phone or email with Villas of Distinction - and advise on Ovation Villa credit"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - California",
+    "city": "Yountville",
+    "hotel": "Vintage House at the Estate Yountville",
+    "commission": "12% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Europe",
+    "country": "Italy",
+    "city": "Umbertide",
+    "hotel": "Vocabolo Moscatelli",
+    "commission": "12% - suites",
+    "special_amenity": "Consortia Amenities",
+    "booking_instructions": "booking via Erin Pirozonni (erin@insiemebyerin.com)"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "city": "Male",
+    "hotel": "Waldorf Asotria Maldives Ithaafushi",
+    "commission": "13% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "N. America",
+    "country": "USA - Massachusetts",
+    "city": "Lenox",
+    "hotel": "Wheatleigh",
+    "commission": "15% - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "CRS; API Rate; Book Directly with Hotel via Phone or E-Mail and Identify as a Virtuoso Member"
+  },
+  {
+    "region": "Antartica",
+    "country": "Antarctica",
+    "city": "Halley",
+    "hotel": "White Desert",
+    "commission": "12% rooms / 15% exclusive buyout - Virtuoso",
+    "special_amenity": null,
+    "booking_instructions": "Book directly via email Kayleigh@white-desert.com"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "San Jose Del Cabo",
+    "hotel": "Viceroy Los Cabos",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "Europe",
+    "country": "Serbia",
+    "city": "Kopaonik",
+    "hotel": "Viceroy Kopanik Serbia",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "Caribbean",
+    "country": "Saint Lucia",
+    "city": "Soufriere",
+    "hotel": "Sugar Beach, a Viceroy Resort",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "California",
+    "city": "Los Angeles",
+    "hotel": "Viceroy Santa Monica",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "District of Columbia",
+    "city": "Washington D.C.",
+    "hotel": "Viceroy Washington DC",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "District of Columbia",
+    "city": "Washington D.C.",
+    "hotel": "Hotel Zena Washington DC",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "Illinois",
+    "city": "Chicago",
+    "hotel": "Viceroy Chicago",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "Mexico",
+    "city": "Cancun",
+    "hotel": "Viceroy Riviera Maya",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "Colorado",
+    "city": "Snowmass",
+    "hotel": "Viceroy Snowmass",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "N. America",
+    "country": "California",
+    "city": "San Francisco",
+    "hotel": "Hotel Emblem San Francisco",
+    "commission": "15%",
+    "special_amenity": "No walk policy, complimentary customized amenity, complimentary breakfast, handwritten welcome note, ",
+    "booking_instructions": "GDS or email"
+  },
+  {
+    "region": "Middle East",
+    "country": "Saudi Arabia",
+    "city": "Alula",
+    "hotel": "Banyan Tree Alula",
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  },
+  {
+    "region": null,
+    "country": null,
+    "city": null,
+    "hotel": null,
+    "commission": "15% - STEP (Accor)",
+    "special_amenity": "Daily complimentary breakfast for 2, credit to be spent no property, early check in and late check out, complimentary Wi-Fi, upgrade upon availability, WIP welcome",
+    "booking_instructions": "GDS-STP; Contact hotel directly and ask for STEP rate"
+  }
+]
+
 export const seasonalOffersData = [
   {
     "location": "Antigua, West Indies",
@@ -39261,13 +43197,99 @@ export const supplierDatabaseData = [
 export const duplicateIDs = ["3nYDGq87TzMRACGUXrSs", "57En2pTXFteEEuUwwqlS", "5TeCgno9a2RPDg9DD1M3", "5gMI22uGt0nbZwbwCE2k", "7358JFU3nWRjuYBN8b5R", "7ewdB8G2K6IYH9NuyCti", "7scfase5HplF1E0I2w7y", "8WprrZSPfAvTjKzxLimo", "8XpSbVnlpQBsritfeH4Q", "8iwgZjhbkBK1tLDPb6qT", "95I4ut2zcTwoeSn2b4nI", "9r20NJ6DBhr1699oSFtG", "APmW1rrWFqdvxLkrj1mS", "Avmd7RIMnM6GpK2TLmIO", "BgRfhUusTPu5t4i2xJMj", "Bnp5CAkl5QHx1xT6ohqB", "BoAWIZ5CsWoXDerD5DR6", "BzdGzimfjCx9a53iBlsf", "CFB3Nce1wJ9dlSiAIDI2", "Cb5h3uCLjoZ32Fu2qPlI", "CdvcP3a0o8m6Lmv1gy3o", "Cl95xNqxycqeXSOYydrm", "DPS6JngQIrdk8g2o01ki", "DnieFRiXv64ZoUWkTGwc", "DoA5tRivI6m0XrvC5LBV", "F10iYycto5ChsSPXY7Ir", "FAOVvYJJz4zzUflqrTe5", "FJaJvXThfBR54QT8HsuC", "FYnQtQRLN6eRPGECz6fz", "FfhFiHTaaPvcOaAD9GZr", "GSA728ZOMnwV8tYAdDWS", "GdWtsEqdF9LhDQVJlQ2h", "H4xcYq5jmICcAT7qvVHa", "I7he7ziYUoO6JA0CQqob", "ICCqsXD53SlKDIA6W3Cx", "IswtY6i2WoZXn3B6qHxp", "JQz0BVEvTnMB2a46yAA7", "JvLOSlu6dsWmkKAfNvXh", "K5cIXJckMe81DtJb2mP8", "KNM9pypTJEsu7pTL71sF", "KOXYsCSPdWwQu5rodVS3", "Kru0dPZ9g7ic2oFJKoEP", "KuvzFhlzdPKwhLIz09RL", "KyzBvZc0szlKV3qGvdRV", "L5k0iVDlWVGvzzEN3m7w", "LAz131veZZb0g85sG4aO", "LOur120rbhuAvlaWd594", "LQeKbbkk8Gpl7LVF75PH", "Lbo4g2QEVYZbpIIC94Kw", "LfzkuolSfPaMwkeesfVU", "Ly0Op9gl7VCTZHbnSVph", "MFmMXuuaQ9UOc0cCPZoz", "MGS7SlprTZOj0n9skxOO", "MH2HtrGCH9Ownq2z6MBR", "MmUWIpRXNSieUK0HnRxb", "MnkhKBYC38xrhJqUTcD4", "MqIJJTt8WYxM8X6WUwsX", "MqNXRWIb8kqAjkPKynPI", "Mtd8hbPpQF7xRHO7aDYB", "N5IjIaec5AYixhfpn4n5", "N5UH4dwfpIb5bO1xWYgN", "NDKcgHkUnFyhuMvqkz7t", "NINmsi0kaAM6vDEg7Te9", "NKs6Su1VP9xaOnu8HjMj", "NMv8ud6fEnQ4UDrWhc7I", "NQFDJL613oEzyyqdoHVZ", "NezY37lhwTos2OKgF8x8", "NkyDEybVYRSHd2qDR7Ts", "NmAf5B2JEAm21MB4SvE2", "Nvzv0BNyMRGernEy8S7k", "NzlIlMUqUc5q38ILczZx", "O4eUcd7RTtaMzMG25HRG", "OPLv4KW7H1XoSJF28FAB", "On8u6ZEVBtx8tfsCYe0z", "OwllvMiiTMNLexRYlYZ0", "P8X0ERk5ECUk9nLIbJYC", "P9z5q15ZddI8JJVxULNi", "PMgZGPVP8aG4Ir32Dcoy", "PRyoMVoZpacdlGN2YHNR", "PYVOEym5nCmXyh6ImsuK", "Pc88E9LKIYdY2w8UfKCi", "PdK7PmCWGHd2z6G6g16k", "PfV2PBc5QXbIz56pdz7U", "Pkl4LltZqzzFeHMEbVt4", "QMN1GlC9Pu6R1QMjwwM9", "QS0zsazeNrq0mzCbP4jI", "Qyzcst5Ei8KQHGifVeaR", "R1UwhXQy7vCP4lRDqgJI", "RCfzeLpWdM6vGuQ4pNVC", "RkxEITMJY9xSGKUanxOp", "RmX1uQzPM2SaOXBzU765", "S1WygCSzcodh81zzDe76", "SCQsDoE9xt4BwMzDV3br", "SZxychp1rmr9D6q1VEwW", "SmGKyQsmWbuBb8fcUd0G", "SnWcLuz7wgpmFSHiljAW", "T4uYpLb0T01CsFyzVbhE", "T7URluv52GYxIQCIQ97N", "T9LTQe7Y40mAIxkHZjhQ", "TUeDkkF0xvUcEi1Yldz4", "TbIyEcR92crUbabSxXXN", "Tk6V8pZEiBFiUmgQp4lR", "Ty1zgEBndUZzq3ZXLHAw", "U1DjPiWjjx2X8mee8JgY", "U1NNFCNaVxfVaVoRAOyb", "U5mnoCa9KFnHKRaiS7sz", "UoJrsncIQaen82nrDSMC", "VAcMlTyS8CJnozWsZqd2", "VVdGBRaVhAShJ64vTLBv", "VpBI0eo28GrYbQurhmBk", "Vt86jfKVjBdD16Tc7sx5", "W0FjtYgBeEiZ7fdUDiZy", "WO9VRN1eZ8GqiMGhVLnR", "WXHKlu5qPBuFH3er8wzf", "Wa3qq6I731xpWHnWyObd", "WfSBibFECG0h8e9aKWaK", "WiWQkQQC6RhsXf6y8qnT", "WvqPdVUaUOEV2IjnyXO7", "X0jrw374nZA5qjpUObjW", "X4O4BIVcgsKoRXFZDGGk", "XGxjj9NezYevFn9WG9hr", "XMflZzUUHF0pqbBJnJsJ", "XQFa5d6Gv2Ba149F8Lla", "XXKDHdlZ3BRmCz7sn7o0", "XXhXrGcCf4AfoTQ8LuY1", "XfBlbof2pWUl60DqEqFv", "Xz538KYBlzbi32TL9wzS", "YUDR7dUmmJUoBtwyBb4z", "YdmQD89G9CmOORtxv7Np", "Yds22nvm80pdgjkODxWS", "YepWahDaCx0ywiD8lD0q", "YozzXzeA4VJrSQM1nRLd", "YpzrLM1r3Td6l11Zbb1C", "YySwitdlpOwcvgV39axA", "Z8PGRTvB2B9zLwqcVsQ1", "ZFQ9KZycub3jLmfj814p", "ZOYV0nk2uygr8Dra6bYG", "ZOvp8q145ovnouJkbaQZ", "ZeUbif8tyCmH5XPw0ZIy", "Zfs60IGtB6bI4KjJ8bfq", "Zlud4Gr2mKoDr9k8wTAQ", "ZuRoTEBSqpGAzC8Wp0pr", "ZwdK8vC7k71ahzuNdGuJ", "ZxyNkfufOVDyIZBJQG7Q", "a5bYnSEmprBb1lheYz3T", "aFCkLqy4MYlMNWJZSPJS", "aIvzBMSlmp4EGBXywxLv", "aSF62J3CCobKEDPdvWGo", "aUowkhHisI3qxBrceGSq", "aZn9A91X1kiRFrQ5dNhp", "akPMvfK1sTWEBjOX2bwx", "auZwwo5k9dQmK1R92eR0", "avDqXMCWpWLq74DK2ZmM", "ayQoeJaiKdpNwtwWBr8N", "b5N8bjGcIKFcH9KjsOhL", "bL85xqY9Sq7SBSlLPgku", "bPIwfRkEI2tTC2guLl0B", "bRFPZU8otoe69nS1Z8rg", "bUep15OsA5IQUlcsDrVf", "bfQ5MbeWJ6IrSFUmwa4j", "biFX0QVEcLZsa2Y1ajqE", "bjhhKsAEloRpKzvYip8z", "bly29E4DpLSPCy9Owt4Z", "cDuPsEgIvT77edHVZJRr", "cEsFa9zuxB62pxNpbl99", "cK2suqZtwtNZRdHud4YP", "cKCIcQEz952qY0zwiFd1", "cKxp8Mu8lVRGeYspmf54", "cY8LLyOTCW6bMEucrxmb", "cjWN5myLRgaPyqvDCxvU", "cxmshqRrwrcqWcqx2kHi", "cz7C5luMZ0qCzXvqaqYJ", "d93ERrGACnfGaRAXxMOD", "dCiLLwowDWYcopUk8ahp", "dPDkieIITEQnXfu9Iuu5", "dRqsBRAjRjKbcWbubUO4", "dW2ixV6FYRpd37inkSmp", "dd71ByDK07iaswRFMy77", "dh7A6LdksPGt0blBOF2z", "dnJsMA29YLXJEICuy8WZ", "dsq4IqDWf9ExHT647mgN", "dsuo16usPEd6pXMTdzeZ", "dzhyoWUjZtQAq2FLkMx5", "e7MuaOLzKk0TL3DMz306", "e8LlBbZFgDgVuSutfag3", "eCnoIEl7M8V9i7fI6Y8E", "eLXoIQVgTSo5KNr8H5eM", "eNoGZp76RFwl1yc3wAhn", "eTZWGSexOtOEb27VvKqX", "ebGmg7LtHLBRpj2ppsFp", "ecCsLeqO2th5bKz7I5mf", "epJv6kcWvcE0TEtKcxeC", "erbar81QIBzLVOdPcfYb", "ezQt0CjBIR36oUxcVYrc", "fWeVFPRrA4BIiFKvMEPR", "fjOl4atEKVoLngjT2bYK", "fkUAT666EBqKcufNWcs2", "flFr9jKUqCYIk5VVapF4", "fvJAGBxeEweb1kKqq1YK", "gPO6YEypaCydsxRp9tky", "gjSdXrUcQnopM8fZsao0", "gmLKB2snsPwZznoqD47P", "grnlcNvGSiyhi3JsWAWI", "gxNCWTy5IXyPsY5S70v5", "gzFGrasUJF6BVwJXl3fN", "h2D96sAE5YBsvnjxeSDr", "hHDfmOdl7rQdwFfPi1ow", "hcHnlkswpYBXTMBZzehc", "hfTG4IVpjZ0jti9SMEWe", "hjjY5ZbH857sGFHkWYfq", "hmeN7EsnBmFTcxJcqq1I", "iXx6m4YWaH39iPhL6Yvi", "iZQRjacd6WlpC02GlXQk", "ilOHutUqthK5YbblG6Jg", "iwTzeWo8XINTeVUXMR36", "jFuFbWPIOe4r5ozPR77M", "jWyCaTGNNBTXs1QvUlE8", "jXe0av4f8eWLrlmZUVnE", "jlI8mx0ALejwyKG46T4i", "jlx9bWteKH4WuZxx7cez", "jnq7bQNst2PO1HoECqSX", "k8Rn8Lx85fLxHe0T25jG", "kAmpwHBaPZymHGA6Obur", "kGxf6P46rhmFNU1iovqa", "kJD4IBULFSCwuywF3jUm", "kNPQ1kmjy9w8mF0VinyE", "kbllhTI06V3olrJXl4Oc", "khAx03354h4DckTJFBBd", "kmjq289br7bCDKwcvIrU", "kq1uHKaI7sVoV9zI5yQj", "kyVDFRW62FiO2SsHdHaX", "lEfg0fdA5RiXkzGpOYz5", "lLesPwCwiXXbgHckXyzl", "lNJbc1yrhtHoVJKkDFGA", "lPpeagpOdPLviel4nTey", "lQlWuFoYfm9xx4b8RYO9", "lRSXrqCvg6Hwn68FMss0", "lSTWWkFVfQ0DaFWmsFWF", "lSdso6F5arbok5cjrTi2", "lZmcWcw8q6ZUAfrKjQzC", "larxXjJvvfrtuZ8JuRqH", "lgOfvG3FPMtsfsRxLPMP", "lhtvoEklzyndsnnbret4", "ltDsfBopSCnGMPrdswJN", "m0FqlhN0UDPHyxINKN1b", "m54kKtvGk3y0PdRw0Rmx", "m78FiJxJtZWDdQ38BDuv", "mE4OWPJkWhnTGuatB0dE", "mGgiFRavjVAijW0afOO5", "mJdU39R76ZafESyDH2j5", "mgKrM0IZGligXCYTOjqG", "mjhKDXOCiRa2xbRr21RD", "mldaPilXSuN1WnACDaox", "mv6TzV6bIeD7Km7J0MV6", "n3kjYXpY10MmKRuXu4ps", "n7BFoPukBNLymNU26Ioa", "nEtwYeBHTaiTqWXQIxEI", "nLfm6zH3sG3ggGupqsJ8", "nTEqYPhfDNKiYMQymmDb", "nUTR3YBhhf72rqrin4pP", "nbrokFIHcw41FBGtSpa3", "ntCBHgbYuWmyYsg9E7Ox", "nvKG9QleSyGdxrodBuaQ", "nxeF7duZASU7Th764LSA", "nzHViuPCbgA8BiwUfz7L", "o74NSRSUy4F2dG7anWdI", "o97EQSnAXc4WltrJZpvc", "oDlz9IkXJCVDGgoYouN7", "oHJTZr0dRceds5K0FGO1", "oKO2mcpdwsTNSCLvAGYL", "oZmVFUzbLawgMD0uDaT6", "obzCiBwRgt0idFWW1x5E", "ofnTuXLClZWgghTmMKIr", "oyyZAirmiux9BWXDns9C", "ozYSv3ua6acbk2MQc5ic", "p6tZfgAL8X8vw0ERLJrF", "pC3Z5kY09Ub4WUIFxAc7", "pGLzwWJYyLndFJZtucBW", "pOEC1IqOBqFqukTNHAtE", "pZG4MhpK2JaKips7Rjck", "peDfmiv4mvjZzBJHDX3G", "pq2F7GEApXh30QSRpM1G", "prHMVnckgl0pIFwrp1on", "q004ngDMWu0026HAnvgP", "q50Sdrl1BZJjUsWRLmfJ", "q9sLURzeNfE7BAdnCieh", "qBXTQ7rj1cIe7L5YD9hj", "qBo9fJ9wC6HwNnWrzOZm", "qIvHCwqLUs9h16dJScpK", "qP9XAtjErdkckXtRFsdr", "qcovSMBpQcsDWJmDUTTG", "qhQoFfgTOl7qDNV7ax4y", "qj2Xkr6VfqZlkVOQeCeX", "ql7Q0qIDSiHlLVyARysb", "qvrvsdBpDOJh2m8wxAV5", "qx4kQPbuXBqt20ZntjFE", "qxE6O3nn653xJRDLmqyk", "r2JI5v2i8lFvzoKsVpXe", "r47ZcWgauTLRWtW2xCLX", "rAeEZNl2nTbhjQzO13MA", "rBRQoL0vfUmSRKGNUiJE", "rCOElEju0otcEvfTIOYO", "rEHCKpxJ0A61LwwqXcJw", "rESh5cCGjQSdOn2tRzNL", "rFLpSs2d2FQQJZSZLv86", "rMTyrG3LQuCuaMqwn3Tl", "rNoeUNNw2kNgzmRFObzv", "rSSeAABpN7N5WTtI7gQc", "rZ8hzwpqPtvo46bZHXQJ", "rjhT6soSZZnqmVpEtHZr", "rkZzCRcBKHeUoMSC8pR6", "rlbWEPWFP7w3lFmtJKGf", "rmV2NpefUuYNNmogki2a", "roDfDgMhB1uf2t3fflKp", "rqY3RrxfqoRQKSHJ1tPv", "rwf33vLRsJHp6ISunvcn", "sC5cD9tuPAhpsSOiJHaT", "sCGlMt4XQLaTfa2dJrox", "sCO97d3znO57yxDoFQGc", "sDgDFkTuKx8v0pE3y3mM", "sHOUAlL7PjgvlKEiqDIu", "sIJUXr5GSvfCpuOYCsJ7", "sLcxptnMy3iOXvdjxUsp", "sVSDKppOj8Ur1hZ6z3V7", "sVhAw4ikXaTxx2623XfS", "sXCOvLGNKvsGMJUpM2N3", "sgVHIv1YUo1VsyWAT3BI", "shX4dwgmuhi32Fo2CLCz", "sqioBVE4fvtNTq4RLkQX", "sszz3Mmn2aHx5hNBFqzC", "t7VMrZNeJeu3B6saF5qb", "tEr6XaUxenhWoIzURyKY", "tIpwHqXvRALDKmRdw6Jv", "tPS8LBPQ8A5DazKFLfM4", "tVByxmcroFNuRrlMyvtd", "tXvfYac4IFnYVQfXZgLF", "tgzjsi6sBHl2DA0ztz9P", "tpP30NYRq1p8tDQMpOZV", "tryTGsvngvOqHgXi3tBj", "ts9GnF7SPVCYRPQODnJs", "twjuBdDQ0trp73zjMuiQ", "twmVMG0Ee4VtQIFxdJGl", "u5euQknG4NrXQmr6KEZc", "u8SsazgOBt5ApApnsoWQ", "uJYeJvz3DK3j4YA4vdrU", "ubBlXHIEqZm7EIhz24vD", "uozKWEqjK9LW259srWlK", "utFfRTQIuwQkZcyd67ZV", "uvepvgmAYi1xRnLS4cO8", "uwcooVgo9BuCHHfrhq5e", "v0HTMqE4iDV8SQjP1kOI", "v1SsrQ8RboEKKpRgRwug", "v7dNQSsFdKGeONF0GMTm", "vEMPVmOmeJCgq3HK5ZPU", "vHiVNUxpnTTifbAJYtQz", "vO16ZbJjl8s0OdtoDFnL", "vQ8ue0pSicgSODHCVsae", "vVN9NcATqwQ03LGbK0Nj", "vXN1zZ6YQk1SK56vzHGb", "va0xjcl1syeBseBl24bU", "vb4sNh0vWm5uOzYbbeHN", "vjkXkyYjnZ2vAfEKsmGu", "vmEqkT6VsN3q0rh32eAq", "voxmAU6zmKI86w1JjUSa", "w04EEebhe7QNUfyIhIPU", "w4l2M3eyxH9SPpguZPmf", "w7wgF2eUpCr0HpNDh5Y9", "w99R2h56wProZgVSV7iJ", "wBCkPfOaGf62hhuNpDxM", "wBKohNknVepMvuN1YZat", "wBcGS8IzN4PYOOh1WyBX", "wEuZGamJkgFYXOvOxK6s", "wFkkKfGoaPd5iKZYzhiQ", "wOR3tdOgQX2BqGeIS1Rf", "wQwIDnCfW2o8R0rxELy3", "wX7Os6mghH1zPGW5p8Cr", "wd1Jbb9Q16yYX3x9hp7s", "wrQDgP4GEWeCmI1l40Nw", "wtuEdIYIsQmakXtSyiPG", "wtupoQux9bR6M2d0AEpj", "wySiEZNO1SJ0WVnGt7K6", "x2hOgcOeBPmtmSXinaXy", "x7fb9dhirMEmMDhmBqpL", "xQiMrvMSTGbRYKUbI9k2", "xVmIW2gGX0UskIAccxLZ", "xWQJTA1GFhl39MQw7xPE", "xXHcbo7XIe1LJGtXLOFl", "xc8CDLvzSMo6Khb3RqUS", "xd7F4v7TtMFI16081h8A", "xe52Ue7nosB1uEBPJlU7", "xgDhMU59I6f3UQqxHKLk", "xmuexDTOwVx4aLkx2UzC", "y7Z5466SIiJSwQ2eHFq5", "yApuMvS4Ca3CJPVT79Z7", "yE8YzNlm2Lq3dJj5c9oh", "yO5EBRTuGbEMAwwzAnYd", "yY27QtHdquuNC9ky24Xu", "yenKhr8ouhWcAgG7mqDO", "yj9ydGY9jLRhXXuQe3QP", "ymz0FkZYfGmComJZgAuP", "yr5WWao7MH2mB7m1aI8k", "yufB2hMBPCPAZm4ME7Xt", "ywDq4Xt1uvBILSKk2VAd", "ywuJOx8LVyncpyt03esi", "z5Morhx7SAGvXcVsqS2U", "zA5TPdw562d761XALYYN", "zIrWiZbx5w7hYO7kuzaA", "zeinB12GV6j79m2Ktmhp", "zekjU906uzObFwU93i0W", "zhbAHZ51lEPRfIPUzYDB", "zsbVBQQH6ucS1JDyLeDK"]
 
 export const suppliersWithNullNameIDs = [
-  "4yRmUyLJfgJwoX7T06DT",
-  "9XGXltSQvUShAEz1YLBI",
-  "BwEtveQdbtet5B90WF6d",
-  "aZn9A91X1kiRFrQ5dNhp",
-  "c17X5OIN4ng7qUoOnRNB",
-  "jdZ6LsqMM7Q3HDfNdE6b",
-  "nzHViuPCbgA8BiwUfz7L",
-  "wtuEdIYIsQmakXtSyiPG",
+
+    "4yRmUyLJfgJwoX7T06DT",
+"9XGXltSQvUShAEz1YLBI",
+"BwEtveQdbtet5B90WF6d",
+"aZn9A91X1kiRFrQ5dNhp",
+"c17X5OIN4ng7qUoOnRNB",
+"jdZ6LsqMM7Q3HDfNdE6b",
+"nzHViuPCbgA8BiwUfz7L",
+"wtuEdIYIsQmakXtSyiPG",
 ]
 
+// suppliers offering enhanced commissions w/ matching supplier name + country + city in DB
+export const enhancedCommissionsByCountryAndCity = [
+    {
+        "id": "HjOWWGHBM64G9qiQcVFJ",
+        "hotel_representative": null,
+        "country": "Ecuador",
+        "state": null,
+        "supplier_name": "Pikaia Lodge",
+        "representative_company": {
+            "phone": "404-915-8728",
+            "title": "Founder & President",
+            "company": "Hidden Doorways Travel Collection",
+            "email": "joann@hiddendoorwaystravel.com",
+            "name": "Kurtz-Ahlers, Joanne"
+        },
+        "city": "Galapagos",
+        "supplier_type": "Hotel"
+    },
+    {
+        "id": "hxb8CX0E7GGVAB0Bosk1",
+        "supplier_type": "Hotel",
+        "country": "Maldives",
+        "city": "Laamu Atoll",
+        "state": null,
+        "representative_company": {
+            "title": "Founder & President",
+            "name": "Kurtz-Ahlers, Joanne",
+            "company": "Hidden Doorways Travel Collection",
+            "email": "joann@hiddendoorwaystravel.com",
+            "phone": "404-915-8728"
+        },
+        "hotel_representative": null,
+        "supplier_name": "Six Senses Laamu"
+    },
+    {
+        "id": "hwEO9lWuNCFJOA2Y4Goi",
+        "hotel_representative": {
+            "title": "Assistant Director of Sales",
+            "phone": "490 171 4801673",
+            "email": "andrea.vitova@sofitel.com",
+            "name": "Vitova, Andrea"
+        },
+        "country": "Germany",
+        "representative_company": null,
+        "supplier_type": "Hotel",
+        "supplier_name": "Sofitel Frankfurt Opera",
+        "state": null,
+        "city": "Frankfurt"
+    },
+    {
+        "id": "1jIyrSJr0VK2NAg6OR1X",
+        "hotel_representative": {
+            "title": "General Manager",
+            "name": "Downing, Nick",
+            "phone": "+66 (0)96-880-3056",
+            "email": "nick@thesiamhotel.com"
+        },
+        "representative_company": null,
+        "state": null,
+        "country": "Thailand",
+        "supplier_name": "The Siam",
+        "city": "Bangkok",
+        "supplier_type": "Hotel"
+    },
+    {
+        "id": "yqQFklOdxttNy5uBaKyo",
+        "representative_company": null,
+        "state": null,
+        "hotel_representative": {
+            "title": "Assistant Director of Sales",
+            "email": "alberto.liparoti@castelfalfi.com",
+            "name": "Liparoti, Alberto ",
+            "phone": "+39 0571 890130"
+        },
+        "last_updated": {
+            "seconds": 1693406637,
+            "nanoseconds": 274000000
+        },
+        "supplier_type": "Hotel",
+        "city": "Montaione",
+        "general_manager": null,
+        "country": "Italy",
+        "supplier_name": "Toscana Resort Castelfalfi"
+    }
+]
