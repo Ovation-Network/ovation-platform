@@ -96,7 +96,7 @@ export const supplierRouter = createTRPCRouter({
         }
       });
     }),
-  /* Add a supplier and create enhance commission - PROTECTED */
+  /* Add a supplier and create enhance commission */
   addSupplierAndEnhancedCommission: protectedProcedure
     .input(z.object({
       name: z.string(),

@@ -96,13 +96,13 @@ export const supplierRouter = createTRPCRouter({
         }
       });
     }),
-  /* Add a supplier and create enhance commission - PROTECTED */
+  /* Add a supplier and create enhance commission */
   addSupplierAndEnhancedCommission: protectedProcedure
     .input(z.object({
       name: z.string(),
       type: z.custom<SupplierType>(),
-      region: z.string().nullable(),
       country: z.string().nullable(),
+      region: z.string().nullable(),
       city: z.string().nullable(),
       state: z.string().nullable(),
       ovationID: z.string().nullable(),
@@ -114,7 +114,7 @@ export const supplierRouter = createTRPCRouter({
     }))
     .mutation(async ({ ctx, input }) => {
       // extract session and databse from ctx
-      const { db, session } = ctx;
+      const { session, db } = ctx;
 
       // check if user is logged in
       if (!session.user) {

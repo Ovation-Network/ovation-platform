@@ -96,13 +96,13 @@ export const supplierRouter = createTRPCRouter({
         }
       });
     }),
-  /* Add a supplier and create enhance commission - PROTECTED */
-  addSupplierAndEnhancedCommission: protectedProcedure
+  /* Add a supplier and create enhance commission */
+  addSupplierAndEnhancedCommission: publicProcedure
     .input(z.object({
       name: z.string(),
       type: z.custom<SupplierType>(),
-      region: z.string().nullable(),
       country: z.string().nullable(),
+      region: z.string().nullable(),
       city: z.string().nullable(),
       state: z.string().nullable(),
       ovationID: z.string().nullable(),
@@ -114,12 +114,7 @@ export const supplierRouter = createTRPCRouter({
     }))
     .mutation(async ({ ctx, input }) => {
       // extract session and databse from ctx
-      const { db, session } = ctx;
-
-      // check if user is logged in
-      if (!session.user) {
-        throw new Error("You must be logged in to add a supplier");
-      }
+      const { db } = ctx;
 
       // create a new supplier
       const supplier = await db.supplier.create({

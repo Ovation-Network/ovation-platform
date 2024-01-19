@@ -19,6 +19,7 @@ export default function EnhancedHotelCommissions() {
           <h1 className="text-4xl font-bold text-center">Enhanced Hotel Commissions - DATA MIGRATION</h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             {/* CONTENT FOR LINKS TO THE PUBLIC LINK FOR OVATION PAGES */}
+            <button className="btn" onClick={() => migrateData()}>MIGRATE</button>
           </div>
         </div>
       </main>

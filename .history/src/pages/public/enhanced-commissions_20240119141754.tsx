@@ -1,11 +1,26 @@
-/* eslint-disable @typescript-eslint/non-nullable-type-assertion-style */
-/* eslint-disable @typescript-eslint/prefer-for-of */
 import Head from "next/head";
 import { api } from "~/utils/api";
+import { enhancedCommissionsByCountryAndCity, type enhanceCommissionsCleaned, indexOfNulls } from "~/utils/data-migration-enhancedCommissions";
 
 export default function EnhancedHotelCommissions() {
 
-  
+  const addEnhancedCommissionAPI = api.enhancedCommission.connectEnhancedCommissionByOvationID.useMutation({
+    onSuccess: (data) => {
+      console.log(`Successfully linked enhanced commission`, data)
+    }
+  })
+
+  const addEnhancedCommission = async (enhancedCommission: typeof enhanceCommissionsCleaned[0]) => {
+    const payload = {
+      name: enhancedCommission.hotel,
+      commission: enhancedCommission.commission,
+      specialAmenities: enhancedCommission.special_amenity,
+      bookingInstructions: enhancedCommission.booking_instructions,
+      ovationID: enhancedCommission.ovationID,
+
+    }
+
+  }
 
   return (
     <>

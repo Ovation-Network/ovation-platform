@@ -3,44 +3,9 @@ import { z } from "zod";
 import {
   createTRPCRouter,
   protectedProcedure,
-  publicProcedure,
 } from "~/server/api/trpc";
 
 export const enhancedCommissionsRouter = createTRPCRouter({
-  /* Connect enhanced commissions by ovationID */
-  connectEnhancedCommissionByOvationID: publicProcedure
-    .input(z.object({
-      ovationID: z.string(),
-      name: z.string(),
-      commission: z.string().nullable(),
-      specialAmenities: z.string().nullable(),
-      bookingInstructions: z.string().nullable(),
-      startDate: z.date().nullable(),
-      endDate: z.string().nullable(),
-    }))
-    .mutation(({ ctx, input }) => {
-      // extract session and databse from ctx
-      const { db } = ctx;
-
-      // create enhanced commission item related to a supplier based on ovationID
-      const enhancedCommission = db.enhancedCommission.create({
-        data: {
-          name: input.name,
-          commission: input.commission,
-          specialAmenities: input.specialAmenities,
-          bookingInstructions: input.bookingInstructions,
-          startDate: input.startDate,
-          endDate: input.endDate,
-          supplier: {
-            connect: {
-              ovationID: input.ovationID,
-            },
-          },
-        },
-      });
-
-      return enhancedCommission;
-    }),
   addEnhancedCommission: protectedProcedure
     .input(z.object({
       supplierId: z.number(),

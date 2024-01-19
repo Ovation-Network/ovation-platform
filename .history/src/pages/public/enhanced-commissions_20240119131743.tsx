@@ -1,11 +1,7 @@
-/* eslint-disable @typescript-eslint/non-nullable-type-assertion-style */
-/* eslint-disable @typescript-eslint/prefer-for-of */
 import Head from "next/head";
 import { api } from "~/utils/api";
 
 export default function EnhancedHotelCommissions() {
-
-  
 
   return (
     <>
