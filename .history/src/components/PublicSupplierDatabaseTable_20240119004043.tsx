@@ -48,7 +48,7 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
     if (search !== '') {
       const suppliers = data?.filter((supplier) => filter === 'supplier' ? supplier.name.toLowerCase().includes(search.toLowerCase()) : supplier.city?.toLowerCase().includes(search.toLowerCase()) ?? supplier.country?.toLowerCase().includes(search.toLowerCase()));
       
-      if (currentPage > maxPage) setCurrentPage(1); // if no results, reset to page 1
+      if (suppliers!.length === 0) setCurrentPage(1); // if no results, reset to page 1
       setMaxPage(Math.ceil((suppliers!.length) / suppliersPerPage)); // calculate max page
       setFilteredSuppliers(chopSuppliers(suppliers, startIndex, endIndex));
     } else {
@@ -56,7 +56,7 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
     }
     
 
-  }, [filter, search, data, isLoading, currentPage, startIndex, endIndex, filteredSuppliers, maxPage])
+  }, [filter, search, data, isLoading, currentPage, startIndex, endIndex, filteredSuppliers])
 
   if (isLoading) return <div>Loading...</div>;
 
