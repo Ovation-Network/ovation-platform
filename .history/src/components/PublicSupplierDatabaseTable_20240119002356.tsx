@@ -37,7 +37,9 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
 
   useEffect(() => {
 
-    if (filteredSuppliers!.length === 0) setCurrentPage(1)
+    if (filteredSuppliers!.length === 0) {
+      setCurrentPage(1);
+    }
 
     const chopSuppliers = (suppliers: typeof data, startIndex: number, endIndex: number) => suppliers?.slice(startIndex, endIndex);
 

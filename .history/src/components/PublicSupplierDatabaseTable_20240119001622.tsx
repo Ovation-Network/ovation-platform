@@ -5,6 +5,22 @@ import { NotifyIAPopup } from '~/components/NotifyIAPopup';
 
 export const PublicSupplierDatabaseTable: React.FC = () => {
 
+  /* CODE FOR OLD SVELTE PAGE:
+    const itemsPerPage = 50;
+
+  let currentPage = 1;
+
+  const suppliers = data.suppliers
+
+  $: startIndex = (currentPage - 1) * itemsPerPage;
+  $: endIndex = startIndex + itemsPerPage;
+
+  $: itemsOnCurrentPage = table.slice(startIndex, endIndex);
+  $: maxPage = table.length / 50;
+
+  $: currentItems = `${startIndex + 1} - ${endIndex > table.length ? table.length : endIndex} of ${table.length} items`
+  */
+
   const { data, isLoading } = api.supplier.getSupplierContacts.useQuery(undefined, {
     refetchOnWindowFocus: false,
     refetchOnMount: false,
@@ -37,9 +53,9 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
 
   useEffect(() => {
 
-    if (filteredSuppliers!.length === 0) setCurrentPage(1)
-
-    const chopSuppliers = (suppliers: typeof data, startIndex: number, endIndex: number) => suppliers?.slice(startIndex, endIndex);
+    const chopSuppliers = (suppliers: typeof data, startIndex: number, endIndex: number) => {
+    return suppliers?.slice(startIndex, endIndex);
+  }
 
     setMaxPage(Math.ceil(data!.length / suppliersPerPage)); // calculate max page
 
@@ -48,6 +64,7 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
 
     // if search is not empty, filter enhancedCommissionData by search
     if (search !== '') {
+      setCurrentPage(1); // reset current page to 1
       const suppliers = data?.filter((supplier) => filter === 'supplier' ? supplier.name.toLowerCase().includes(search.toLowerCase()) : supplier.city?.toLowerCase().includes(search.toLowerCase()) ?? supplier.country?.toLowerCase().includes(search.toLowerCase()));
       setMaxPage(Math.ceil((suppliers!.length) / suppliersPerPage)); // calculate max page
       setFilteredSuppliers(chopSuppliers(suppliers, startIndex, endIndex));
@@ -64,25 +81,10 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
 
   return (
     <>
-{/* <div class="join">
-  <div>
-    <div>
-      <input class="input input-bordered join-item" placeholder="Search"/>
-    </div>
-  </div>
-  <select class="select select-bordered join-item">
-    <option disabled selected>Filter</option>
-    <option>Sci-fi</option>
-    <option>Drama</option>
-    <option>Action</option>
-  </select>
-  <div class="indicator">
-    <span class="indicator-item badge badge-secondary">new</span> 
-    <button class="btn join-item">Search</button>
-  </div>
-</div> */}
+    
 
-{/* <div className="input-group mb-5">
+    {/* Search box and filter dropdown */}
+    <div className="input-group mb-5">
       <select className="select select-bordered" value={filter} onChange={(e) => setFilter(e.target.value)}>
         <option value="supplier">Supplier</option>
         <option value="location">Location</option>
@@ -90,22 +92,6 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
       <input type="text" placeholder="Search…" className="input input-bordered" value={search} onChange={(e) => setSearch(e.target.value)}/>
       <div className="btn" onClick={() => setSearch('')}>
         RESET
-      </div>
-    </div> */}
-
-    {/* Search box and filter dropdown */}
-    <div className="join">
-      <div>
-        <div>
-          <input className="input input-bordered join-item" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)}/>
-        </div>
-      </div>
-      <select className="select select-bordered join-item" value={filter} onChange={(e) => setFilter(e.target.value)}>
-        <option value="supplier">Supplier</option>
-        <option value="location">Location</option>
-      </select>
-      <div className="indicator">
-        <button className="btn join-item">Search</button>
       </div>
     </div>
 

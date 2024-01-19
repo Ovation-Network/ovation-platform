@@ -5,6 +5,22 @@ import { NotifyIAPopup } from '~/components/NotifyIAPopup';
 
 export const PublicSupplierDatabaseTable: React.FC = () => {
 
+  /* CODE FOR OLD SVELTE PAGE:
+    const itemsPerPage = 50;
+
+  let currentPage = 1;
+
+  const suppliers = data.suppliers
+
+  $: startIndex = (currentPage - 1) * itemsPerPage;
+  $: endIndex = startIndex + itemsPerPage;
+
+  $: itemsOnCurrentPage = table.slice(startIndex, endIndex);
+  $: maxPage = table.length / 50;
+
+  $: currentItems = `${startIndex + 1} - ${endIndex > table.length ? table.length : endIndex} of ${table.length} items`
+  */
+
   const { data, isLoading } = api.supplier.getSupplierContacts.useQuery(undefined, {
     refetchOnWindowFocus: false,
     refetchOnMount: false,
@@ -37,9 +53,13 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
 
   useEffect(() => {
 
-    if (filteredSuppliers!.length === 0) setCurrentPage(1)
+    if (data!.length === 0) {
+      setCurrentPage(1);
+    }
 
-    const chopSuppliers = (suppliers: typeof data, startIndex: number, endIndex: number) => suppliers?.slice(startIndex, endIndex);
+    const chopSuppliers = (suppliers: typeof data, startIndex: number, endIndex: number) => {
+    return suppliers?.slice(startIndex, endIndex);
+  }
 
     setMaxPage(Math.ceil(data!.length / suppliersPerPage)); // calculate max page
 
