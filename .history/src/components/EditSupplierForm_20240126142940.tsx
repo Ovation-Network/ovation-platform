@@ -5,7 +5,7 @@ import type { SupplierType } from '@prisma/client'
 
 
 
-export const EditSupplierForm: React.FC = () => {
+export const EditSupplierForm: React.FC<> = () => {
 
   const router = useRouter();
 
@@ -31,21 +31,21 @@ export const EditSupplierForm: React.FC = () => {
   const [ supplierCity, setSupplierCity ] = useState<string>(supplier.data?.city ?? '');
   const [ supplierState, setSupplierState ] = useState<string>(supplier.data?.state ??'');
   const [ onsiteContact, setOnsiteContact ] = useState<boolean>(supplier.data?.contacts.length != undefined && supplier.data?.contacts.length  > 0 || false);
-  const [ onsiteContactName, setOnsiteContactName ] = useState<string>(supplier.data?.contacts[0]?.name ?? '');
-  const [ onsiteContactTitle, setOnsiteContactTitle ] = useState<string>(supplier.data?.contacts[0]?.title ?? '');
-  const [ onsiteContactPhone, setOnsiteContactPhone ] = useState<string>(supplier.data?.contacts[0]?.phone ?? '');
-  const [ onsiteContactEmail, setOnsiteContactEmail ] = useState<string>(supplier.data?.contacts[0]?.email ?? '');
-  const [ representativeCompany, setRepresentativeCompany ] = useState<boolean>(supplier.data?.representativeCompanies.length != undefined && supplier.data?.representativeCompanies.length  > 0 || false);
-  const [ representativeCompanyName, setRepresentativeCompanyName ] = useState<string>(supplier.data?.representativeCompanies[0]?.companyName ?? '');
-  const [ representativeName, setRepresentativeName ] = useState<string>(supplier.data?.representativeCompanies[0]?.name ?? '');
-  const [ representativeTitle, setRepresentativeTitle ] = useState<string>(supplier.data?.representativeCompanies[0]?.title ?? '');
-  const [ representativePhone, setRepresentativePhone ] = useState<string>(supplier.data?.representativeCompanies[0]?.phone ?? '');
-  const [ representativeEmail, setRepresentativeEmail ] = useState<string>(supplier.data?.representativeCompanies[0]?.email ?? '');
-  const [ generalManager, setGeneralManager ] = useState<boolean>(supplier.data?.generalManagers.length != undefined && supplier.data?.generalManagers.length  > 0 || false);
-  const [ generalManagerName, setGeneralManagerName ] = useState<string>(supplier.data?.generalManagers[0]?.name ?? '');
-  const [ generalManagerTitle, setGeneralManagerTitle ] = useState<string>(supplier.data?.generalManagers[0]?.title ?? '');
-  const [ generalManagerPhone, setGeneralManagerPhone ] = useState<string>(supplier.data?.generalManagers[0]?.phone ?? '');
-  const [ generalManagerEmail, setGeneralManagerEmail ] = useState<string>(supplier.data?.generalManagers[0]?.email ?? '');
+  const [ onsiteContactName, setOnsiteContactName ] = useState<string>('');
+  const [ onsiteContactTitle, setOnsiteContactTitle ] = useState<string>('');
+  const [ onsiteContactPhone, setOnsiteContactPhone ] = useState<string>('');
+  const [ onsiteContactEmail, setOnsiteContactEmail ] = useState<string>('');
+  const [ representativeCompany, setRepresentativeCompany ] = useState<boolean>(false);
+  const [ representativeCompanyName, setRepresentativeCompanyName ] = useState<string>('');
+  const [ representativeName, setRepresentativeName ] = useState<string>('');
+  const [ representativeTitle, setRepresentativeTitle ] = useState<string>('');
+  const [ representativePhone, setRepresentativePhone ] = useState<string>('');
+  const [ representativeEmail, setRepresentativeEmail ] = useState<string>('');
+  const [ generalManager, setGeneralManager ] = useState<boolean>(false);
+  const [ generalManagerName, setGeneralManagerName ] = useState<string>('');
+  const [ generalManagerTitle, setGeneralManagerTitle ] = useState<string>('');
+  const [ generalManagerPhone, setGeneralManagerPhone ] = useState<string>('');
+  const [ generalManagerEmail, setGeneralManagerEmail ] = useState<string>('');
 
 
   const supplierTypeOptions = ['HOTEL', 'DMC', 'CRUISE', 'RAIL', 'REPRESENTATION_COMPANY', 'AIR', 'TOUR_OPERTATOR', 'CAR_RENTAL', 'TRAVEL_INSURANCE', 'CHAUFFEUR_SERVICES', 'OTHER']
