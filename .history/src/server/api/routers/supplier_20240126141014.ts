@@ -258,6 +258,11 @@ export const supplierRouter = createTRPCRouter({
             email: input.representativeCompanyEmail,
             phone: input.representativeCompanyPhone,
             companyName: input.representativeCompanyName!,
+            supplier: {
+              connect: {
+                id: supplier.id
+              }
+            }
           }
         });
       }

@@ -246,18 +246,20 @@ export const supplierRouter = createTRPCRouter({
         });
       }
 
-      // Update RepresentativeCompany if present in input
+      // Create RepresentativeCompany if present in input
       if (input.representativeCompany) {
-        await db.representativeCompany.update({
-          where: {
-            id: input.representativeCompanyID
-          },
+        await db.representativeCompany.create({
           data: {
             name: input.representativeCompanyName!,
             title: input.representativeCompanyTitle!,
             email: input.representativeCompanyEmail,
             phone: input.representativeCompanyPhone,
             companyName: input.representativeCompanyName!,
+            supplier: {
+              connect: {
+                id: supplier.id
+              }
+            }
           }
         });
       }
