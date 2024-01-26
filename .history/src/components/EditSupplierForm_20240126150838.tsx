@@ -13,10 +13,10 @@ export const EditSupplierForm: React.FC = () => {
   const { id } = router.query;
 
   // change the ID to a number for the API
-  const supplierQueryID = Number(id);
+  const supplierId = Number(id);
 
   // get the supplier data from the API
-  const supplier = api.supplier.getSupplierById.useQuery({id: supplierQueryID});
+  const supplier = api.supplier.getSupplierById.useQuery({id: supplierId});
 
   const editSupplierAndContactsAPI = api.supplier.editSupplierAndContacts.useMutation({
     onSuccess: () => {
@@ -24,16 +24,6 @@ export const EditSupplierForm: React.FC = () => {
       alert(' Successfully updated the database! ');
     }
   });
-
-
-  // set the state for the IDs
-  const [supplierId, setSupplierId] = useState<number>(supplier.data?.id ?? 0);
-  const [contactId, setContactId] = useState<number>(supplier.data?.contacts[0]?.id ?? 0);
-  const [represntativeCompanyID, setRepresentativeCompanyID] = useState<number>(supplier.data?.representativeCompanies[0]?.id ?? 0);
-  const [generalManagerID, setGeneralManagerID] = useState<number>(supplier.data?.generalManagers[0]?.id ?? 0);
-
-
-
 
   const [ supplierName, setSupplierName ] = useState<string>(supplier.data?.name ?? '');
   const [ supplierType, setSupplierType ] = useState<SupplierType>(supplier.data?.type ?? 'OTHER');
@@ -59,14 +49,6 @@ export const EditSupplierForm: React.FC = () => {
 
   // use useEffect to update the state when the supplier data changes
   useEffect(() => {
-
-    // set the state for the IDs
-    setSupplierId(supplier.data?.id ?? 0);
-    setContactId(supplier.data?.contacts[0]?.id ?? 0);
-    setRepresentativeCompanyID(supplier.data?.representativeCompanies[0]?.id ?? 0);
-    setGeneralManagerID(supplier.data?.generalManagers[0]?.id ?? 0);
-
-
     setSupplierName(supplier.data?.name ?? '');
     setSupplierType(supplier.data?.type ?? 'OTHER');
     setSupplierCountry(supplier.data?.country ?? '');
@@ -97,27 +79,23 @@ export const EditSupplierForm: React.FC = () => {
     event.preventDefault();
 
     const supplierData = {
-      id: supplierId,
       name: supplierName,
-      type: supplierType,
+      type: (supplierType as SupplierType),
       region: null,
       country: supplierCountry,
       city: supplierCity,
       state: supplierState,
       onsiteContact: onsiteContact,
-      onsiteContactID: contactId,
       onsiteContactName: onsiteContactName,
       onsiteContactTitle: onsiteContactTitle,
       onsiteContactPhone: onsiteContactPhone,
       onsiteContactEmail: onsiteContactEmail,
       generalManager: generalManager,
-      generalManagerID: generalManagerID,
       generalManagerName: generalManagerName,
       generalManagerTitle: generalManagerTitle,
       generalManagerPhone: generalManagerPhone,
       generalManagerEmail: generalManagerEmail,
       representativeCompany: representativeCompany,
-      representativeCompanyID: represntativeCompanyID,
       representativeCompanyName: representativeCompanyName,
       representativeCompanyTitle: representativeTitle,
       representativeCompanyPhone: representativePhone,

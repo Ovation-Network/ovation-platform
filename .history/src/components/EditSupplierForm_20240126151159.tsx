@@ -13,10 +13,10 @@ export const EditSupplierForm: React.FC = () => {
   const { id } = router.query;
 
   // change the ID to a number for the API
-  const supplierQueryID = Number(id);
+  const supplierId = Number(id);
 
   // get the supplier data from the API
-  const supplier = api.supplier.getSupplierById.useQuery({id: supplierQueryID});
+  const supplier = api.supplier.getSupplierById.useQuery({id: supplierId});
 
   const editSupplierAndContactsAPI = api.supplier.editSupplierAndContacts.useMutation({
     onSuccess: () => {
@@ -97,27 +97,27 @@ export const EditSupplierForm: React.FC = () => {
     event.preventDefault();
 
     const supplierData = {
-      id: supplierId,
+      supplierId: supplierId,
       name: supplierName,
       type: supplierType,
       region: null,
       country: supplierCountry,
       city: supplierCity,
       state: supplierState,
+      contactId: contactId,
       onsiteContact: onsiteContact,
-      onsiteContactID: contactId,
       onsiteContactName: onsiteContactName,
       onsiteContactTitle: onsiteContactTitle,
       onsiteContactPhone: onsiteContactPhone,
       onsiteContactEmail: onsiteContactEmail,
+      generalManagerId: generalManagerID,
       generalManager: generalManager,
-      generalManagerID: generalManagerID,
       generalManagerName: generalManagerName,
       generalManagerTitle: generalManagerTitle,
       generalManagerPhone: generalManagerPhone,
       generalManagerEmail: generalManagerEmail,
+      representativeCompanyId: represntativeCompanyID,
       representativeCompany: representativeCompany,
-      representativeCompanyID: represntativeCompanyID,
       representativeCompanyName: representativeCompanyName,
       representativeCompanyTitle: representativeTitle,
       representativeCompanyPhone: representativePhone,
