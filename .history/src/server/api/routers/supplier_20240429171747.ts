@@ -1,36 +1,15 @@
-/* eslint-disable @typescript-eslint/consistent-type-imports */
 import { z } from "zod";
 
 import {
   createTRPCRouter,
   publicProcedure,
   protectedProcedure,
-  createTRPCContext
+  inferAsyncReturnType
 } from "~/server/api/trpc";
 
-import type { inferAsyncReturnType } from "@trpc/server";
-
-import type { Prisma, SupplierType } from "@prisma/client";
+import { Prisma, SupplierType } from "@prisma/client";
 
 export const supplierRouter = createTRPCRouter({
-  infiniteProfileSuppliersFeed: publicProcedure
-    .input(
-      z.object({
-        name: z.string().optional(),
-        country: z.string().optional(),
-        city: z.string().optional(),
-        limit: z.number().optional(),
-        cursor: z.object({ id: z.number(), createdAt: z.date() }).optional(),
-      })
-    )
-    .query(async ({ input: { limit = 50, name, cursor }, ctx }) => {
-      return await infiniteSupplierQuery({
-        limit,
-        ctx,
-        cursor,
-        whereClause: { name },
-      });
-    }),
   /* Get all suppliers - PUBLIC */
   getSupplierContacts: publicProcedure
     .query(({ ctx }) => {
@@ -736,7 +715,7 @@ import {
   createTRPCContext,
 } from "~/server/api/trpc";
 
-export const supplierRouter = createTRPCRouter({
+export const tweetRouter = createTRPCRouter({
   infiniteProfileFeed: publicProcedure
     .input(
       z.object({
@@ -746,7 +725,7 @@ export const supplierRouter = createTRPCRouter({
       })
     )
     .query(async ({ input: { limit = 10, userId, cursor }, ctx }) => {
-      return await getInfinitesuppliers({
+      return await getInfiniteTweets({
         limit,
         ctx,
         cursor,
@@ -764,7 +743,7 @@ export const supplierRouter = createTRPCRouter({
     .query(
       async ({ input: { limit = 10, onlyFollowing = false, cursor }, ctx }) => {
         const currentUserId = ctx.session?.user.id;
-        return await getInfinitesuppliers({
+        return await getInfiniteTweets({
           limit,
           ctx,
           cursor,
@@ -782,34 +761,34 @@ export const supplierRouter = createTRPCRouter({
   create: protectedProcedure
     .input(z.object({ content: z.string() }))
     .mutation(async ({ input: { content }, ctx }) => {
-      const supplier = await ctx.prisma.supplier.create({
+      const tweet = await ctx.prisma.tweet.create({
         data: { content, userId: ctx.session.user.id },
       });
 
       void ctx.revalidateSSG?.(`/profiles/${ctx.session.user.id}`);
 
-      return supplier;
+      return tweet;
     }),
   toggleLike: protectedProcedure
     .input(z.object({ id: z.string() }))
     .mutation(async ({ input: { id }, ctx }) => {
-      const data = { supplierId: id, userId: ctx.session.user.id };
+      const data = { tweetId: id, userId: ctx.session.user.id };
 
       const existingLike = await ctx.prisma.like.findUnique({
-        where: { userId_supplierId: data },
+        where: { userId_tweetId: data },
       });
 
       if (existingLike == null) {
         await ctx.prisma.like.create({ data });
         return { addedLike: true };
       } else {
-        await ctx.prisma.like.delete({ where: { userId_supplierId: data } });
+        await ctx.prisma.like.delete({ where: { userId_tweetId: data } });
         return { addedLike: false };
       }
     }),
 }); */
 
-async function infiniteSupplierQuery({
+async function paginateSupplierQuery({
   whereClause,
   ctx,
   limit,
@@ -817,27 +796,26 @@ async function infiniteSupplierQuery({
 }: {
   whereClause?: Prisma.SupplierWhereInput;
   limit: number;
-  cursor: { id: number; createdAt: Date } | undefined;
+  cursor: { id: string; createdAt: Date } | undefined;
   ctx: inferAsyncReturnType<typeof createTRPCContext>;
 }) {
+  const currentUserId = ctx.session?.user.id;
 
-  const data = await ctx.db.supplier.findMany({
+  const data = await ctx.prisma.tweet.findMany({
     take: limit + 1,
-    cursor: cursor ? cursor : undefined,
+    cursor: cursor ? { createdAt_id: cursor } : undefined,
     orderBy: [{ createdAt: "desc" }, { id: "desc" }],
     where: whereClause,
     select: {
       id: true,
-      name: true,
-      type: true,
-      country: true,
-      region: true,
-      city: true,
-      state: true,
+      content: true,
       createdAt: true,
-      contacts: true,
-      generalManagers: true,
-      representativeCompanies: true,
+      _count: { select: { likes: true } },
+      likes:
+        currentUserId == null ? false : { where: { userId: currentUserId } },
+      user: {
+        select: { name: true, id: true, image: true },
+      },
     },
   });
 
@@ -850,19 +828,14 @@ async function infiniteSupplierQuery({
   }
 
   return {
-    supplier: data.map((supplier) => {
+    tweets: data.map((tweet) => {
       return {
-        id: supplier.id,
-        createdAt: supplier.createdAt,
-        name: supplier.name,
-        type: supplier.type,
-        country: supplier.country,
-        region: supplier.region,
-        city: supplier.city,
-        state: supplier.state,
-        contacts: supplier.contacts,
-        generalManagers: supplier.generalManagers,
-        representativeCompanies: supplier.representativeCompanies,
+        id: tweet.id,
+        content: tweet.content,
+        createdAt: tweet.createdAt,
+        likeCount: tweet._count.likes,
+        user: tweet.user,
+        likedByMe: tweet.likes?.length > 0,
       };
     }),
     nextCursor,

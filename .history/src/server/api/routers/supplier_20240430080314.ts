@@ -17,10 +17,8 @@ export const supplierRouter = createTRPCRouter({
     .input(
       z.object({
         name: z.string().optional(),
-        country: z.string().optional(),
-        city: z.string().optional(),
         limit: z.number().optional(),
-        cursor: z.object({ id: z.number(), createdAt: z.date() }).optional(),
+        cursor: z.object({ id: z.string(), createdAt: z.date() }).optional(),
       })
     )
     .query(async ({ input: { limit = 50, name, cursor }, ctx }) => {
@@ -820,6 +818,25 @@ async function infiniteSupplierQuery({
   cursor: { id: number; createdAt: Date } | undefined;
   ctx: inferAsyncReturnType<typeof createTRPCContext>;
 }) {
+  const currentUserId = ctx.session?.user.id;
+
+  // const data = await ctx.prisma.supplier.findMany({
+  //   take: limit + 1,
+  //   cursor: cursor ? { createdAt_id: cursor } : undefined,
+  //   orderBy: [{ createdAt: "desc" }, { id: "desc" }],
+  //   where: whereClause,
+  //   select: {
+  //     id: true,
+  //     content: true,
+  //     createdAt: true,
+  //     _count: { select: { likes: true } },
+  //     likes:
+  //       currentUserId == null ? false : { where: { userId: currentUserId } },
+  //     user: {
+  //       select: { name: true, id: true, image: true },
+  //     },
+  //   },
+  // });
 
   const data = await ctx.db.supplier.findMany({
     take: limit + 1,

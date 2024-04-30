@@ -101,9 +101,6 @@ model OnSiteContact {
   updatedAt  DateTime @updatedAt
   supplierId Int
   supplier   Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
-
-  @@unique([id, createdAt])
-  @@index([supplierId])
 }
 
 model GeneralManager {

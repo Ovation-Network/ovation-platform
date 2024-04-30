@@ -17,8 +17,6 @@ export const supplierRouter = createTRPCRouter({
     .input(
       z.object({
         name: z.string().optional(),
-        country: z.string().optional(),
-        city: z.string().optional(),
         limit: z.number().optional(),
         cursor: z.object({ id: z.number(), createdAt: z.date() }).optional(),
       })

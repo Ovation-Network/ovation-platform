@@ -101,9 +101,6 @@ model OnSiteContact {
   updatedAt  DateTime @updatedAt
   supplierId Int
   supplier   Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
-
-  @@unique([id, createdAt])
-  @@index([supplierId])
 }
 
 model GeneralManager {
@@ -116,9 +113,6 @@ model GeneralManager {
   updatedAt  DateTime @updatedAt
   supplierId Int
   supplier   Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
-
-  @@unique([id, createdAt])
-  @@index([supplierId])
 }
 
 model RepresentativeCompany {
@@ -132,9 +126,6 @@ model RepresentativeCompany {
   updatedAt   DateTime @updatedAt
   supplierId  Int
   supplier    Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
-
-  @@unique([id, createdAt])
-  @@index([supplierId])
 }
 
 model EnhancedCommission {
@@ -149,9 +140,6 @@ model EnhancedCommission {
   createdAt           DateTime  @default(now())
   supplierId          Int
   supplier            Supplier  @relation(fields: [supplierId], references: [id], onDelete: Cascade)
-
-  @@unique([id, createdAt])
-  @@index([supplierId])
 }
 
 model SeasonalOffer {
@@ -166,9 +154,6 @@ model SeasonalOffer {
   createAt            DateTime  @default(now())
   supplierId          Int
   supplier            Supplier  @relation(fields: [supplierId], references: [id], onDelete: Cascade)
-
-  @@unique([id, createAt])
-  @@index([supplierId])
 }
 
 model HomepageTicker {
