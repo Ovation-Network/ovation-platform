@@ -36,7 +36,7 @@ export const PublicSupplierDatabaseTable: React.FC = () => {
     }
   }
 
-  const filterSuppliers = useCallback((filter: string, search: string) => {
+  const filterSuppliers = useCallback((/* suppliers: typeof data,  */filter: string, search: string) => {
     if (filter === 'supplier') {
       return data?.filter(supplier => supplier.name.toLowerCase().includes(search.toLowerCase()));
     } else if (filter === 'location') {

@@ -6,7 +6,7 @@ export const suppliers = [
       email: "s.baratelli@edenroccapcana.com ",
       phone: "+1 809 469-7469",
       title: null,
-      name: "Baratelli, Stefano "
+      name: " Baratelli, Stefano "
     },
     representative_company: null,
     supplier_name: "Eden Roc Cap Cana",
