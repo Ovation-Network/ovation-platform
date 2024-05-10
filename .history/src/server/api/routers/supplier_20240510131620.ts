@@ -199,7 +199,7 @@ export const supplierRouter = createTRPCRouter({
         }
         return { supplier };
       } catch (error) {
-        throw new Error("Error creating supplier");
+        return new Error("Error creating supplier");
       }
     }),
   /* Get a supplier by ID - PROTECTED */

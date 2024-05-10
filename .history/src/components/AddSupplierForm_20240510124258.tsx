@@ -21,11 +21,6 @@ export const AddSupplierForm: React.FC = () => {
 
       // redirect to the Admin Page
       await router.push('/admin');
-    },
-    onError: (error) => {
-      // show error message
-      alert('Failed to add supplier and contacts. Please try again later');
-      console.error(error);
     }
   });
 

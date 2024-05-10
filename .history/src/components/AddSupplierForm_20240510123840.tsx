@@ -11,21 +11,13 @@ export const AddSupplierForm: React.FC = () => {
   const trpcUtils = api.useUtils();
 
   const addSupplierAndContactsAPI = api.supplier.createSupplierAndContacts.useMutation({
-    onSuccess: async () => {
+    onSuccess: () => {
       // show success message
       alert(' Supplier and contacts added successfully! ');
-      void await trpcUtils.supplier.getSupplierContacts
-        .invalidate({})
-        .then(() => alert('invalidated getSupplierContactsCache! Public page should be updated with changes'))
-        .catch(() => alert('Failed to invalidate cache, public data might serve stale data. Please ping me on Zoom to fix'));
-
+      void trpcUtils.supplier.getSupplierContacts.invalidate().then(() => alert('invalidated getSupplierContactsCache! Public page should be updated with changes'));
+      
       // redirect to the Admin Page
-      await router.push('/admin');
-    },
-    onError: (error) => {
-      // show error message
-      alert('Failed to add supplier and contacts. Please try again later');
-      console.error(error);
+      router.push('/admin/suppliers');
     }
   });
 
