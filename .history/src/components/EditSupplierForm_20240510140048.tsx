@@ -167,10 +167,6 @@ export const EditSupplierForm: React.FC = () => {
     editSupplierAndContactsAPI.mutate(supplierData);
     await router.push('/admin/suppliers');
   }
-
-  // handle case where no supplier is found
-  if (supplier === null) return <h1>Could not find a supplier with id {supplierQueryID} </h1>
-
   return (
     <>
       <form onSubmit={handleSubmit}>
