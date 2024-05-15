@@ -2,9 +2,12 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import { AdminSupplierDatabaseTable } from "~/components/AdminSupplierDatabaseTable";
+// import { useRouter } from "next/navigation";
+// import { redirect } from "next/navigation";
 
 
 export default function Home() {
+  const { data: sessionData } = useSession();
 
   return (
     <>
@@ -21,7 +24,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-2">
             {/* BUTTON TO SIGN IN -> REDIRECT TO THE ADMIN DASHBOARD */}
             <AuthShowcase />
-            <AdminSupplierDatabaseTable />
+            {sessionData ? <AdminSupplierDatabaseTable /> : <p className="text-center text-2xl min-h-screen">Please sign in to access the admin dashboard</p>}
           </div>
         </div>
       </main>
@@ -31,6 +34,7 @@ export default function Home() {
 
 function AuthShowcase() {
   const { data: sessionData } = useSession();
+
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <p className="text-center text-2xl">
