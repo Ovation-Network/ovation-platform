@@ -22,6 +22,7 @@ export default function SignIn() {
             {/* CONTENT FOR LINKS TO THE PUBLIC LINK FOR OVATION PAGES */}
           </div>
           <div className="flex flex-col items-center gap-2">
+            
             <AuthShowcase />
           </div>
         </div>
@@ -45,36 +46,36 @@ function AuthShowcase() {
 
 
   return (
-    <>
+    <div className="flex flex-col">
       {/* BUTTONS AS SIGN INS */}
       <div className="flex justify-center">
         <button
           onClick={async () => await signInWithEmail('aarcila@theovationnetwork.com')}
-          className="p-4 text-2xl font-bold text-white bg-teal-400 mx-10 w-40 rounded-lg"
+          className="p-4 text-2xl font-bold text-white bg-teal-400 mx-10 rounded-lg"
         >
           ALEX
         </button>
         <button
-          onClick={async () => await signInWithEmail('ggarcia@theovationnetwork.com')}
-          className="p-4 text-2xl font-bold text-white bg-teal-400 mx-10 w-40 rounded-lg"
+          onClick={() => signInWithEmail('ggarcia@theovationnetwork.com')}
+          className="p-4 text-2xl font-bold text-white bg-teal-400 mx-10 rounded-lg"
         >
           VON
         </button>
       </div>
       <div className="flex justify-center mt-10">
         <button
-          onClick={async () => await signInWithEmail('jalbright@theovationnetwork.com')}
-          className="p-4 text-2xl font-bold text-white bg-teal-400 mx-10 w-40 rounded-lg"
+          onClick={() => signInWithEmail('jalbright@theovationnetwork.com')}
+          className="p-4 text-2xl font-bold text-white bg-teal-400 mx-10 rounded-lg"
         >
           JORDAN
         </button>
         <button
-          onClick={async () => await signInWithEmail('pogarcia@theovationnetwork.com')}
-          className="p-4 text-2xl font-bold text-white bg-teal-400 mx-10 w-40 rounded-lg"
+          onClick={() => signInWithEmail('pogarcia@theovationnetwork.com')}
+          className="p-4 text-2xl font-bold text-white bg-teal-400 mx-10 rounded-lg"
         >
           POLO
         </button>
       </div>
-    </>
+    </div>
   );
 }

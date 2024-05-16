@@ -22,6 +22,7 @@ export default function SignIn() {
             {/* CONTENT FOR LINKS TO THE PUBLIC LINK FOR OVATION PAGES */}
           </div>
           <div className="flex flex-col items-center gap-2">
+            
             <AuthShowcase />
           </div>
         </div>
