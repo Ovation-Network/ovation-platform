@@ -74,7 +74,6 @@ export const notificationRouter = createTRPCRouter({
       }
     }),
   getUnresolvedNotifications: protectedProcedure
-    .input(z.object({}))
     .query(async ({ ctx }) => {
       // extract session and databse from ctx
       const { db, session } = ctx;

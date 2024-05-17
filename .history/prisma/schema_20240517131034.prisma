@@ -204,7 +204,7 @@ model Notification {
   name       String?
   details    String
   isResolved Boolean  @default(false)
-  resolvedBy String   @default("IA TEAM")
+  resolvedBy String?  @default("IA TEAM")
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }

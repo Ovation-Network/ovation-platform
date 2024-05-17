@@ -85,12 +85,12 @@ export const AdminSupplierDatabaseTable: React.FC = () => {
               <input className="input input-bordered join-item bg-white border-teal-400" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)}/>
             </div>
           </div>
-          <select className="select select-bordered join-item bg-white border-teal-400" value={filter} onChange={(e) => setFilter(e.target.value)}>
+          <select className="select select-bordered join-item" value={filter} onChange={(e) => setFilter(e.target.value)}>
             <option value="supplier">Supplier</option>
             <option value="location">Location</option>
           </select>
           <div className="indicator">
-            <button className="btn join-item bg-teal-400 border-teal-400 hover:border-red-400 hover:bg-red-400 text-white" onClick={() => setSearch('')}>RESET</button>
+            <button className="btn join-item">Search</button>
           </div>
         </div>
         {/* Search box and filter dropdown */}

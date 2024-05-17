@@ -74,7 +74,6 @@ export const notificationRouter = createTRPCRouter({
       }
     }),
   getUnresolvedNotifications: protectedProcedure
-    .input(z.object({}))
     .query(async ({ ctx }) => {
       // extract session and databse from ctx
       const { db, session } = ctx;
@@ -137,7 +136,7 @@ export const notificationRouter = createTRPCRouter({
           },
           data: {
             isResolved: true,
-            resolvedBy: session.user.email,
+            resolvedBy: session.user.email!,
           },
         });
 

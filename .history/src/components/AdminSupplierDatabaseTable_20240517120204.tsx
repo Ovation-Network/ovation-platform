@@ -90,7 +90,7 @@ export const AdminSupplierDatabaseTable: React.FC = () => {
             <option value="location">Location</option>
           </select>
           <div className="indicator">
-            <button className="btn join-item bg-teal-400 border-teal-400 hover:border-red-400 hover:bg-red-400 text-white" onClick={() => setSearch('')}>RESET</button>
+            <button className="btn join-item bg-teal-400 border-teal-100">Search</button>
           </div>
         </div>
         {/* Search box and filter dropdown */}

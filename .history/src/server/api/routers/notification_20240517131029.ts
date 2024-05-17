@@ -74,7 +74,6 @@ export const notificationRouter = createTRPCRouter({
       }
     }),
   getUnresolvedNotifications: protectedProcedure
-    .input(z.object({}))
     .query(async ({ ctx }) => {
       // extract session and databse from ctx
       const { db, session } = ctx;
@@ -129,19 +128,26 @@ export const notificationRouter = createTRPCRouter({
         });
       }
 
+      if (!input.id) {
+        throw new TRPCError({
+          code: "BAD_REQUEST",
+          message: "You need to provide an ID when resolving an issue! :)",
+        });
+      }
+
       // mark notification as resolved
       try {
-        await db.notification.update({
+        const notification = await db.notification.update({
           where: {
             id: input.id,
           },
           data: {
             isResolved: true,
-            resolvedBy: session.user.email,
+            resolvedBy: session.user.email!,
           },
         });
 
-        return;
+        return notification;
       } catch (error) {
 
         throw new TRPCError({
