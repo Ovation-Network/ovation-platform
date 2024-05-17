@@ -294,7 +294,7 @@ export const supplierRouter = createTRPCRouter({
       generalManagerEmail: z.string().nullable(),
       representativeCompany: z.boolean(),
       representativeCompanyID: z.number(),
-      representativeName: z.string(),
+      repressentativeName: z.string(),
       representativeCompanyName: z.string().nullable(),
       representativeCompanyTitle: z.string().nullable(),
       representativeCompanyPhone: z.string().nullable(),

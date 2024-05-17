@@ -179,7 +179,7 @@ export const EditSupplierForm: React.FC = () => {
       representativeCompany: representativeCompany,
       representativeCompanyID: represntativeCompanyID,
       representativeCompanyName: representativeCompanyName,
-      representativeName: representativeName,
+      representativeCompanyContact: representativeName,
       representativeCompanyTitle: representativeTitle,
       representativeCompanyPhone: representativePhone,
       representativeCompanyEmail: representativeEmail,

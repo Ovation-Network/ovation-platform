@@ -294,8 +294,8 @@ export const supplierRouter = createTRPCRouter({
       generalManagerEmail: z.string().nullable(),
       representativeCompany: z.boolean(),
       representativeCompanyID: z.number(),
-      representativeName: z.string(),
       representativeCompanyName: z.string().nullable(),
+      representativeCompanyContact: z.string().nullable(),
       representativeCompanyTitle: z.string().nullable(),
       representativeCompanyPhone: z.string().nullable(),
       representativeCompanyEmail: z.string().nullable(),
@@ -376,8 +376,8 @@ export const supplierRouter = createTRPCRouter({
           create: {
             name: input.generalManagerName!,
             title: input.generalManagerTitle ?? 'General Manager',
-            email: input.generalManagerEmail,
-            phone: input.generalManagerPhone,
+            email: input.onsiteContactEmail,
+            phone: input.onsiteContactPhone,
             supplier: {
               connect: {
                 id: input.id
@@ -394,14 +394,14 @@ export const supplierRouter = createTRPCRouter({
             id: input.representativeCompanyID
           },
           update: {
-            name: input.representativeName,
+            name: input.representativeCompanyName!,
             title: input.representativeCompanyTitle!,
             email: input.representativeCompanyEmail,
             phone: input.representativeCompanyPhone,
             companyName: input.representativeCompanyName!,
           },
           create: {
-            name: input.representativeName,
+            name: input.representativeCompanyContact!,
             title: input.representativeCompanyTitle!,
             email: input.representativeCompanyEmail,
             phone: input.representativeCompanyPhone,
