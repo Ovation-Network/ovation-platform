@@ -19,7 +19,7 @@ export default function Suppliers() {
         <div className="relative h-[100px] w-4/5 rounded-lg mb-auto">
             <Image fill src="/ovation-logo.png" alt="logo" className="object-fill" />
         </div>
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
+        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 text-slate-700">
           {sessionData ? <EditSupplierForm /> : (
             <>
               <p className="text-2xl text-gray-800 mb-20">

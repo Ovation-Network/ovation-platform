@@ -204,9 +204,7 @@ export const EditSupplierForm: React.FC = () => {
 
   return (
     <div className="flex flex-col justify-center align-middle mx-auto text-slate-700">
-      <h1 className="text-2xl font-bold text-center">{supplierName}</h1>
-      <h2 className="text-lg text-center">{supplierCountry} | {supplierCity}</h2>
-      <div className="btn btn-wide bg-yellow-400 text-white mx-auto hover:bg-yellow-600" onClick={() => router.push('/admin')}>GO BACK</div>
+      <div className="btn btn-wide bg-red-400 text-white mx-auto hover:bg-red-600" onClick={handleDelete}>DELETE SUPPLIER</div>
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center">
           <div className="form-control w-full max-w-xs pr-2">
@@ -386,11 +384,10 @@ export const EditSupplierForm: React.FC = () => {
 
           
 
-        <div className="flex flex-col">
+        <div className="flex">
           <button className="btn btn-wide my-5 mx-auto bg-teal-300 text-white hover:bg-green-500" type="submit">
             UPDATE
           </button>
-          <div className="btn btn-wide bg-red-400 text-white mx-auto hover:bg-red-600" onClick={handleDelete}>DELETE SUPPLIER</div>
         </div>
       </form>
 

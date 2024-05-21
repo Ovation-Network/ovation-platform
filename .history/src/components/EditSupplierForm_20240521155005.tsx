@@ -1,59 +1,163 @@
-import { useState } from 'react'
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { useState, useEffect } from 'react'
 import { api } from '~/utils/api'
 import { useRouter } from 'next/router'
-import type { SupplierType } from '@prisma/client'
+import type { SupplierType } from '@prisma/client';
 
-export const AddSupplierForm: React.FC = () => {
+export const EditSupplierForm: React.FC = () => {
 
   const router = useRouter();
+
+  // grab the supplier's id from the route params
+  const { id } = router.query;
+  // const params = useParams<{id: string}>();
+
+  // change the ID to a number for the API
+  const supplierQueryID = Number(id);
+
+  // get the supplier data from the API
+  const supplier = api.supplier.getSupplierById.useQuery({id: supplierQueryID}, {
+    refetchOnMount: false,
+    refetchOnReconnect: false,
+    refetchOnWindowFocus: false,
+  });
 
   // initiate an instance of trpc Utils in to use when making changes to the supplier database
   const trpcUtils = api.useUtils();
 
-  const addSupplierAndContactsAPI = api.supplier.createSupplierAndContacts.useMutation({
+  const deleteSupplierAPI = api.supplier.deleteSupplier.useMutation({
     onSuccess: () => {
+      // void router.push('/admin');
       trpcUtils.supplier.getSupplierContacts.invalidate({})
         .then(() => console.log('Successfully invalidated getSupplierContacts cache'))
         .catch((error) => console.error(error))
+
+      alert('Successfully deleted the supplier, hope you meant to do that!');
     },
     onError: (error) => {
-      // show error message
-      alert('Failed to add supplier and contacts. Please try again later');
       console.error(error);
     }
   });
 
-  const [ supplierName, setSupplierName ] = useState<string>('');
-  const [ supplierType, setSupplierType ] = useState<SupplierType>('OTHER');
-  const [ supplierCountry, setSupplierCountry ] = useState<string>('');
-  const [ supplierCity, setSupplierCity ] = useState<string>('');
-  const [ supplierState, setSupplierState ] = useState<string>('');
-  const [ onsiteContact, setOnsiteContact ] = useState<boolean>(false);
-  const [ onsiteContactName, setOnsiteContactName ] = useState<string>('');
-  const [ onsiteContactTitle, setOnsiteContactTitle ] = useState<string>('');
-  const [ onsiteContactPhone, setOnsiteContactPhone ] = useState<string>('');
-  const [ onsiteContactEmail, setOnsiteContactEmail ] = useState<string>('');
-  const [ representativeCompany, setRepresentativeCompany ] = useState<boolean>(false);
-  const [ representativeCompanyName, setRepresentativeCompanyName ] = useState<string>('');
-  const [ representativeName, setRepresentativeName ] = useState<string>('');
-  const [ representativeTitle, setRepresentativeTitle ] = useState<string>('');
-  const [ representativePhone, setRepresentativePhone ] = useState<string>('');
-  const [ representativeEmail, setRepresentativeEmail ] = useState<string>('');
-  const [ generalManager, setGeneralManager ] = useState<boolean>(false);
-  const [ generalManagerName, setGeneralManagerName ] = useState<string>('');
-  const [ generalManagerTitle, setGeneralManagerTitle ] = useState<string>('');
-  const [ generalManagerPhone, setGeneralManagerPhone ] = useState<string>('');
-  const [ generalManagerEmail, setGeneralManagerEmail ] = useState<string>('');
+  // set the state for the IDs
+  const [supplierId, setSupplierId] = useState<number>(supplier.data?.id ?? 0);
+  const [contactId, setContactId] = useState<number>(supplier.data?.contacts[0]?.id ?? 0);
+  const [represntativeCompanyID, setRepresentativeCompanyID] = useState<number>(supplier.data?.representativeCompanies[0]?.id ?? 0);
+  const [generalManagerID, setGeneralManagerID] = useState<number>(supplier.data?.generalManagers[0]?.id ?? 0);
+
+  const [ supplierName, setSupplierName ] = useState<string>(supplier.data?.name ?? '');
+  const [ supplierType, setSupplierType ] = useState<SupplierType>(supplier.data?.type ?? 'OTHER');
+  const [ supplierCountry, setSupplierCountry ] = useState<string>(supplier.data?.country ?? '');
+  const [ supplierCity, setSupplierCity ] = useState<string>(supplier.data?.city ?? '');
+  const [ supplierState, setSupplierState ] = useState<string>(supplier.data?.state ??'');
+
+  const [ onsiteContact, setOnsiteContact ] = useState<boolean>(supplier.data?.contacts.length != undefined && supplier.data?.contacts.length  > 0 || false);
+  const [ onsiteContactName, setOnsiteContactName ] = useState<string>(supplier.data?.contacts[0]?.name ?? '');
+  const [ onsiteContactTitle, setOnsiteContactTitle ] = useState<string>(supplier.data?.contacts[0]?.title ?? '');
+  const [ onsiteContactPhone, setOnsiteContactPhone ] = useState<string>(supplier.data?.contacts[0]?.phone ?? '');
+  const [ onsiteContactEmail, setOnsiteContactEmail ] = useState<string>(supplier.data?.contacts[0]?.email ?? '');
+
+  const [ representativeCompany, setRepresentativeCompany ] = useState<boolean>(supplier.data?.representativeCompanies.length != undefined && supplier.data?.representativeCompanies.length  > 0 || false);
+  const [ representativeCompanyName, setRepresentativeCompanyName ] = useState<string>(supplier.data?.representativeCompanies[0]?.companyName ?? '');
+  const [ representativeName, setRepresentativeName ] = useState<string>(supplier.data?.representativeCompanies[0]?.name ?? '');
+  const [ representativeTitle, setRepresentativeTitle ] = useState<string>(supplier.data?.representativeCompanies[0]?.title ?? '');
+  const [ representativePhone, setRepresentativePhone ] = useState<string>(supplier.data?.representativeCompanies[0]?.phone ?? '');
+  const [ representativeEmail, setRepresentativeEmail ] = useState<string>(supplier.data?.representativeCompanies[0]?.email ?? '');
+
+  const [ generalManager, setGeneralManager ] = useState<boolean>(supplier.data?.generalManagers.length != undefined && supplier.data?.generalManagers.length  > 0 || false);
+  const [ generalManagerName, setGeneralManagerName ] = useState<string>(supplier.data?.generalManagers[0]?.name ?? '');
+  const [ generalManagerTitle, setGeneralManagerTitle ] = useState<string>(supplier.data?.generalManagers[0]?.title ?? '');
+  const [ generalManagerPhone, setGeneralManagerPhone ] = useState<string>(supplier.data?.generalManagers[0]?.phone ?? '');
+  const [ generalManagerEmail, setGeneralManagerEmail ] = useState<string>(supplier.data?.generalManagers[0]?.email ?? '');
+
+  const editSupplierAndContactsAPI = api.supplier.editSupplierAndContacts.useMutation({
+    onSuccess: ( { supplier } ) => {
+      // invalidate invalidate getSupplierContacts cache
+      void trpcUtils.supplier.getSupplierContacts.invalidate();
+      const newSupplierData = supplier;
+
+      const updateData: Parameters<typeof trpcUtils.supplier.infiniteSupplierFeed.setInfiniteData>[1] =
+        (oldData) => {
+          if (oldData == null) return;
+
+          return {
+            ...oldData,
+            pages: oldData.pages.map((page) => {
+              return {
+                ...page,
+                supplier: page.supplier.map((supplier) => {
+                  if (supplier.id === supplierQueryID) {
+                    return {
+                      ...supplier,
+                      name: newSupplierData.name,
+                      type: newSupplierData.type,
+                      country: newSupplierData.country,
+                      city: newSupplierData.city,
+                      state: newSupplierData.state,
+                      contacts: newSupplierData.contacts,
+                      generalManagers: newSupplierData.generalManagers,
+                      representativeCompanies: newSupplierData.representativeCompanies,
+                    }
+                  }
+                  return supplier;
+                })
+              }
+            })
+          }
+        };
+        // use trpcUtils to update infiniteSupplierFeed data
+        trpcUtils.supplier.infiniteSupplierFeed.setInfiniteData({}, updateData);
+        console.log('Successfully ran trpcUtils infiniteSupplierFeed.setInfiniteData cache update');
+
+        
+        // show success message
+        alert(' Successfully updated the database and updated inifniteQuery cache! ');
+    }
+  });
+
+  // use useEffect to update the state when the supplier data changes
+  useEffect(() => {
+
+    // set the state for the IDs
+    setSupplierId(supplier.data?.id ?? 0);
+    setContactId(supplier.data?.contacts[0]?.id ?? 0);
+    setRepresentativeCompanyID(supplier.data?.representativeCompanies[0]?.id ?? 0);
+    setGeneralManagerID(supplier.data?.generalManagers[0]?.id ?? 0);
+
+
+    setSupplierName(supplier.data?.name ?? '');
+    setSupplierType(supplier.data?.type ?? 'OTHER');
+    setSupplierCountry(supplier.data?.country ?? '');
+    setSupplierCity(supplier.data?.city ?? '');
+    setSupplierState(supplier.data?.state ??'');
+    setOnsiteContact(supplier.data?.contacts.length != undefined && supplier.data?.contacts.length  > 0 || false);
+    setOnsiteContactName(supplier.data?.contacts[0]?.name ?? '');
+    setOnsiteContactTitle(supplier.data?.contacts[0]?.title ?? '');
+    setOnsiteContactPhone(supplier.data?.contacts[0]?.phone ?? '');
+    setOnsiteContactEmail(supplier.data?.contacts[0]?.email ?? '');
+    setRepresentativeCompany(supplier.data?.representativeCompanies.length != undefined && supplier.data?.representativeCompanies.length  > 0 || false);
+    setRepresentativeCompanyName(supplier.data?.representativeCompanies[0]?.companyName ?? '');
+    setRepresentativeName(supplier.data?.representativeCompanies[0]?.name ?? '');
+    setRepresentativeTitle(supplier.data?.representativeCompanies[0]?.title ?? '');
+    setRepresentativePhone(supplier.data?.representativeCompanies[0]?.phone ?? '');
+    setRepresentativeEmail(supplier.data?.representativeCompanies[0]?.email ?? '');
+    setGeneralManager(supplier.data?.generalManagers.length != undefined && supplier.data?.generalManagers.length  > 0 || false);
+    setGeneralManagerName(supplier.data?.generalManagers[0]?.name ?? '');
+    setGeneralManagerTitle(supplier.data?.generalManagers[0]?.title ?? '');
+    setGeneralManagerPhone(supplier.data?.generalManagers[0]?.phone ?? '');
+    setGeneralManagerEmail(supplier.data?.generalManagers[0]?.email ?? '');
+  }, [supplier.data])
+
 
   const supplierTypeOptions = ['HOTEL', 'DMC', 'CRUISE', 'RAIL', 'REPRESENTATION_COMPANY', 'AIR', 'TOUR_OPERTATOR', 'CAR_RENTAL', 'TRAVEL_INSURANCE', 'CHAUFFEUR_SERVICES', 'OTHER']
 
-  const handleSubmit = (e: React.MouseEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    // handle any empty forms
-    if (supplierName === '' || supplierCountry === '' || supplierCity === '') return alert('Please submit all required fields: name of property/supplier, country, and city.')
+  const handleSubmit = async (event: React.MouseEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
     const supplierData = {
+      id: supplierId,
       name: supplierName,
       type: supplierType,
       region: null,
@@ -61,29 +165,46 @@ export const AddSupplierForm: React.FC = () => {
       city: supplierCity,
       state: supplierState,
       onsiteContact: onsiteContact,
+      onsiteContactID: contactId,
       onsiteContactName: onsiteContactName,
       onsiteContactTitle: onsiteContactTitle,
       onsiteContactPhone: onsiteContactPhone,
       onsiteContactEmail: onsiteContactEmail,
       generalManager: generalManager,
+      generalManagerID: generalManagerID,
       generalManagerName: generalManagerName,
       generalManagerTitle: generalManagerTitle,
       generalManagerPhone: generalManagerPhone,
       generalManagerEmail: generalManagerEmail,
       representativeCompany: representativeCompany,
-      representativeName: representativeName,
+      representativeCompanyID: represntativeCompanyID,
       representativeCompanyName: representativeCompanyName,
+      representativeName: representativeName,
       representativeCompanyTitle: representativeTitle,
       representativeCompanyPhone: representativePhone,
       representativeCompanyEmail: representativeEmail,
     }
 
-    addSupplierAndContactsAPI.mutate(supplierData);
-    void router.push('/admin');
+    console.log(supplierData);
+
+    editSupplierAndContactsAPI.mutate(supplierData);
+    await router.push('/admin');
   }
 
+  const handleDelete = async (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    deleteSupplierAPI.mutate({id: supplierQueryID});
+    void router.push('/admin')
+  }
+
+
+
+  // handle case where no supplier is found
+  if (supplier === null) return <h1>Could not find a supplier with id {supplierQueryID} </h1>
+
   return (
-    <>
+    <div className="flex flex-col justify-center align-middle mx-auto">
+      <div className="btn btn-wide bg-red-400 text-white mx-auto" onClick={handleDelete}>DELETE SUPPLIER</div>
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center">
           <div className="form-control w-full max-w-xs pr-2">
@@ -120,19 +241,20 @@ export const AddSupplierForm: React.FC = () => {
               <span className="label-text">TYPE</span>
             </label>
             <select id="option-select" className="select select-bordered w-full max-w-xs" defaultValue={""} onChange={(e) => setSupplierType(e.target.value as SupplierType)} required>
-              <option disabled value="">--Choose Suppliery Type--</option>
+              <option disabled value="OTHER">--Choose Suppliery Type--</option>
               {supplierTypeOptions.map((option, i) => <option key={`supplier-type-${i}`} value={option}>{option}</option>)}
+                                    
             </select>
 
             {/* <div className="btn-group my-5">
-              <button className={onsiteContact ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setOnsiteContact((prevValue) => !prevValue)} type='button'>ONSITE</button>
-              <button className={representativeCompany ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setRepresentativeCompany((prevValue) => !prevValue)} type='button'>REP COMPANY</button>
-              <button className={generalManager ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setGeneralManager((prevValue) => !prevValue)} type='button'>GEN MANAGER</button>
+              <div className={onsiteContact ? 'btn btn-active' : 'btn'} onClick={() => setOnsiteContact((prevValue) => !prevValue)}>ONSITE</div>
+              <div className={representativeCompany ? 'btn btn-active' : 'btn'} onClick={() => setRepresentativeCompany((prevValue) => !prevValue)}>REP COMPANY</div>
+              <div className={generalManager ? 'btn btn-active' : 'btn'} onClick={() => setGeneralManager((prevValue) => !prevValue)}>GEN MANAGER</div>
             </div> */}
             <div className="join">
-              <button className={onsiteContact ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setOnsiteContact((prevValue) => !prevValue)} type='button'>ONSITE</button>
-              <button className={representativeCompany ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setRepresentativeCompany((prevValue) => !prevValue)} type='button'>REP COMPANY</button>
-              <button className={generalManager ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setGeneralManager((prevValue) => !prevValue)} type='button'>GEN MANAGER</button>
+              <button className={onsiteContact ? 'btn bg-teal-400 join-item md:btn-sm btn-active dark:text-white' : 'btn join-item md:btn-sm dark:text-white'} onClick={() => setOnsiteContact((prevValue) => !prevValue)} type='button'>ONSITE</button>
+              <button className={representativeCompany ? 'btn bg-teal-400 join-item md:btn-sm btn-active dark:text-white' : 'btn join-item md:btn-sm dark:text-white'} onClick={() => setRepresentativeCompany((prevValue) => !prevValue)} type='button'>REP COMPANY</button>
+              <button className={generalManager ? 'btn bg-teal-400 join-item md:btn-sm btn-active dark:text-white' : 'btn join-item md:btn-sm dark:text-white'} onClick={() => setGeneralManager((prevValue) => !prevValue)} type='button'>GEN MANAGER</button>
             </div>
           </div>
         </div>
@@ -260,13 +382,16 @@ export const AddSupplierForm: React.FC = () => {
           
           </>}
 
+          
+
         <div className="flex">
-          <button className="btn btn-wide my-5 mx-auto " type="submit">
+          <button className="btn btn-wide my-5 mx-auto bg-teal-300 text-white" type="submit">
+            UPDATE
           </button>
         </div>
       </form>
 
-    </>
+    </div>
   )
 }
 

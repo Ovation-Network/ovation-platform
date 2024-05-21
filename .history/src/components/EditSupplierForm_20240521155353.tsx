@@ -203,24 +203,22 @@ export const EditSupplierForm: React.FC = () => {
   if (supplier === null) return <h1>Could not find a supplier with id {supplierQueryID} </h1>
 
   return (
-    <div className="flex flex-col justify-center align-middle mx-auto text-slate-700">
-      <h1 className="text-2xl font-bold text-center">{supplierName}</h1>
-      <h2 className="text-lg text-center">{supplierCountry} | {supplierCity}</h2>
-      <div className="btn btn-wide bg-yellow-400 text-white mx-auto hover:bg-yellow-600" onClick={() => router.push('/admin')}>GO BACK</div>
+    <div className="flex flex-col justify-center align-middle mx-auto">
+      <div className="btn btn-wide bg-red-400 text-white mx-auto hover:bg-red-600" onClick={handleDelete}>DELETE SUPPLIER</div>
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center">
           <div className="form-control w-full max-w-xs pr-2">
             <label className="label">
               <span className="label-text">SUPPLIER NAME</span>
             </label>
-            <input value={supplierName} onChange={(e) => setSupplierName(e.target.value)} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" required/>
+            <input value={supplierName} onChange={(e) => setSupplierName(e.target.value)} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" required/>
           </div>
 
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">COUNTRY</span>
             </label>
-            <input value={supplierCountry} onChange={(e) => setSupplierCountry(e.target.value)} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" required/>
+            <input value={supplierCountry} onChange={(e) => setSupplierCountry(e.target.value)} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" required/>
           </div>
         </div>
         <div className="flex justify-center">
@@ -228,13 +226,13 @@ export const EditSupplierForm: React.FC = () => {
             <label className="label">
               <span className="label-text">CITY</span>
             </label>
-            <input value={supplierCity} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setSupplierCity(e.target.value)} required/>
+            <input value={supplierCity} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setSupplierCity(e.target.value)} required/>
           </div>
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">STATE</span>
             </label>
-            <input value={supplierState} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setSupplierState(e.target.value)}/>
+            <input value={supplierState} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setSupplierState(e.target.value)}/>
           </div>
         </div>
         <div className="flex justify-center">
@@ -271,14 +269,14 @@ export const EditSupplierForm: React.FC = () => {
                 <label className="label">
                   <span className="label-text">NAME</span>
                 </label>
-                <input value={onsiteContactName} type="text" placeholder="Last, First" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setOnsiteContactName(e.target.value)} required/>
+                <input value={onsiteContactName} type="text" placeholder="Last, First" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setOnsiteContactName(e.target.value)} required/>
               </div>
               
               <div className="form-control w-full max-w-xs">
                 <label className="label">
                   <span className="label-text">TITLE</span>
                 </label>
-                <input value={onsiteContactTitle} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setOnsiteContactTitle(e.target.value)}/>
+                <input value={onsiteContactTitle} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setOnsiteContactTitle(e.target.value)}/>
               </div>
             </div>
             <div className="flex justify-center">
@@ -286,14 +284,14 @@ export const EditSupplierForm: React.FC = () => {
                 <label className="label">
                   <span className="label-text">PHONE</span>
                 </label>
-                <input value={onsiteContactPhone} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setOnsiteContactPhone(e.target.value)} />
+                <input value={onsiteContactPhone} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setOnsiteContactPhone(e.target.value)} />
               </div>
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
                   <span className="label-text">EMAIL</span>
                 </label>
-                <input value={onsiteContactEmail} type="email" placeholder="contact@example.com" className="input input-bordered bg-white border-teal-300 w-full max-w-xs"  onChange={(e) => setOnsiteContactEmail(e.target.value)} required/>
+                <input value={onsiteContactEmail} type="email" placeholder="contact@example.com" className="input input-bordered bg-white w-full max-w-xs"  onChange={(e) => setOnsiteContactEmail(e.target.value)} required/>
               </div>
             </div>
           </>
@@ -309,14 +307,14 @@ export const EditSupplierForm: React.FC = () => {
                 <label className="label">
                   <span className="label-text">COMPANY</span>
                 </label>
-                <input value={representativeCompanyName} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setRepresentativeCompanyName(e.target.value)} required/>
+                <input value={representativeCompanyName} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setRepresentativeCompanyName(e.target.value)} required/>
               </div>
               
               <div className="form-control w-full max-w-xs pr-2">
                 <label className="label">
                   <span className="label-text">NAME</span>
                 </label>
-                <input value={representativeName} type="text" placeholder="Last, First" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setRepresentativeName(e.target.value)} required/>
+                <input value={representativeName} type="text" placeholder="Last, First" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setRepresentativeName(e.target.value)} required/>
               </div>
             </div>
             <div className="flex justify-center">
@@ -324,14 +322,14 @@ export const EditSupplierForm: React.FC = () => {
                 <label className="label">
                   <span className="label-text">TITLE</span>
                 </label>
-                <input value={representativeTitle} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setRepresentativeTitle(e.target.value)}/>
+                <input value={representativeTitle} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setRepresentativeTitle(e.target.value)}/>
               </div>
               
               <div className="form-control w-full max-w-xs pr-2">
                 <label className="label">
                   <span className="label-text">PHONE</span>
                 </label>
-                <input value={representativePhone} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setRepresentativePhone(e.target.value)}/>
+                <input value={representativePhone} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setRepresentativePhone(e.target.value)}/>
               </div>
             </div>
             <div className="flex justify-center">
@@ -339,7 +337,7 @@ export const EditSupplierForm: React.FC = () => {
                 <label className="label">
                   <span className="label-text">EMAIL</span>
                 </label>
-                <input value={representativeEmail} type="email" placeholder="contact@example.com" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setRepresentativeEmail(e.target.value)} required/>
+                <input value={representativeEmail} type="email" placeholder="contact@example.com" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setRepresentativeEmail(e.target.value)} required/>
               </div>
             </div>
           
@@ -356,14 +354,14 @@ export const EditSupplierForm: React.FC = () => {
                 <label className="label">
                   <span className="label-text">NAME</span>
                 </label>
-                <input value={generalManagerName} type="text" placeholder="Last, First" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setGeneralManagerName(e.target.value)}/>
+                <input value={generalManagerName} type="text" placeholder="Last, First" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setGeneralManagerName(e.target.value)}/>
               </div>
               
               <div className="form-control w-full max-w-xs pr-2">
                 <label className="label">
                   <span className="label-text">TITLE</span>
                 </label>
-                <input value={generalManagerTitle} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setGeneralManagerTitle(e.target.value)}/>
+                <input value={generalManagerTitle} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setGeneralManagerTitle(e.target.value)}/>
               </div>
             </div>
             <div className="flex justify-center">
@@ -371,14 +369,14 @@ export const EditSupplierForm: React.FC = () => {
                 <label className="label">
                   <span className="label-text">PHONE</span>
                 </label>
-                <input value={generalManagerPhone} type="text" placeholder="Type here" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setGeneralManagerPhone(e.target.value)}/>
+                <input value={generalManagerPhone} type="text" placeholder="Type here" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setGeneralManagerPhone(e.target.value)}/>
               </div>
               
               <div className="form-control w-full max-w-xs pr-2">
                 <label className="label">
                   <span className="label-text">EMAIL</span>
                 </label>
-                <input value={generalManagerEmail} type="email" placeholder="contact@example.com" className="input input-bordered bg-white border-teal-300 w-full max-w-xs" onChange={(e) => setGeneralManagerEmail(e.target.value)}/>
+                <input value={generalManagerEmail} type="email" placeholder="contact@example.com" className="input input-bordered bg-white w-full max-w-xs" onChange={(e) => setGeneralManagerEmail(e.target.value)}/>
               </div>
             </div>
           
@@ -386,11 +384,10 @@ export const EditSupplierForm: React.FC = () => {
 
           
 
-        <div className="flex flex-col">
+        <div className="flex">
           <button className="btn btn-wide my-5 mx-auto bg-teal-300 text-white hover:bg-green-500" type="submit">
             UPDATE
           </button>
-          <div className="btn btn-wide bg-red-400 text-white mx-auto hover:bg-red-600" onClick={handleDelete}>DELETE SUPPLIER</div>
         </div>
       </form>
 

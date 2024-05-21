@@ -47,9 +47,9 @@ export const Notification: React.FC<NotificationProps> = ({notificationID, suppl
       <span>{notifier} raised an issue on {submissionDate.toLocaleDateString()} - {details}</span>
       <div>
         <Link href={`/admin/supplier/${supplierID}`}>
-          <button className="btn btn-sm bg-teal-300 hover:bg-teal-500 text-white">EDIT</button>
+          <button className="btn btn-sm bg-teal-300 text-white">EDIT</button>
         </Link>
-        <button className="btn btn-sm bg-red-500 hover:bg-red-700 text-white" onClick={(e) => handleResolveNotification(e)}>RESOLVE</button>
+        <button className="btn btn-sm btn-orange" onClick={(e) => handleResolveNotification(e)}>RESOLVE</button>
       </div>
     </div>
   )

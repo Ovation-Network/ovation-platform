@@ -125,14 +125,14 @@ export const AddSupplierForm: React.FC = () => {
             </select>
 
             {/* <div className="btn-group my-5">
-              <button className={onsiteContact ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setOnsiteContact((prevValue) => !prevValue)} type='button'>ONSITE</button>
-              <button className={representativeCompany ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setRepresentativeCompany((prevValue) => !prevValue)} type='button'>REP COMPANY</button>
-              <button className={generalManager ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setGeneralManager((prevValue) => !prevValue)} type='button'>GEN MANAGER</button>
+              <div className={onsiteContact ? 'btn btn-active' : 'btn'} onClick={() => setOnsiteContact((prevValue) => !prevValue)}>ONSITE</div>
+              <div className={representativeCompany ? 'btn btn-active' : 'btn'} onClick={() => setRepresentativeCompany((prevValue) => !prevValue)}>REP COMPANY</div>
+              <div className={generalManager ? 'btn btn-active' : 'btn'} onClick={() => setGeneralManager((prevValue) => !prevValue)}>GEN MANAGER</div>
             </div> */}
             <div className="join">
-              <button className={onsiteContact ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setOnsiteContact((prevValue) => !prevValue)} type='button'>ONSITE</button>
-              <button className={representativeCompany ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setRepresentativeCompany((prevValue) => !prevValue)} type='button'>REP COMPANY</button>
-              <button className={generalManager ? 'btn join-item md:btn-sm btn-active' : 'btn md:btn-sm'} onClick={() => setGeneralManager((prevValue) => !prevValue)} type='button'>GEN MANAGER</button>
+              <button className="btn join-item md:btn-sm" type='button'>Button</button>
+              <button className="btn join-item md:btn-sm" type='button'>Button</button>
+              <button className="btn join-item md:btn-sm" type='button'>Button</button>
             </div>
           </div>
         </div>
